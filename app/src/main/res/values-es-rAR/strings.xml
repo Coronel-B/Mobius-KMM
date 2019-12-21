@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Möbius</string>
+
+    <string name="file_provider_authority">org.itdevelopers.mobius.fileprovider</string>
+
+    <string name="not_yet_registered">Aún no estoy registrado</string>
+
+    <!--Errores de sign up-->
+    <string name="error_network">La red no está disponible</string>
+
+    <!--Perfil-->
+    <string name="text_field_dni">DNI</string>
+    <string name="text_field_dni_id">Número de trámite</string>
+    <string name="text_field_name">Nombres/s</string>
+    <string name="text_field_surname">Apellido/s</string>
+    <string name="text_field_facebook_user">Usuario de Facebook</string>
+    <string name="text_field_origin_locality">Localidad de procedencia</string>
+    <string name="text_field_phone">Celular</string>
+    <string name="radio_button_male">Masculino</string>
+    <string name="radio_button_female">Femenino</string>
+
+    <string name="creation_profile_birthdate_label">Fecha de nacimiento</string>
+    <string name="creation_profile_nationality_label">Nacionalidad</string>
+    <string name="creation_profile_gender_label">Género</string>
+    <string name="creation_profile_avatar_label">Avatar</string>
+
+    <string name="text_field_birthdate_day_of_month">Día</string>
+    <string name="text_field_birthdate_month">Mes</string>
+    <string name="text_field_birthdate_year">Año</string>
+
+    <string name="select_origin_locality">Seleccionar localidad de origen</string>
+    <string name="gps_not_enabled">Es necesario habilitar el GPS para que el botón de Mi Ubicación esté disponible</string>
+    <string name="open_location_settings">Habilitar GPS</string>
+
+
+    <string name="profile_dni_error">"DNI inválido"</string>
+    <string name="profile_dni_id_error">"Número de trámite inválido"</string>
+    <string name="profile_name_error">"Nombre/s inválido"</string>
+    <string name="profile_surname_error">"Apellido/s inválido"</string>
+    <string name="profile_facebook_user_error">"Usuario de Facebook inválido"</string>
+    <string name="profile_origin_locality_not_selected_error">"Localidad de procedencia no seleccionada"</string>
+    <string name="profile_birthdate_empty_fields_error">"Debe tipear o seleccionar una fecha de nacimiento"</string>
+    <string name="profile_birthdate_day_of_month_error">"dd"</string>
+    <string name="profile_birthdate_month_error">"mm"</string>
+    <string name="profile_birthdate_year_error">"yyyy"</string>
+    <string name="profile_phone_error">"Celular inválido"</string>
+    <string name="profile_nationality_error">"Ninguna seleccionada"</string>
+    <string name="profile_gender_not_selected_error">"Género del perfil no seleccionado"</string>
+    <string name="profile_avatar_empty_error">"Debe seleccionar o capturar un avatar"</string>
+
+
+    <string name="add_profile_button">Agregar Perfil</string>
+    <string name="profile_label">Perfil</string>
+    <string name="action_save_user_profile">Guardar</string>
+
+    <!--___________________________________-->
+
+
+    <!--Cuenta-->
+    <string name="add_account_button">Agregar Cuenta</string>
+    <string name="account_label">Cuenta</string>
+    <string name="email_label">Correo electrónico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="confirm_password_label">Confirmar Contraseña</string>
+    <string name="action_save_user_account">Guardar</string>
+
+    <!--Errores de cuenta-->
+    <string name="email_format_error">Formato de correo inválido</string>
+    <string name="password_error">
+        Contraseña insegura. Se requieren al menos 8 caracteres alfanuméricos.</string>
+    <string name="password_confirmation_error">Confirmación de contraseña inválida</string>
+    <string name="no_data_account">Sin datos</string>
+    <string name="strong_pw">Contraseña fuerte</string>
+    <string name="fairly_safe_pw">Contraseña medianamente segura</string>
+
+    <!-- Acciones Toolbar -->
+    <string name="action_save_user">Guardar Usuario</string>
+
+    <!--Usuario-->
+    <string name="add_user">Añadir Usuario</string>
+    <string name="edit_user">Editar Usuario</string>
+    <string name="add_user_account">Añadir Cuenta</string>
+    <string name="add_user_profile">Añadir Perfil</string>
+    <string name="edit_user_account">Editar Cuenta</string>
+    <string name="edit_user_profile">Editar Perfil</string>
+    <string name="empty_user_profile">Se requiere la creación de un perfil</string>
+    <string name="empty_user_account">Se requiere la creación de una cuenta</string>
+    <string name="empty_user_name">Se requiere tipear un nombre de usuario</string>
+    <string name="username_error">Nombre de usuario inválido. Se requieren al menos 3 caracteres.</string>
+
+    <string name="text_field_email">Correo electrónico</string>
+    <string name="text_field_password">Contraseña</string>
+    <string name="text_field_confirm_password">Confirmar Contraseña</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="creation_user_name_label">Nombre de usuario</string>
+
+    <string name="message_successfully_saved_user">Usuario guardado correctamente</string>
+
+
+    <!--Diálogo descartar cambios-->
+    <string name="title_discard_changes_dialog">¿Deseas descartar cambios?</string>
+
+    <!--Diálogo reconocer dni-->
+    <string name="title_acknowledge_dni_dialog">Reconocimiento del DNI</string>
+    <string name="message_acknowledge_dni_dialog">
+        Es un requisito para garantizar la unicidad de las personas.
+        Luego tendrás que verificar la cuenta.</string>
+
+    <!--Diálogo reconocer id dni-->
+    <string name="title_acknowledge_dni_id_dialog">Reconocimiento del número de trámite</string>
+    <string name="message_acknowledge_dni_id_dialog">
+        Es el permiso que usted nos otorga para que
+        Möbius pueda consultar la base de datos del
+        registro nacional de las personas y
+        determinar si su existencia es real.
+    </string>
+
+    <string-array name="nationalities">
+        <item>Afganistán</item>
+        <item>Albania</item>
+        <item>Alemania</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua y Barbuda</item>
+        <item>Arabia Saudita</item>
+        <item>Argelia</item>
+        <item>Argentina</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaiyán</item>
+        <item>Bahamas</item>
+        <item>Bangladés</item>
+        <item>Barbados</item>
+        <item>Baréin</item>
+        <item>Bélgica</item>
+        <item>Belice</item>
+        <item>Benín</item>
+        <item>Bielorrusia</item>
+        <item>Birmania</item>
+        <item>Bolivia</item>
+        <item>Bosnia y Herzegovina</item>
+        <item>Botsuana</item>
+        <item>Brasil</item>
+        <item>Brunéi</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Bután</item>
+        <item>Cabo Verde</item>
+        <item>Camboya</item>
+        <item>Camerún</item>
+        <item>Canadá</item>
+        <item>Catar</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Chipre</item>
+        <item>Ciudad del Vaticano</item>
+        <item>Colombia</item>
+        <item>Comoras</item>
+        <item>Corea del Norte</item>
+        <item>Corea del Sur</item>
+        <item>Costa de Marfil</item>
+        <item>Costa Rica</item>
+        <item>Croacia</item>
+        <item>Cuba</item>
+        <item>Dinamarca</item>
+        <item>Dominica</item>
+        <item>Ecuador</item>
+        <item>Egipto</item>
+        <item>El Salvador</item>
+        <item>Emiratos Árabes Unidos</item>
+        <item>Eritrea</item>
+        <item>Eslovaquia</item>
+        <item>Eslovenia</item>
+        <item>España</item>
+        <item>Estados Unidos</item>
+        <item>Estonia</item>
+        <item>Etiopía</item>
+        <item>Filipinas</item>
+        <item>Finlandia</item>
+        <item>Fiyi</item>
+        <item>Francia</item>
+        <item>Gabón</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Ghana</item>
+        <item>Granada</item>
+        <item>Grecia</item>
+        <item>Guatemala</item>
+        <item>Guyana</item>
+        <item>Guinea</item>
+        <item>Guinea-Bisáu</item>
+        <item>Guinea Ecuatorial</item>
+        <item>Haití</item>
+        <item>Honduras</item>
+        <item>Hungría</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Irak</item>
+        <item>Irán</item>
+        <item>Irlanda</item>
+        <item>Islandia</item>
+        <item>Islas Marshall</item>
+        <item>Islas Salomón</item>
+        <item>Israel</item>
+        <item>Italia</item>
+        <item>Jamaica</item>
+        <item>Japón</item>
+        <item>Jordania</item>
+        <item>Kazajistán</item>
+        <item>Kenia</item>
+        <item>Kirguistán</item>
+        <item>Kiribati</item>
+        <item>Kuwait</item>
+        <item>Laos</item>
+        <item>Lesoto</item>
+        <item>Letonia</item>
+        <item>Líbano</item>
+        <item>Liberia</item>
+        <item>Libia</item>
+        <item>Liechtenstein</item>
+        <item>Lituania</item>
+        <item>Luxemburgo</item>
+        <item>Madagascar</item>
+        <item>Malasia</item>
+        <item>Malaui</item>
+        <item>Maldivas</item>
+        <item>Malí</item>
+        <item>Malta</item>
+        <item>Marruecos</item>
+        <item>Mauricio</item>
+        <item>Mauritania</item>
+        <item>México</item>
+        <item>Micronesia</item>
+        <item>Moldavia</item>
+        <item>Mónaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Mozambique</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Nicaragua</item>
+        <item>Níger</item>
+        <item>Nigeria</item>
+        <item>Noruega</item>
+        <item>Nueva Zelanda</item>
+        <item>Omán</item>
+        <item>Países Bajos</item>
+        <item>Pakistán</item>
+        <item>Palaos</item>
+        <item>Panamá</item>
+        <item>Papúa Nueva Guinea</item>
+        <item>Paraguay</item>
+        <item>Perú</item>
+        <item>Polonia</item>
+        <item>Portugal</item>
+        <item>Reino Unido de Gran Bretaña e Irlanda del Norte</item>
+        <item>República Centroafricana</item>
+        <item>República Checa</item>
+        <item>República de Macedonia</item>
+        <item>República del Congo</item>
+        <item>República Democrática del Congo</item>
+        <item>República Dominicana</item>
+        <item>República Sudafricana</item>
+        <item>Ruanda</item>
+        <item>Rumanía</item>
+        <item>Rusia</item>
+        <item>Samoa</item>
+        <item>San Cristóbal y Nieves</item>
+        <item>San Marino</item>
+        <item>San Vicente y las Granadinas</item>
+        <item>Santa Lucía</item>
+        <item>Santo Tomé y Príncipe</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leona</item>
+        <item>Singapur</item>
+        <item>Siria</item>
+        <item>Somalia</item>
+        <item>Sri Lanka</item>
+        <item>Suazilandia</item>
+        <item>Sudán</item>
+        <item>Sudán del Sur</item>
+        <item>Suecia</item>
+        <item>Suiza</item>
+        <item>Surinam</item>
+        <item>Tailandia</item>
+        <item>Tanzania</item>
+        <item>Tayikistán</item>
+        <item>Timor Oriental</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad y Tobago</item>
+        <item>Túnez</item>
+        <item>Turkmenistán</item>
+        <item>Turquía</item>
+        <item>Tuvalu</item>
+        <item>Ucrania</item>
+        <item>Uganda</item>
+        <item>Uruguay</item>
+        <item>Uzbekistán</item>
+        <item>Vanuatu</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Yibuti</item>
+        <item>Zambia</item>
+        <item>Zimbabue</item>
+    </string-array>
+
+</resources>

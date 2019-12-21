@@ -1,0 +1,24 @@
+<resources>
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">8dp</dimen>
+
+    <dimen name="user_profile_height">76dp</dimen>
+    <dimen name="user_account_height">64dp</dimen>
+
+    <!--Ítem de perfil de usuario-->
+    <dimen name="user_profile_avatar_size">48</dimen>
+
+    <dimen name="remove_button_size">48dp</dimen>
+
+    <dimen name="keyline_1">8dp</dimen>
+
+    <!--Fill in of profile-->
+    <dimen name="generate_a_profile_avatar_button">48dp</dimen>
+    <dimen name="select_a_profile_avatar_button">48dp</dimen>
+    <dimen name="birthdate_selection_img">48dp</dimen>
+    <dimen name="dni_acknowledgment_button">48dp</dimen>
+    <dimen name="dni_id_acknowledgment_button">48dp</dimen>
+    <dimen name="profile_avatar_size">76</dimen>
+
+
+</resources>
