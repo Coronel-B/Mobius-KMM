@@ -1,6 +1,6 @@
 package org.itdevelopers.mobius.addedituserprofile.data;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.itdevelopers.mobius.users.domain.entities.UserProfile;
 

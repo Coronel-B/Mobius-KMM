@@ -1,10 +1,11 @@
 package org.itdevelopers.mobius.addedituserprofile.presentation;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.widget.ImageView;
 
 import org.itdevelopers.mobius.users.domain.entities.UserProfile;
+
+import androidx.annotation.NonNull;
 
 /**
  * 24/1/2019

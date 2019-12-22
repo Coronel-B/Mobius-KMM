@@ -1,6 +1,6 @@
 package org.itdevelopers.mobius.addedituser.presentation;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.itdevelopers.mobius.users.domain.entities.UserAccount;
 import org.itdevelopers.mobius.users.domain.entities.UserProfile;

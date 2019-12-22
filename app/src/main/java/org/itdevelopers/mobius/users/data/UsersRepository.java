@@ -4,8 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.annotation.NonNull;
-import android.support.v4.util.Preconditions;
+import androidx.annotation.NonNull;
+import androidx.core.util.Preconditions;
 
 import org.itdevelopers.mobius.R;
 import org.itdevelopers.mobius.users.data.cloud.ICloudUsersDataSource;

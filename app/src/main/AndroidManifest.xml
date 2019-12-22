@@ -49,7 +49,7 @@
 
         <!-- Provider p/el acceso de archivos -->
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="org.itdevelopers.mobius.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">

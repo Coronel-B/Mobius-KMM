@@ -1,6 +1,6 @@
 package org.itdevelopers.mobius.users.data;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.itdevelopers.mobius.users.domain.entities.User;
 

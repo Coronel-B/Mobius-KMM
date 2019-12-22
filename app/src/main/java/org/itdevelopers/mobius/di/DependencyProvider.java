@@ -1,7 +1,7 @@
 package org.itdevelopers.mobius.di;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.itdevelopers.mobius.addedituseraccount.data.CacheUserAccountStore;
 import org.itdevelopers.mobius.addedituserprofile.data.CacheUserProfileStore;

@@ -2,8 +2,6 @@ package org.itdevelopers.mobius.addedituser.presentation;
 
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
-import android.support.annotation.NonNull;
-import android.support.v4.util.Preconditions;
 
 import org.itdevelopers.mobius.R;
 import org.itdevelopers.mobius.addedituseraccount.data.ICacheUserAccountStore;
@@ -12,6 +10,9 @@ import org.itdevelopers.mobius.users.domain.entities.User;
 import org.itdevelopers.mobius.users.domain.entities.UserAccount;
 import org.itdevelopers.mobius.users.domain.entities.UserProfile;
 import org.itdevelopers.mobius.users.domain.usecases.ISaveUser;
+
+import androidx.annotation.NonNull;
+import androidx.core.util.Preconditions;
 
 /**
  * 14/1/2019

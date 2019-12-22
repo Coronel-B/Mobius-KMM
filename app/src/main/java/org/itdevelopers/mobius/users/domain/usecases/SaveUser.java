@@ -1,13 +1,13 @@
 package org.itdevelopers.mobius.users.domain.usecases;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.NonNull;
-import android.support.v4.util.Preconditions;
+import androidx.annotation.NonNull;
+import androidx.core.util.Preconditions;
 
 import org.itdevelopers.mobius.users.data.IUsersRepository;
 import org.itdevelopers.mobius.users.domain.entities.User;
 
-import static android.support.v4.util.Preconditions.checkNotNull;
+import static androidx.core.util.Preconditions.checkNotNull;
 
 /**
  * 5/11/2019
