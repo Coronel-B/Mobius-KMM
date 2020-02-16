@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.techdev.mobius">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name="org.techdev.mobius.MainActivity"></activity>
+
+        <activity android:name="org.techdev.mobius.login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="org.techdev.mobius.addedituser.AddEditUserActivity"
+            android:parentActivityName="org.techdev.mobius.login.LoginActivity"
+            android:theme="@style/AppTheme.SignUp"
+            tools:targetApi="jelly_bean" />
+
+        <activity android:name="org.techdev.mobius.addedituseraccount.AddEditUserAccountActivity" />
+        <activity android:name="org.techdev.mobius.addedituserprofile.AddEditUserProfileActivity" />
+        <activity android:name="org.techdev.mobius.privacy.legal_and_policies.TermsOfService" />
+        <activity android:name="org.techdev.mobius.addedituserprofile.presentation.OriginLocalityPickerMapActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="org.techdev.mobius.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- Provider p/el acceso de archivos -->
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+    </application>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- With GPS -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- With Wifi or mobile cell data -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Galería -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Cámara -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>
