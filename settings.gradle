@@ -1,1 +1,5 @@
-include ':mobile', ':shared', ':model'
+include ':mobile', ':shared', ':buildSrc'
+include ':feature_signup'
+include ':feature_login'
+
+include ':model'//TODO: Borrar
