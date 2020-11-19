@@ -21,7 +21,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api project(':model')
+    api project(':domain')
     implementation "com.jakewharton.threetenabp:threetenabp:$rootProject.threetenabp"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }

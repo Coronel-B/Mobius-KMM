@@ -1,6 +1,8 @@
 include ':mobile', ':shared'
 
-include ':feature_signup'
-include ':feature_login'
+// Features
+include ':feature-sign-up'
+include ':feature-login'
 
-include ':model'
+include ':domain'
+include ':view'
