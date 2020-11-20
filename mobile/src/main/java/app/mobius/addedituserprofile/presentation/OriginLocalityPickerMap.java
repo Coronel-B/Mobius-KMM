@@ -27,7 +27,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 
 import java.io.IOException;
 import java.util.List;

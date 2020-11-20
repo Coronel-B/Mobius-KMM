@@ -12,7 +12,7 @@
     app:cardElevation="8dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="@dimen/keyline_1"
-    tools:context="app.mobius.mobius.app.mobius.addedituseraccount.presentation.AddEditUserAccountFragment">
+    tools:context="app.mobius.app.mobius.addedituseraccount.presentation.AddEditUserAccountFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

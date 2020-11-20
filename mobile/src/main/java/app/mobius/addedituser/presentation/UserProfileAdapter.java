@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.users.domain.entities.UserProfile;
 
 import androidx.annotation.NonNull;

@@ -1,4 +1,4 @@
-package app.mobius.mobius
+package app.mobius
 
 /**
  * PRO: Describe models that represent the status of the UI

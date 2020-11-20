@@ -2,5 +2,5 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path
         name="my_images"
-        path="Android/data/app.mobius.mobius/files/Pictures"/>
+        path="Android/data/app.mobius/files/Pictures"/>
 </paths>

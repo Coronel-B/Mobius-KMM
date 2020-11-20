@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

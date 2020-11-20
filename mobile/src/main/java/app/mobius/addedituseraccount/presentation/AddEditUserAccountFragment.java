@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.users.domain.entities.UserAccount;
 import app.mobius.util.TextWatcherLabelUtils;
 

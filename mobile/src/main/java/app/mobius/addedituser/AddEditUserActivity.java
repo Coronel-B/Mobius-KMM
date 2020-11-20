@@ -3,7 +3,7 @@ package app.mobius.addedituser;
 import android.os.Bundle;
 import android.view.Menu;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.addedituser.presentation.AddEditUserFragment;
 import app.mobius.addedituser.presentation.AddEditUserPresenter;
 import app.mobius.di.DependencyProvider;

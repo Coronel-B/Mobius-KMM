@@ -1,4 +1,4 @@
-package app.mobius.mobius;
+package app.mobius;
 
 import org.junit.Test;
 

@@ -3,7 +3,7 @@ package app.mobius.addedituser.presentation;
 import android.annotation.SuppressLint;
 import android.content.res.Resources;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.addedituseraccount.data.ICacheUserAccountStore;
 import app.mobius.addedituserprofile.data.ICacheUserProfileStore;
 import app.mobius.users.domain.entities.User;

@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.util.Patterns;
 
 import app.mobius.addedituseraccount.data.ICacheUserAccountStore;
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.users.domain.entities.UserAccount;
 
 import java.util.regex.Matcher;

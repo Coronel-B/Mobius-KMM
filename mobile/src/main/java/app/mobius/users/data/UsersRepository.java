@@ -5,12 +5,13 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import androidx.core.util.Preconditions;
+
 import org.jetbrains.annotations.NotNull;
-import app.mobius.mobius.R;
+
+import app.mobius.R;
 import app.mobius.users.data.cloud.ICloudUsersDataSource;
 import app.mobius.users.domain.entities.User;
-
-import androidx.core.util.Preconditions;
 
 /**
  * 6/1/2019

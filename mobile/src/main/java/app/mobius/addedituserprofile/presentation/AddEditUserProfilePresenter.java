@@ -14,7 +14,7 @@ import com.google.common.base.Preconditions;
 
 import app.mobius.addedituserprofile.AddEditUserProfileActivity;
 import app.mobius.addedituserprofile.data.ICacheUserProfileStore;
-import app.mobius.mobius.shared.util.LocalDateUtils;
+import app.mobius.shared.util.LocalDateUtils;
 import app.mobius.users.domain.entities.UserProfile;
 
 import androidx.annotation.NonNull;

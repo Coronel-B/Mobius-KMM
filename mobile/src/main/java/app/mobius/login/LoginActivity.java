@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import app.mobius.addedituser.AddEditUserActivity;
-import app.mobius.mobius.R;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import app.mobius.R;
+import app.mobius.addedituser.AddEditUserActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

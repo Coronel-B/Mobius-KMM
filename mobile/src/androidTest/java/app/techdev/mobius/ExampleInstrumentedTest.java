@@ -1,4 +1,4 @@
-package app.mobius.mobius;
+package app.mobius;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("app.mobius.mobius", appContext.getPackageName());
+        assertEquals("app.mobius", appContext.getPackageName());
     }
 }

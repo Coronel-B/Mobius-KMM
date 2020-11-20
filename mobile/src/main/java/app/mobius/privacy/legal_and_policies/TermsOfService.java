@@ -3,7 +3,7 @@ package app.mobius.privacy.legal_and_policies;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 
 public class TermsOfService extends AppCompatActivity {
 

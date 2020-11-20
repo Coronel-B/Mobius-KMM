@@ -25,19 +25,19 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.common.util.IOUtils;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.common.base.Preconditions;
 import com.jakewharton.threetenabp.AndroidThreeTen;
-
-import app.mobius.addedituserprofile.AddEditUserProfileActivity;
-import app.mobius.mobius.R;
-import app.mobius.privacy.legal_and_policies.TermsOfService;
-import app.mobius.users.domain.entities.UserProfile;
-import app.mobius.mobius.shared.util.LocalDateUtils;
-import app.mobius.util.TextWatcherLabelUtils;
 
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
@@ -50,12 +50,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Date;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.core.content.FileProvider;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import app.mobius.R;
+import app.mobius.addedituserprofile.AddEditUserProfileActivity;
+import app.mobius.privacy.legal_and_policies.TermsOfService;
+import app.mobius.shared.util.LocalDateUtils;
+import app.mobius.users.domain.entities.UserProfile;
+import app.mobius.util.TextWatcherLabelUtils;
 
 /**
  * 26/1/2019

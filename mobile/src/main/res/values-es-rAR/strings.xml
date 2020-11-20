@@ -3,7 +3,7 @@
 
     <string name="app_name">Möbius</string>
 
-    <string name="file_provider_authority">app.mobius.mobius.fileprovider</string>
+    <string name="file_provider_authority">app.mobius.fileprovider</string>
 
     <string name="not_yet_registered">Aún no estoy registrado</string>
 

@@ -9,7 +9,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 
 /**
  * 16/1/2019

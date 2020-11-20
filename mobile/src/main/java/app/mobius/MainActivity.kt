@@ -1,4 +1,4 @@
-package app.mobius.mobius
+package app.mobius
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

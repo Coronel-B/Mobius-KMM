@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.mobius.mobius.app.mobius.privacy.legal_and_policies.TermsOfService">
+    tools:context="app.mobius.app.mobius.privacy.legal_and_policies.TermsOfService">
 
     <TextView
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package app.mobius.mobius.shared.data.login
+package app.mobius.shared.data.login
 
 /**
  * PRO: Describe models that represent the status of the Login screen

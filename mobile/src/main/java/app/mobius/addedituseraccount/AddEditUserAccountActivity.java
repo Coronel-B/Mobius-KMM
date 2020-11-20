@@ -10,7 +10,7 @@ import app.mobius.addedituser.AddEditUserActivity;
 import app.mobius.addedituseraccount.presentation.AddEditUserAccountFragment;
 import app.mobius.addedituseraccount.presentation.AddEditUserAccountPresenter;
 import app.mobius.di.DependencyProvider;
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.users.domain.entities.UserAccount;
 
 /**

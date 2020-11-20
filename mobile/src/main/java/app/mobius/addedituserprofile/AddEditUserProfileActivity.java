@@ -9,7 +9,7 @@ import android.view.Menu;
 
 import app.mobius.addedituser.AddEditUserActivity;
 import app.mobius.di.DependencyProvider;
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.addedituserprofile.presentation.AddEditUserProfileFragment;
 import app.mobius.addedituserprofile.presentation.AddEditUserProfilePresenter;
 import app.mobius.users.domain.entities.UserProfile;

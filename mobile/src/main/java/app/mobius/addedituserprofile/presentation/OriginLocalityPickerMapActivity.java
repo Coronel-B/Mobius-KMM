@@ -5,7 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 
 public class OriginLocalityPickerMapActivity extends AppCompatActivity {
 

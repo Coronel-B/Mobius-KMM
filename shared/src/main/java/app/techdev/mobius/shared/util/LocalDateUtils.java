@@ -1,4 +1,4 @@
-package app.mobius.mobius.shared.util;
+package app.mobius.shared.util;
 
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;

@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputLayout;
 
 import app.mobius.addedituser.AddEditUserActivity;
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.addedituseraccount.AddEditUserAccountActivity;
 import app.mobius.addedituserprofile.AddEditUserProfileActivity;
 import app.mobius.users.domain.entities.UserAccount;

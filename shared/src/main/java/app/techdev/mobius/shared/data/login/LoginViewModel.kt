@@ -1,4 +1,4 @@
-package app.mobius.mobius.shared.data.login
+package app.mobius.shared.data.login
 
 class LoginViewModel {
 }

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 import app.mobius.users.domain.entities.UserAccount;
 
 import androidx.annotation.NonNull;

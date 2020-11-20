@@ -5,7 +5,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
-import app.mobius.mobius.R;
+import app.mobius.R;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

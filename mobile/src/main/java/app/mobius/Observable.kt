@@ -1,4 +1,4 @@
-package app.mobius.mobius
+package app.mobius
 
 /**
  * PRO: Permite que una clase pueda ser observada
