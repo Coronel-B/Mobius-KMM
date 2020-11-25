@@ -1,9 +1,0 @@
-include ':androidApp', ':old-shared'
-
-// Features
-include ':feature-sign-up'
-include ':feature-login'
-
-include ':domain'
-include ':view'
-include ':iosApp'
