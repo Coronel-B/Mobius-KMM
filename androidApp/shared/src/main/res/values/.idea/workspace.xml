@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d42ad95f-880b-414d-9990-fcb5fc63e325" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../Clean Architecture" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/sampledata/profiles" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/Observable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/ScreenState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/login/LoginInteractor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/login/LoginState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/login/LoginViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../model/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../model/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/org/techdev/mobius/shared/data/asd.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/org/techdev/mobius/shared/domain/UseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/androidTest/java/org/itdevelopers/mobius/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/androidTest/java/org/techdev/mobius/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/debug/res/values/google_maps_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/debug/res/values/google_maps_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/Estructura de paquetes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/TODOs" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/TODOs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/AddEditUserActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/AddEditUserActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/domain/entities/UserAccountUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/domain/entities/UserAccountUi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/domain/entities/UserProfileUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/domain/entities/UserProfileUi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/presentation/AddEditUserFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/presentation/AddEditUserFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/presentation/AddEditUserMvp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/presentation/AddEditUserMvp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/presentation/AddEditUserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/presentation/AddEditUserPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/presentation/UserAccountAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/presentation/UserAccountAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituser/presentation/UserProfileAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituser/presentation/UserProfileAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituseraccount/AddEditUserAccountActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituseraccount/AddEditUserAccountActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituseraccount/data/CacheUserAccountStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituseraccount/data/CacheUserAccountStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituseraccount/data/ICacheUserAccountStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituseraccount/data/ICacheUserAccountStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituseraccount/presentation/AddEditUserAccountFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituseraccount/presentation/AddEditUserAccountFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituseraccount/presentation/AddEditUserAccountMvp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituseraccount/presentation/AddEditUserAccountMvp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituseraccount/presentation/AddEditUserAccountPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituseraccount/presentation/AddEditUserAccountPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/AddEditUserProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/AddEditUserProfileActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/data/CacheUserProfileStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/data/CacheUserProfileStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/data/ICacheUserProfileStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/data/ICacheUserProfileStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/AcknowledgeDniDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/AcknowledgeDniDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/AcknowledgeDniIdDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/AcknowledgeDniIdDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/AddEditUserProfileFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/AddEditUserProfileFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/AddEditUserProfileMvp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/AddEditUserProfileMvp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/AddEditUserProfilePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/AddEditUserProfilePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/BirthdatePickerDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/BirthdatePickerDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/OriginLocalityPickerMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/OriginLocalityPickerMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/addedituserprofile/presentation/OriginLocalityPickerMapActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/addedituserprofile/presentation/OriginLocalityPickerMapActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/di/DependencyProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/di/DependencyProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/login/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/login/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/privacy/legal_and_policies/TermsOfService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/privacy/legal_and_policies/TermsOfService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/data/IUsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/data/IUsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/data/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/data/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/data/cloud/CloudUsersDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/data/cloud/CloudUsersDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/data/cloud/ICloudUsersDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/data/cloud/ICloudUsersDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/domain/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/domain/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/domain/entities/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/domain/entities/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/domain/entities/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/domain/entities/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/domain/usecases/ISaveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/domain/usecases/ISaveUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/users/domain/usecases/SaveUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/users/domain/usecases/SaveUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/util/DiscardChangesDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/util/DiscardChangesDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/util/LocalDateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/org/techdev/mobius/shared/util/LocalDateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/java/org/itdevelopers/mobius/util/TextWatcherLabelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/java/org/techdev/mobius/util/TextWatcherLabelUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable-hdpi/empty_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable-hdpi/empty_avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable-mdpi/empty_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable-mdpi/empty_avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable-xhdpi/empty_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable-xhdpi/empty_avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable-xxhdpi/empty_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable-xxhdpi/empty_avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable-xxxhdpi/empty_avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable-xxxhdpi/empty_avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_add_a_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_add_a_photo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_check.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_check.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_close.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_close.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_date_range.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_date_range.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_info_outline.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_info_outline.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_insert_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_insert_photo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/drawable/sample_dni_id.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/drawable/sample_dni_id.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/activity_add_edit_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_add_edit_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/activity_add_edit_user_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_add_edit_user_account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/activity_add_edit_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_add_edit_user_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/activity_origin_locality_picker_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_origin_locality_picker_map.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/activity_terms_of_service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/activity_terms_of_service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/alert_dialog_aknowledge_dni_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/alert_dialog_aknowledge_dni_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/fragment_add_edit_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/fragment_add_edit_user.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/fragment_add_edit_user_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/fragment_add_edit_user_account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/fragment_add_edit_user_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/fragment_add_edit_user_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/user_account_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/user_account_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/layout/user_profile_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/layout/user_profile_list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/menu/add_edit_user_account_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/menu/add_edit_user_account_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/menu/add_edit_user_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/menu/add_edit_user_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/menu/add_edit_user_profile_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/menu/add_edit_user_profile_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/values-es-rAR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/values-es-rAR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/release/res/values/google_maps_api.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/release/res/values/google_maps_api.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../app/src/test/java/org/itdevelopers/mobius/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../mobile/src/test/java/org/techdev/mobius/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../settings.gradle" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1XrvVcwjwrVGmsGcZA9AA16yp7q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d42ad95f-880b-414d-9990-fcb5fc63e325" name="Default Changelist" comment="" />
+      <created>1581817052548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581817052548</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

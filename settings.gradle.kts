@@ -16,17 +16,24 @@ pluginManagement {
 }
 rootProject.name = "Mobius"
 
-include ':androidApp'
-include ':old-shared'
+include(":androidApp")
+include(":iosApp")
+include(":shared_kmm")
 
-include ':feature_sign_up'
-include ':feature_login'
+// ------- BEGIN ANDROID --------
 
-include ':domain'
-include ':view'
-include ':iosApp'
-include ':shared'
+// Core
+include(":androidApp:shared")
+include(":androidApp:domain")
+include(":androidApp:view")
 
 // Features
 include(":androidApp:feature_sign_up")
 include(":androidApp:feature_login")
+
+// ------- END ANDROID --------
+
+
+
+
+
