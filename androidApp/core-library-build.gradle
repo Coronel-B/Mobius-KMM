@@ -1,0 +1,6 @@
+/**
+ * https://stackoverflow.com/a/65030997/5279996
+ */
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
