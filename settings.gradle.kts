@@ -34,6 +34,6 @@ include(":androidApp:feature_login")
 // ------- END ANDROID --------
 
 
-
-
-
+include(":shared_kmm:network")
+include(":shared_kmm:data_access")
+include(":shared_kmm:cryptographic_storage")
