@@ -4,5 +4,5 @@
 plugins {
     `com.android.library`
     `kotlin-android`
-    `kotlin-android-extensions`
+    `kotlin-parcelize`
 }

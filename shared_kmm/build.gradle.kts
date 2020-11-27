@@ -4,7 +4,7 @@ plugins {
     kotlin("multiplatform")
 //    kotlin("multiplatform") version "1.4.1"
     id("com.android.library")
-    id("kotlin-android-extensions")
+    id("kotlin-parcelize")
 }
 group = "org.itdevexpert.myapplication"
 version = "1.0-SNAPSHOT"
