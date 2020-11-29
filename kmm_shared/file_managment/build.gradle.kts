@@ -10,7 +10,7 @@ kotlin {
     ios {
         binaries {
             framework {
-                baseName = "shared_kmm:network"
+                baseName = "kmm_shared:file_managment"
             }
         }
     }

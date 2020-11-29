@@ -10,7 +10,7 @@ kotlin {
     ios {
         binaries {
             framework {
-                baseName = "shared_kmm:cryptographic_storage"
+                baseName = "kmm_shared:data_access"
             }
         }
     }

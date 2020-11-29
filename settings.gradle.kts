@@ -18,7 +18,7 @@ rootProject.name = "Mobius"
 
 include(":androidApp")
 include(":iosApp")
-include(":shared_kmm")
+include(":kmm_shared")
 
 // ------- BEGIN ANDROID --------
 
@@ -34,6 +34,8 @@ include(":androidApp:feature_login")
 // ------- END ANDROID --------
 
 
-include(":shared_kmm:network")
-include(":shared_kmm:data_access")
-include(":shared_kmm:cryptographic_storage")
+include(":kmm_shared:network_api")
+include(":kmm_shared:data_access")
+include(":kmm_shared:cryptographic_storage")
+include(":kmm_shared:file_managment")
+include(":kmm_shared:credential_managment")

@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":shared_kmm"))
+    implementation(project(':kmm_shared'))
 
     api(project(":androidApp:feature_login"))
     api(project(":androidApp:feature_sign_up"))
