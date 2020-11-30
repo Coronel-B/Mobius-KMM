@@ -6,16 +6,14 @@ plugins {
 }
 
 kotlin {
-
     android()
     ios {
         binaries {
             framework {
-                baseName = "kmm_shared:domain"
+                baseName = "kmm_shared:util"
             }
         }
     }
-
     sourceSets {
         val commonMain by getting
         val commonTest by getting {
@@ -28,7 +26,7 @@ kotlin {
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.13.1")
+                implementation("junit:junit:4.13")
             }
         }
         val iosMain by getting
@@ -37,10 +35,10 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(29)
     defaultConfig {
         minSdkVersion(24)
-        targetSdkVersion(30)
+        targetSdkVersion(29)
     }
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 }
