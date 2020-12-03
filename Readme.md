@@ -1,8 +1,12 @@
 # Mobius KMM (Kotlin Multiplatform Mobile)
 
 ###### Immortalizes the essence and consciousness of people
- 
- Android Jetpack Libraries
+
+___
+
+### Android App
+
+Android Jetpack Libraries
  --------------
  * Activity
  * AppCompat
@@ -24,13 +28,23 @@
  * ViewModel
  * Kotlin Coroutines
  
- 
  ##### Build Automation:
   * Gradle Kotlin DSL
+
+___
+ 
+### iOS App
+ 
+___
+
+ 
+##### Architecture:
+  * Clean
+  * Modularization by features
   
 ##### Specification:
   * Json API
-  * Open API Specification
+  * Open API 3.0
  
  ##### API Support:
   * http://www.möbius.app/support/api
