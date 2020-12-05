@@ -15,7 +15,14 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(D.Ktor.commonCore)
+                implementation(D.Ktor.commonJson)
+                implementation(D.Ktor.commonLogging)
+                implementation(D.Ktor.commonSerialization)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -24,6 +31,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                implementation(D.Ktor.androidCore)
                 implementation("com.squareup.okhttp3:okhttp:4.9.0")
             }
         }
@@ -33,7 +41,11 @@ kotlin {
                 implementation("junit:junit:4.13.1")
             }
         }
-        val iosMain by getting
+        val iosMain by getting {
+            dependencies {
+                implementation(D.Ktor.iOS)
+            }
+        }
         val iosTest by getting
     }
 }

@@ -1,0 +1,1 @@
+(Use buildSrc to abstract imperative logic)[https://docs.gradle.org/current/userguide/organizing_gradle_projects.html#sec:build_sources]
