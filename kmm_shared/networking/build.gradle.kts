@@ -14,7 +14,17 @@ kotlin {
             }
         }
     }
+
+    version = "0.0"
+
     sourceSets {
+        all {
+            languageSettings.apply {
+                useExperimentalAnnotation("kotlin.RequiresOptIn")
+                useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
+            }
+        }
+
         val commonMain by getting {
             dependencies {
                 implementation(D.Ktor.Common.commonCore)
@@ -23,6 +33,8 @@ kotlin {
                 implementation(D.Ktor.Common.commonLogging)
                 implementation(D.Ktor.Common.commonSerialization)
                 implementation(D.Ktor.Common.commonAuth)
+
+                implementation(D.Coroutines.common)
             }
         }
         val androidMain by getting {
@@ -30,6 +42,8 @@ kotlin {
                 implementation(D.Ktor.Android.androidOkHttp)
                 implementation(D.Ktor.Android.androidLogging)
                 implementation(D.Ktor.Android.androidSerialization)
+
+                implementation(D.Coroutines.android)
             }
         }
         val iosMain by getting {
@@ -52,6 +66,7 @@ kotlin {
                 implementation("junit:junit:4.13.1")
 
                 implementation(D.Ktor.Android.androidMock)
+                implementation(D.Coroutines.androidTest)
             }
         }
         val iosTest by getting {

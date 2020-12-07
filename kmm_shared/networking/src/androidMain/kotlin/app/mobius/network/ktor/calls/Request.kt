@@ -6,16 +6,7 @@ import io.ktor.http.*
 import io.ktor.util.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlin.jvm.JvmStatic
 
-/**
- *  When handling routes (Routing feature), or directly intercepting the pipeline (requests),
- *  you get a context with an
- *  ApplicationCall. That call contains a property called request.
- *  The main function for creating HTTP requests is request. All the request settings are generated
- *  using the HttpRequestBuilder.
- *  The request function has the suspend modifier, so requests can be executed in coroutines.
- */
 @KtorExperimentalAPI
 class Request {
 
@@ -28,9 +19,14 @@ class Request {
 
 }
 
-object TestRequest2 {
+@KtorExperimentalAPI
+object TestRequest {
+
     @JvmStatic
     fun main(args: Array<String>) {
-
+        /*GlobalScope.launch {
+            println(Request().getHtmlContent())
+        }*/
     }
+
 }

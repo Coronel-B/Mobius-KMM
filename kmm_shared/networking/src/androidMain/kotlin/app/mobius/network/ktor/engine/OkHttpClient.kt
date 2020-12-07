@@ -6,7 +6,7 @@ import io.ktor.client.engine.okhttp.*
 /**
  * Reason for use this client: https://stackoverflow.com/a/58585489/5279996
  */
-class OkHt2tpClient {
+class OkHttpClient {
 
     val client = HttpClient(OkHttp) {
         engine {

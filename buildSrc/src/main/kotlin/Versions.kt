@@ -11,11 +11,10 @@ object V {
 
     const val buildToolsVersion = "30.0.2"
     const val cocoapodsext = "0.11"
-    const val coroutines = "1.3.9-native-mt-2"
+    const val coroutines = "1.4.1"
     const val kermit = "0.1.8"
     const val karmok = "0.1.8"
-//    const val ktor = "1.4.2"
-    const val ktor = "1.4.0"
+    const val ktor = "1.4.2"
     const val junit = "4.13"
     const val material = "1.2.1"
     const val multiplatformSettings = "0.6.3"

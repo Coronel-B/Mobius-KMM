@@ -51,7 +51,7 @@ object D {
 
         const val common = "${coroutine}core:${V.coroutines}"
         const val android = "${coroutine}android:${V.coroutines}"
-        const val test = "${coroutine}test:${V.coroutines}"
+        const val androidTest = "${coroutine}test:${V.coroutines}"
     }
 
     object SqlDelight {
