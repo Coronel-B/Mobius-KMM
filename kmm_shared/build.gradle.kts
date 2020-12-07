@@ -5,7 +5,7 @@ plugins {
     id("com.android.library")
     id("kotlin-parcelize")
 }
-group = "org.itdevexpert.myapplication"
+group = "app.mobius.myapplication"
 version = "1.0-SNAPSHOT"
 
 repositories {
