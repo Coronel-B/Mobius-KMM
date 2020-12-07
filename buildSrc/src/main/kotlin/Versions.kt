@@ -34,4 +34,9 @@ object V {
         const val test = "1.3.0"
         const val testExt = "1.1.2"
     }
+
+    object OkHttp {
+        const val okhttp3 = "4.9.0"
+    }
+
 }

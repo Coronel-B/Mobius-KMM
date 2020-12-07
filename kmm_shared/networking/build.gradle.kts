@@ -17,36 +17,48 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation(D.Ktor.commonCore)
-                implementation(D.Ktor.commonJson)
-                implementation(D.Ktor.commonLogging)
-                implementation(D.Ktor.commonSerialization)
-            }
-        }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test-common"))
-                implementation(kotlin("test-annotations-common"))
+                implementation(D.Ktor.Common.commonCore)
+                implementation(D.Ktor.Common.commonCio)
+                implementation(D.Ktor.Common.commonJson)
+                implementation(D.Ktor.Common.commonLogging)
+                implementation(D.Ktor.Common.commonSerialization)
+                implementation(D.Ktor.Common.commonAuth)
             }
         }
         val androidMain by getting {
             dependencies {
-                implementation(D.Ktor.androidCore)
-                implementation("com.squareup.okhttp3:okhttp:4.9.0")
+                implementation(D.Ktor.Android.androidOkHttp)
+                implementation(D.Ktor.Android.androidLogging)
+                implementation(D.Ktor.Android.androidSerialization)
+            }
+        }
+        val iosMain by getting {
+            dependencies {
+                implementation(D.Ktor.iOS.iOSHttpClient)
+            }
+        }
+
+        val commonTest by getting {
+            dependencies {
+                implementation(kotlin("test-common"))
+                implementation(kotlin("test-annotations-common"))
+
+                implementation(D.Ktor.Common.commonMock)
             }
         }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13.1")
+
+                implementation(D.Ktor.Android.androidMock)
             }
         }
-        val iosMain by getting {
+        val iosTest by getting {
             dependencies {
-                implementation(D.Ktor.iOS)
+                implementation(D.Ktor.iOS.iOSMock)
             }
         }
-        val iosTest by getting
     }
 }
 
