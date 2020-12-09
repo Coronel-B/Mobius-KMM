@@ -89,7 +89,7 @@ object D {
 
         object iOS {
             const val iOSHttpClient = "${client}ios:${V.ktor}"
-            const val iOSMock = "${client}mock-native:1.3.1"
+            const val iOSMock = "${client}mock-native:${V.ktorMockNative}"
         }
 
     }
