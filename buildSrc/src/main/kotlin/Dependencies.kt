@@ -2,6 +2,7 @@
  * TODO Impl: https://developer.android.com/studio/write/lint
  * Acronym: https://www.acronymfinder.com/Dependency-(D).html
  */
+
 object D {
     const val androidGradlePlugin = "com.android.tools.build:gradle:${V.androidGradlePlugin}"
     const val cocoapodsext = "co.touchlab:kotlinnativecocoapods:${V.cocoapodsext}"
@@ -88,7 +89,7 @@ object D {
 
         object iOS {
             const val iOSHttpClient = "${client}ios:${V.ktor}"
-            const val iOSMock = "${client}mock-native:${V.ktor}"
+            const val iOSMock = "${client}mock-native:1.3.1"
         }
 
     }

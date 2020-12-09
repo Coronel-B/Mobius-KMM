@@ -15,6 +15,7 @@ object V {
     const val kermit = "0.1.8"
     const val karmok = "0.1.8"
     const val ktor = "1.4.2"
+    const val ktorMockNative = "1.3.1"
     const val junit = "4.13"
     const val material = "1.2.1"
     const val multiplatformSettings = "0.6.3"

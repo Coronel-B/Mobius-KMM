@@ -1,4 +1,4 @@
-package app.mobius.domain
+package org.itdevexpert.feature_sign_up
 
 import kotlin.test.Test
 import kotlin.test.assertTrue

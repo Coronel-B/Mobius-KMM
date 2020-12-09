@@ -17,7 +17,6 @@ pluginManagement {
 rootProject.name = "Mobius"
 
 include(":androidApp")
-include(":iosApp")
 include(":kmm_shared")
 
 // ------- BEGIN ANDROID --------
@@ -39,5 +38,6 @@ include(":kmm_shared:data_access")
 include(":kmm_shared:cryptographic_storage")
 include(":kmm_shared:file_managment")
 include(":kmm_shared:credential_managment")
-include(":kmm_shared:domain")
 include(":kmm_shared:util")
+include(":kmm_shared:feature_sign_up")
+include(":kmm_shared:domain")
