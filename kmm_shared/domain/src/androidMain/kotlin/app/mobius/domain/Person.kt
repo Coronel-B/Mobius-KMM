@@ -2,7 +2,7 @@ package app.mobius.domain
 
 import java.util.*
 
-data class Person(
-    val personUUID: UUID? = null,
-    val username: String = ""
+actual class Person actual constructor(
+    actual val personUUID: UUID,
+    actual val username: String
 )

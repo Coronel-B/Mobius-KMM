@@ -17,21 +17,34 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting
+
+
+        val commonMain by getting {
+            dependencies {
+                implementation(D.Common.uuid)
+            }
+        }
+
+        val androidMain by getting {
+
+        }
+
+        val iosMain by getting {
+
+        }
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13.1")
             }
         }
-        val iosMain by getting
         val iosTest by getting
     }
 }

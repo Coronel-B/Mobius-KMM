@@ -25,6 +25,10 @@ object V {
     const val serialization = "1.0.0"
     const val kotlinxDateTime = "0.1.1"
 
+    object Common {
+        const val uuid = "0.2.3"
+    }
+
     object AndroidX {
         const val appcompat = "1.2.0"
         const val constraintlayout = "2.0.4"

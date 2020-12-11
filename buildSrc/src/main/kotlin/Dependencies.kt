@@ -16,6 +16,14 @@ object D {
     const val stately = "co.touchlab:stately-common:${V.stately}"
     const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.kotlinxDateTime}"
 
+    object Common {
+
+//        https://github.com/benasher44/uuid
+        const val uuid = "com.benasher44:uuid:${V.Common.uuid}"
+
+    }
+
+
     object AndroidX {
         private const val lifecycle = "androidx.lifecycle:lifecycle-"
 
