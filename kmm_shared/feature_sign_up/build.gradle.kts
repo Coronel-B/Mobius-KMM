@@ -19,26 +19,40 @@ kotlin {
             dependencies {
                 api(project(":kmm_shared:domain"))
                 api(project(":kmm_shared:networking"))
+
+                /**
+                 * TODO | Gradle: Use the dependencies of the parent module (:networking)
+                 * Using Clean Project does not work
+                 */
+                implementation(D.Ktor.Common.commonCore)
+                implementation(D.Ktor.Common.commonSerialization)
             }
         }
+
+        val androidMain by getting {
+            dependencies {
+
+            }
+        }
+
+        val iosMain by getting
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting {
-            dependencies {
-
-            }
-        }
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13")
+
+//                TODO | Gradle: Use the dependencies of the parent module (:networking)
+                implementation(D.Ktor.Android.androidMock)
+                implementation(D.Coroutines.androidTest)
             }
         }
-        val iosMain by getting
         val iosTest by getting
     }
 }

@@ -1,4 +1,4 @@
-package org.itdevexpert.feature_sign_up
+package app.mobius.feature_sign_up
 
 import app.mobius.domain.dataTypes.UUID
 import platform.UIKit.UIDevice

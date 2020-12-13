@@ -19,6 +19,9 @@ kotlin {
     sourceSets {
 
 
+        /**
+         * UUID: https://stackoverflow.com/a/55426090/5279996
+         */
         val commonMain by getting {
             dependencies {
                 implementation(D.Common.uuid)
