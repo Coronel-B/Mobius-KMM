@@ -5,19 +5,19 @@ import app.mobius.domain.Country
 import com.benasher44.uuid.Uuid
 import kotlinx.datetime.LocalDate
 
-class IdentityVerification(
+data class IdentityVerification(
     val uuid: Uuid?,
     val documentationVerification: DocumentationVerification,
     val liveness: Liveness
 )
 
-class DocumentationVerification(
+data class DocumentationVerification(
     val uuid: Uuid?,
     val documentationVerificationStatus: DocumentationVerificationStatus = DocumentationVerificationStatus.UNSOLICITED,
     val dni: DNI? = null,
 )
 
-class DNI(
+data class DNI(
     val uuid: Uuid?,
     val surname: String,
     val name: String,
@@ -39,7 +39,7 @@ enum class DocumentationVerificationStatus {
     UNSOLICITED, PENDING, VERIFIED, BLOCKED
 }
 
-class Liveness(
+data class Liveness(
     val uuid: Uuid?,
     val livenessStatus: LivenessStatus = LivenessStatus.UNSOLICITED
 )

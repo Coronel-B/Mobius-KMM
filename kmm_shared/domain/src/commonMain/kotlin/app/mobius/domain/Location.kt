@@ -2,7 +2,7 @@ package app.mobius.domain
 
 import com.benasher44.uuid.Uuid
 
-class Location(
+data class Location(
     val uuid: Uuid?,
     val country: Country,
     val province: Province,
@@ -10,32 +10,32 @@ class Location(
     val direction: Direction? = null
 ) 
 
-class Country(
+data class Country(
     val uuid: Uuid?,
     val name: String,
     val locationLimits: LocationLimits,
 ) 
 
 
-class Province(
+data class Province(
     val uuid: Uuid?,
     val name: String,
     val locationLimits: LocationLimits,
 ) 
 
-class City(
+data class City(
     val uuid: Uuid?,
     val name: String,
     val locationLimits: LocationLimits,
 )
 
-class LocationLimits(
+data class LocationLimits(
     val uuid: Uuid?,
     val northeast: Coordinate,
     val southwest: Coordinate
 )
 
-class Direction(
+data class Direction(
     val uuid: Uuid?,
     val street: String,
     val number: Int,
@@ -44,7 +44,7 @@ class Direction(
     val coordinate: Coordinate
 )
 
-class Coordinate(
+data class Coordinate(
     val uuid: Uuid?,
     val lat: Double,
     val lng: Double,

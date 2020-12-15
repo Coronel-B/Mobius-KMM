@@ -5,33 +5,33 @@ import com.benasher44.uuid.Uuid
 /**
  *  Obs: Are manipulated by the person
  */
-class SecurityMethods(
+data class SecurityMethods(
     val uuid: Uuid?,
     val identityVerification: IdentityVerification? = null,
     val twoFactorAuth: TwoFactorAuth? = null,
     val antiPishingCode: AntiPishingCode? = null,
 )
 
-class TwoFactorAuth(
+data class TwoFactorAuth(
     val uuid: Uuid?,
     val googleAuthentication: GoogleAuth,
     val smsAuthentication: SMSAuthentication,
     val emailVerification: EmailVerification
 )
 
-class GoogleAuth(
+data class GoogleAuth(
     val uuid: Uuid?,
     val enable: Boolean = false,
     val verificationCode: Int
 )
 
-class SMSAuthentication(
+data class SMSAuthentication(
     val uuid: Uuid?,
     val enable: Boolean = false,
     val verificationCode: Int
 )
 
-class EmailVerification(
+data class EmailVerification(
     val uuid: Uuid?,
     val enable: Boolean = false,
     val emailVerificationStatus: EmailVerificationStatus = EmailVerificationStatus.UNCONFIRMED,
@@ -42,7 +42,7 @@ enum class EmailVerificationStatus {
     UNCONFIRMED, INVALID, PENDING, CONFIRMED
 }
 
-class AntiPishingCode(
+data class AntiPishingCode(
     val uuid: Uuid?,
     val enable: Boolean = false,
     val code: String

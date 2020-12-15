@@ -7,7 +7,7 @@ import kotlinx.datetime.LocalDate
  * Represents a authentication credential
  * TODO: Add app token
  */
-class Authentication(
+data class Authentication(
     val uuid: Uuid?,
     val session: Session,
     val basicAuth: BasicAuth
@@ -17,13 +17,13 @@ class Authentication(
  * Represents a traditional or basic authentication
  * OBS: Other methods will not be considered
  */
-class BasicAuth(
+data class BasicAuth(
     val uuid: Uuid?,
     val email: String,
     val password: Password,
 )
 
-class Password(
+data class Password(
     val uuid: Uuid?,
     val apiHashPassword: String,
     val dbHashPassword: String? = null,

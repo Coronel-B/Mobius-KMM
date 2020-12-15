@@ -3,7 +3,7 @@ package app.mobius.domain.setting.security
 import com.benasher44.uuid.Uuid
 import kotlinx.datetime.LocalDate
 
-class Token(
+data class Token(
     val uuid: Uuid?,
     val token: String? = null,
     val created: LocalDate, //TODO: Set now() as default

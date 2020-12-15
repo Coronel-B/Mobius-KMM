@@ -5,7 +5,7 @@ import com.benasher44.uuid.Uuid
 /**
  * @param securityLevel: [0,4]
  */
-class Security(
+data class Security(
     val uuid: Uuid?,
     val authentication: Authentication,
     val securityLevel: Byte = 0,

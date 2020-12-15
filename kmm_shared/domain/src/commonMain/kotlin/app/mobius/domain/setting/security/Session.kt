@@ -5,7 +5,7 @@ import com.benasher44.uuid.Uuid
 /**
  * TODO: Check whether to rename some type of authorization
  */
-class Session(
+data class Session(
     val uuid: Uuid?,
     val accessToken: AccessToken,
     val dailyReloadToken: DailyReloadToken,
@@ -18,7 +18,7 @@ class Session(
  * OBS: Dont use AccessToken as name to avoid conflicts of mapping TODO
  * @param token: Access token or API key to identify the person
  */
-class AccessToken(
+data class AccessToken(
     val uuid: Uuid?,
     val token: Token
 )
@@ -27,7 +27,7 @@ class AccessToken(
  * Represents a daily token to reload the AT
  * @param keepSessionDaily: Expires in 1 day but is optional for the person
  */
-class DailyReloadToken(
+data class DailyReloadToken(
     val uuid: Uuid?,
     val keepSessionDaily: Boolean = false,
     val token: Token
@@ -37,7 +37,7 @@ class DailyReloadToken(
  * Represents a monthly token to reload the dailyReloadToken
  * Obs: Expires in 1 month
  */
-class MonthlyReloadToken(
+data class MonthlyReloadToken(
     val uuid: Uuid?,
     val token: Token
 )
