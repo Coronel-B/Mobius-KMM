@@ -1,10 +1,11 @@
 package app.mobius.domain.setting.security
 
 import com.benasher44.uuid.Uuid
+import kotlinx.datetime.LocalDate
 
-data class Token(
+class Token(
     val uuid: Uuid?,
     val token: String? = null,
-    val created: Date = Date(),
-    val expiry: Date
+    val created: LocalDate, //TODO: Set now() as default
+    val expiry: LocalDate
 )

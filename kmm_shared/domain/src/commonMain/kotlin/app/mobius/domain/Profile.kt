@@ -1,9 +1,9 @@
 package app.mobius.domain
 
 import com.benasher44.uuid.Uuid
+import kotlinx.datetime.LocalDate
 
-// TODO: https://github.com/Kotlin/kotlinx-datetime
-expect class Profile(
+class Profile(
     uuid: Uuid?,
     name: String,
     surname: String,
@@ -13,14 +13,14 @@ expect class Profile(
     nickname: String?,
     biography: String?,
     phone: Phone,
-    birthdate: Date,
+    birthdate: LocalDate,
     sex: Sex,
     gender: Gender? = null
 ) {
 
 }
 
-expect class Phone(
+class Phone(
     uuid: Uuid?,
     codeCountry: String,
     codeArea: String,

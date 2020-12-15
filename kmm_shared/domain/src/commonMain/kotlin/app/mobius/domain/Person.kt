@@ -10,13 +10,13 @@ import com.benasher44.uuid.Uuid
 expect class Person(
     personUuid: Uuid?,
     username: String,
-    profile: Profile,
-    setting: Setting,
-    role: Role,
+//    profile: Profile,
+//    setting: Setting,
+//    role: Role,
 ) {
     val personUuid: Uuid?
     val username: String
-    val profile: Profile
-    val setting: Setting
-    val role: Role
+//    val profile: Profile
+//    val setting: Setting
+//    val role: Role
 }
