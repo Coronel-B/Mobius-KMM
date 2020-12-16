@@ -6,7 +6,7 @@ import com.benasher44.uuid.Uuid
  * TODO: Check whether to rename some type of authorization
  */
 data class Session(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val accessToken: AccessToken,
     val dailyReloadToken: DailyReloadToken,
     val monthlyReloadToken: MonthlyReloadToken,
@@ -19,7 +19,7 @@ data class Session(
  * @param token: Access token or API key to identify the person
  */
 data class AccessToken(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val token: Token
 )
 
@@ -28,7 +28,7 @@ data class AccessToken(
  * @param keepSessionDaily: Expires in 1 day but is optional for the person
  */
 data class DailyReloadToken(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val keepSessionDaily: Boolean = false,
     val token: Token
 )
@@ -38,6 +38,6 @@ data class DailyReloadToken(
  * Obs: Expires in 1 month
  */
 data class MonthlyReloadToken(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val token: Token
 )

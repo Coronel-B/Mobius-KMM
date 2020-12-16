@@ -1,8 +1,6 @@
 package app.mobius.domain.utils
 
-import kotlinx.datetime.Clock
-import kotlinx.datetime.TimeZone
-import kotlinx.datetime.toLocalDateTime
+import kotlinx.datetime.*
 import org.junit.Test
 
 class KotlinXDateTimeOperationsTest {
@@ -16,6 +14,9 @@ class KotlinXDateTimeOperationsTest {
 //        Converting an instant to local date and time components
         val datetimeInGMT3 = currentMoment.toLocalDateTime(TimeZone.of("GMT-3"))
         println(datetimeInGMT3)
+
+        println(currentLocalDate())
     }
 
 }
+

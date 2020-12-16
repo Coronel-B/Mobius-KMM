@@ -6,19 +6,19 @@ import com.benasher44.uuid.Uuid
 import kotlinx.datetime.LocalDate
 
 data class IdentityVerification(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val documentationVerification: DocumentationVerification,
     val liveness: Liveness
 )
 
 data class DocumentationVerification(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val documentationVerificationStatus: DocumentationVerificationStatus = DocumentationVerificationStatus.UNSOLICITED,
     val dni: DNI? = null,
 )
 
 data class DNI(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val surname: String,
     val name: String,
     val sex: Sex,
@@ -40,6 +40,6 @@ enum class DocumentationVerificationStatus {
 }
 
 data class Liveness(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val livenessStatus: LivenessStatus = LivenessStatus.UNSOLICITED
 )

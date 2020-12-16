@@ -8,7 +8,7 @@ import kotlinx.datetime.LocalDate
  * TODO: Add app token
  */
 data class Authentication(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val session: Session,
     val basicAuth: BasicAuth
 )
@@ -18,13 +18,13 @@ data class Authentication(
  * OBS: Other methods will not be considered
  */
 data class BasicAuth(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val email: String,
     val password: Password,
 )
 
 data class Password(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val apiHashPassword: String,
     val dbHashPassword: String? = null,
     val resetPasswordToken: String? = null,

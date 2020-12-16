@@ -4,7 +4,7 @@ import app.mobius.domain.LivenessStatus
 import com.benasher44.uuid.Uuid
 
 data class Role(
-    val uuid: Uuid?,
+    val uuid: Uuid? = null,
     val livenessStatus: LivenessStatus = LivenessStatus.UNSOLICITED,
     val securityLevel: Byte = 0,
     val subscription: Subscription,

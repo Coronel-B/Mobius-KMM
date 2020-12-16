@@ -10,8 +10,9 @@ import com.benasher44.uuid.Uuid
 data class Person(
     val personUuid: Uuid?,
     val username: String,
-    val profile: Profile,
+    val profile: Profile?,
 //    setting: Setting,
 //    role: Role,
 ) {
+    constructor() : this(null, "", null)
 }

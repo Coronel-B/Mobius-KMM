@@ -13,7 +13,7 @@ class PersonRepositoryCloudTest {
 
     @Test
     fun addPerson() {
-        val person = Person(null, "")
+        val person = Person()
         runBlocking {
             val result = personRepositoryCloud.addPerson(person)
             assert(result.status.isSuccess())
