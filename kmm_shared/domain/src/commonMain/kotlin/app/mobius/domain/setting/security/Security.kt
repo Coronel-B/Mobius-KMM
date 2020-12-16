@@ -10,4 +10,6 @@ data class Security(
     val authentication: Authentication,
     val securityLevel: Byte = 0,
     val securityMethods: SecurityMethods? = null,
-)
+) {
+    constructor() : this(authentication = Authentication(), securityLevel = 0)
+}

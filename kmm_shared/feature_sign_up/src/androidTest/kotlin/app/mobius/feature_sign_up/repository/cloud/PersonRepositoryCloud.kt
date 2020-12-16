@@ -20,4 +20,7 @@ class PersonRepositoryCloudTest {
         }
     }
 
+    @Test
+    fun some2() {}
+
 }

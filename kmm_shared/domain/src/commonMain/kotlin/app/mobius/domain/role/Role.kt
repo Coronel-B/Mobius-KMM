@@ -9,5 +9,6 @@ data class Role(
     val securityLevel: Byte = 0,
     val subscription: Subscription,
     val permissions: List<Permission>
-
-)
+) {
+    constructor() : this(subscription = Subscription(), permissions = listOf())
+}

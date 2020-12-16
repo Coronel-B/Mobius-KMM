@@ -10,7 +10,9 @@ data class Session(
     val accessToken: AccessToken,
     val dailyReloadToken: DailyReloadToken,
     val monthlyReloadToken: MonthlyReloadToken,
-)
+) {
+    constructor() : this(accessToken = AccessToken(), dailyReloadToken = DailyReloadToken(), monthlyReloadToken = MonthlyReloadToken())
+}
 
 /**
  * Represents the dataAccess token or AT
@@ -21,7 +23,9 @@ data class Session(
 data class AccessToken(
     val uuid: Uuid? = null,
     val token: Token
-)
+) {
+    constructor() : this(token = Token())
+}
 
 /**
  * Represents a daily token to reload the AT
@@ -31,7 +35,9 @@ data class DailyReloadToken(
     val uuid: Uuid? = null,
     val keepSessionDaily: Boolean = false,
     val token: Token
-)
+) {
+    constructor() : this(token = Token())
+}
 
 /**
  * Represents a monthly token to reload the dailyReloadToken
@@ -40,4 +46,6 @@ data class DailyReloadToken(
 data class MonthlyReloadToken(
     val uuid: Uuid? = null,
     val token: Token
-)
+) {
+    constructor() : this(token = Token())
+}

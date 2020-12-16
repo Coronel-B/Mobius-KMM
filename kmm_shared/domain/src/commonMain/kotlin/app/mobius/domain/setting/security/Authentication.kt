@@ -11,7 +11,9 @@ data class Authentication(
     val uuid: Uuid? = null,
     val session: Session,
     val basicAuth: BasicAuth
-)
+) {
+    constructor() : this(session = Session(), basicAuth = BasicAuth())
+}
 
 /**
  * Represents a traditional or basic authentication
@@ -21,7 +23,9 @@ data class BasicAuth(
     val uuid: Uuid? = null,
     val email: String,
     val password: Password,
-)
+) {
+    constructor() : this(email = "", password = Password())
+}
 
 data class Password(
     val uuid: Uuid? = null,
@@ -29,4 +33,6 @@ data class Password(
     val dbHashPassword: String? = null,
     val resetPasswordToken: String? = null,
     val resetPasswordTokenExpire: LocalDate? = null,
-)
+) {
+    constructor() : this(apiHashPassword = "-1")
+}

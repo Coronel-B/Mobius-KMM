@@ -8,7 +8,9 @@ data class Setting(
     val account: Account,
     val security: Security,
     val theme: Theme = Theme.DEFAULT
-)
+) {
+    constructor() : this(account = Account(), security = Security())
+}
 
 enum class Theme {
     LIGHT, DARK, DEFAULT

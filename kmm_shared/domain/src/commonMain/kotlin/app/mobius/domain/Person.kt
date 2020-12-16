@@ -8,11 +8,12 @@ import com.benasher44.uuid.Uuid
  * Be endowed with reason, self-aware and possessed of their own person
  */
 data class Person(
-    val personUuid: Uuid?,
+    val uuid: Uuid? = null,
     val username: String,
     val profile: Profile?,
-//    setting: Setting,
-//    role: Role,
+    val setting: Setting,
+    val role: Role,
 ) {
-    constructor() : this(null, "", null)
+    constructor() : this(username = "", profile = Profile(), setting = Setting(), role = Role())
 }
+
