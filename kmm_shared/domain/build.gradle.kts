@@ -5,10 +5,6 @@ plugins {
     id("com.android.library")
 }
 
-repositories {
-    maven(url = "https://kotlin.bintray.com/kotlinx/") //TODO | Gradle: soon will be just jcenter()
-}
-
 kotlin {
 
     android()
@@ -22,7 +18,6 @@ kotlin {
 
     sourceSets {
 
-
         /**
          * UUID: https://stackoverflow.com/a/55426090/5279996
          * Date: https://github.com/Kotlin/kotlinx-datetime
@@ -30,7 +25,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(D.Common.uuid)
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.1.1")
+                implementation(D.Common.kotlinxDateTime)
             }
         }
 

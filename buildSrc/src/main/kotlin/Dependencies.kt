@@ -14,13 +14,13 @@ object D {
     const val multiplatformSettingsTest = "com.russhwolf:multiplatform-settings-test:${V.multiplatformSettings}"
     const val robolectric = "org.robolectric:robolectric:${V.robolectric}"
     const val stately = "co.touchlab:stately-common:${V.stately}"
-    const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.kotlinxDateTime}"
 
     object Common {
 
 //        https://github.com/benasher44/uuid
         const val uuid = "com.benasher44:uuid:${V.Common.uuid}"
 
+        const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.kotlinxDateTime}"
     }
 
 
