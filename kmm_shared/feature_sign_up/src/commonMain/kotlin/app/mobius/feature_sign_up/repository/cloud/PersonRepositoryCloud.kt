@@ -1,6 +1,6 @@
 package app.mobius.feature_sign_up.repository.cloud
 
-import app.mobius.feature_sign_up.domain.mappers.PersonSignUpDto
+import app.mobius.feature_sign_up.domain.dto.PersonSignUpDto
 import app.mobius.network.engines.KtorHttpCLient
 import io.ktor.client.request.*
 import io.ktor.http.*
