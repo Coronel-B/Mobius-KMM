@@ -21,24 +21,23 @@ data class TwoFactorAuth(
 
 data class GoogleAuth(
     val uuid: Uuid? = null,
-    val enable: Boolean = false,
+    val verificationStatus: VerificationStatus = VerificationStatus.UNCONFIRMED,
     val verificationCode: Int
 )
 
 data class SMSAuthentication(
     val uuid: Uuid? = null,
-    val enable: Boolean = false,
+    val verificationStatus: VerificationStatus = VerificationStatus.UNCONFIRMED,
     val verificationCode: Int
 )
 
 data class EmailVerification(
     val uuid: Uuid? = null,
-    val enable: Boolean = false,
-    val emailVerificationStatus: EmailVerificationStatus = EmailVerificationStatus.UNCONFIRMED,
+    val verificationStatus: VerificationStatus = VerificationStatus.UNCONFIRMED,
     val token: Token? = null
 )
 
-enum class EmailVerificationStatus {
+enum class VerificationStatus {
     UNCONFIRMED, INVALID, PENDING, CONFIRMED
 }
 
