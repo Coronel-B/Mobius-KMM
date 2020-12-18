@@ -1,6 +1,6 @@
 package app.mobius.feature_sign_up.repository.cloud
 
-import app.mobius.domain.Person
+import app.mobius.feature_sign_up.domain.mappers.PersonSignUpDto
 import io.ktor.http.*
 import io.ktor.util.*
 import kotlinx.coroutines.runBlocking
@@ -13,7 +13,9 @@ class PersonRepositoryCloudTest {
 
     @Test
     fun addPerson() {
-        val person = Person()
+        val person = PersonSignUpDto(
+            username = "itdev"
+        )
         runBlocking {
             val result = personRepositoryCloud.addPerson(person)
             assert(result.status.isSuccess())
