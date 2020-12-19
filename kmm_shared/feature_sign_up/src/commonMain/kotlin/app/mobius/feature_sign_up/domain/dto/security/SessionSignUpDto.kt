@@ -4,7 +4,6 @@ import app.mobius.domain.utils.currentLocalDateTime
 import com.benasher44.uuid.Uuid
 import kotlinx.datetime.LocalDateTime
 
-
 /**
  * TODO: Check whether to rename some type of authorization
  */
@@ -17,7 +16,6 @@ data class SessionSignUpDto(
 /**
  * Represents the dataAccess token or AT
  * Expires in 5 minutes
- * OBS: Dont use AccessToken as name to avoid conflicts of mapping TODO
  * @param token: Access token or API key to identify the person
  */
 data class AccessTokenSignUpDto(
