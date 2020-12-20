@@ -17,9 +17,16 @@ object D {
 
     object Common {
 
-//        https://github.com/benasher44/uuid
+//
+        /**
+         * https://github.com/benasher44/uuid
+         * https://stackoverflow.com/a/55426090/5279996
+         */
         const val uuid = "com.benasher44:uuid:${V.Common.uuid}"
 
+        /**
+         * https://github.com/Kotlin/kotlinx-datetime
+         */
         const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.kotlinxDateTime}"
     }
 

@@ -18,10 +18,6 @@ kotlin {
 
     sourceSets {
 
-        /**
-         * UUID: https://stackoverflow.com/a/55426090/5279996
-         * Date: https://github.com/Kotlin/kotlinx-datetime
-         */
         val commonMain by getting {
             dependencies {
                 implementation(D.Common.uuid)
