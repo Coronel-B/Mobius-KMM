@@ -4,20 +4,13 @@ import app.mobius.credential_managment.config.GLOBAL_PASSWORD_APPLICATION
 import com.benasher44.uuid.Uuid
 import kotlinx.datetime.LocalDateTime
 
-
 data class AppCredentials(
     val uuid: Uuid,
+    val appGlobalSessionToken: AppGlobalSessionToken,
+    val consumer: ConsumerPeople,
     val environment: Environment,
     val password: String = GLOBAL_PASSWORD_APPLICATION,
-    val consumer: ConsumerPeople,
-    val version: Double,
-    val appGlobalSessionToken: AppGlobalSessionToken? = null
-)
-
-data class AppGlobalSessionToken(
-    val uuid: Uuid,
-    val token: String,
-    val expiry: LocalDateTime
+    val version: Double
 )
 
 enum class Environment {
@@ -28,6 +21,7 @@ data class ConsumerPeople(
     val uuid: Uuid,
     val platform: Platform
 )
+
 /**
  * @param name: i.e: Android
  * @param ecosystem: i.e: Auto, TV, Wear OS
