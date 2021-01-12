@@ -1,4 +1,4 @@
-package app.mobius.network.engines
+package app.mobius.network.ktor.engine
 
 /**
  *  . Most configurable HTTP client
@@ -6,8 +6,4 @@ package app.mobius.network.engines
  *  . It is the only one that supports following redirects and allows you to configure timeouts,
  *  proxies among other things
  */
-class ApacheHttpClient {
-
-//    TODO
-
-}
+class ApacheHttpClient

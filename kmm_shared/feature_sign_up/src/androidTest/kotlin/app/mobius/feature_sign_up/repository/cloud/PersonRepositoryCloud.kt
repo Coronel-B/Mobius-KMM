@@ -14,7 +14,7 @@ class PersonRepositoryCloudTest {
     @Test
     fun addPerson() {
         val person = PersonSignUpDto(
-            username = "itdev"
+            username = "Braian"
         )
         runBlocking {
             val result = personRepositoryCloud.addPerson(person)

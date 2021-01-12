@@ -1,8 +1,11 @@
 package app.mobius.network.engines
 
 import io.ktor.client.*
+import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
 import io.ktor.client.features.observer.*
+import io.ktor.client.request.*
+import io.ktor.http.*
 import io.ktor.util.*
 
 /**
@@ -46,6 +49,23 @@ class KtorHttpCLient {
 //            Providers config
         }
 
+        defaultRequest {
+            method = HttpMethod.Head
+            host = "http://localhost"
+            port = 8090
+
+            header("MOB-Authentication", "developerPw")
+            header("platform-name", "Android")
+            header("platform-ecosystem", "Mobile")
+        }
+
+    }
+
+
+    /**
+     * Source: https://ktor.io/docs/default-request.html#example
+     */
+    private fun installDefaultHeaders() {
 
     }
 

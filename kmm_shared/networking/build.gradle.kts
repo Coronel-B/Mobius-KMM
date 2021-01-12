@@ -27,6 +27,8 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
+                implementation(project(":kmm_shared:util"))
+
                 implementation(D.Ktor.Common.commonCore)
                 implementation(D.Ktor.Common.commonCio)
                 implementation(D.Ktor.Common.commonJson)
