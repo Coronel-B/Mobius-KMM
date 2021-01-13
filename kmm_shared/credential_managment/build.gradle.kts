@@ -1,13 +1,46 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
-// TODO: Get appAuthorizationPassword with script
-val appAuthorizationKey: String by project
-println(appAuthorizationKey)
+/**
+ * Describes the appAuthorizationKey from home properties on build time
+ * PRECONDITION: Add appAuthorizationKey property in ~/.gradle/gradle.properties with <YOUR-KEY>
+ *
+ * TODO: Migrate to a task
+ * TODO: do a task for addEditKeyAppAuthorizationDeveloper
+ *
+ * Source:
+ *  . Get variable with DSL: https://stackoverflow.com/a/59871066/5279996
+ *  . https://stackoverflow.com/a/46805257/5279996
+ */
+/*val mobiusKmmProperty_KeyAppAuthorizationDeveloper: String by project
+println(mobiusKmmProperty_KeyAppAuthorizationDeveloper)*/
+
+// --------------------
+
+/*buildScript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:+")
+    }
+}*/
 
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+//    id("com.codingfeline.buildkonfig")
 }
+
+
+
+/*buildkonfig {
+    packageName("com.codingfeline.buildkonfigsample")
+
+    defaultConfigs {
+        buildConfigField("STRING", "test", "testvalue")
+    }
+}*/
 
 kotlin {
     android()

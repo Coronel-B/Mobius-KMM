@@ -67,7 +67,6 @@ class KtorHttpCLient {
      * Source: https://ktor.io/docs/default-request.html#example
      */
     private fun installDefaultHeaders() {
-
     }
 
 

@@ -46,9 +46,9 @@ ___
   * Json API
   * Open API 3.0
   
-#### Setup
+#### See Setup in:
 
- * Add appAuthorizationKey property in ~/.gradle/gradle.properties with <YOUR-KEY>
+ * :kmm_shared:credential_managment -> Setup.md
  
  ##### API Support:
   * http://www.möbius.app/support/api
