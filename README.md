@@ -45,6 +45,10 @@ ___
 ##### Specification:
   * Json API
   * Open API 3.0
+  
+#### Setup
+
+ * Add appAuthorizationKey property in ~/.gradle/gradle.properties with <YOUR-KEY>
  
  ##### API Support:
   * http://www.möbius.app/support/api

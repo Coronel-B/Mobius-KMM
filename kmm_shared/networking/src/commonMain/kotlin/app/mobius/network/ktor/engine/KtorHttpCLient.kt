@@ -54,6 +54,7 @@ class KtorHttpCLient {
             host = "http://localhost"
             port = 8090
 
+//            TODO: Take values from external .gradle
             header("MOB-Authentication", "developerPw")
             header("platform-name", "Android")
             header("platform-ecosystem", "Mobile")

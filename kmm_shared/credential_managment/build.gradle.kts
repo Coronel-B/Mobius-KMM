@@ -1,5 +1,9 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
+// TODO: Get appAuthorizationPassword with script
+val appAuthorizationKey: String by project
+println(appAuthorizationKey)
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
