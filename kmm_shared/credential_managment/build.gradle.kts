@@ -16,31 +16,38 @@ println(mobiusKmmProperty_KeyAppAuthorizationDeveloper)*/
 
 // --------------------
 
-/*buildScript {
-    repositories {
-        jcenter()
-    }
 
-    dependencies {
-        classpath("com.codingfeline.buildkonfig:buildkonfig-gradle-plugin:+")
-    }
-}*/
-
+/**
+ * BuildKonfig: https://plugins.gradle.org/plugin/com.codingfeline.buildkonfig
+ */
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-//    id("com.codingfeline.buildkonfig")
+    id("com.codingfeline.buildkonfig") version "0.7.0"
 }
 
 
+/**
+ * Usage: Run $ ./gradlew generateBuildKonfig
+ */
+configure<com.codingfeline.buildkonfig.gradle.BuildKonfigExtension> {
+    packageName = "app.mobius.credential_managment"
 
-/*buildkonfig {
-    packageName("com.codingfeline.buildkonfigsample")
-
+    // default config is required
     defaultConfigs {
-        buildConfigField("STRING", "test", "testvalue")
+        buildConfigField(com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING, "keyAppAuthorizationDeveloper", "secretPw")
     }
-}*/
+
+    targetConfigs() {
+        android{}
+    }
+       /*android {
+            buildConfigField("STRING", "name2", "value2")
+        }
+        ios {
+            buildConfigField("STRING", "name3", "value3")
+        }*/
+}
 
 kotlin {
     android()
