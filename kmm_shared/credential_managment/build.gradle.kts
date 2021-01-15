@@ -1,8 +1,10 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
+import com.codingfeline.buildkonfig.gradle.TargetConfigDsl
 
 /**
  * Describes the appAuthorizationKey from home properties on build time
- * PRECONDITION: Add appAuthorizationKey property in ~/.gradle/gradle.properties with <YOUR-KEY>
+ * PRECONDITION: Variables exist as property in ~/.gradle/gradle.properties with <YOUR-KEY>
  *
  * TODO: Migrate to a task
  * TODO: do a task for addEditKeyAppAuthorizationDeveloper
@@ -11,10 +13,8 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
  *  . Get variable with DSL: https://stackoverflow.com/a/59871066/5279996
  *  . https://stackoverflow.com/a/46805257/5279996
  */
-/*val mobiusKmmProperty_KeyAppAuthorizationDeveloper: String by project
-println(mobiusKmmProperty_KeyAppAuthorizationDeveloper)*/
-
-// --------------------
+val mobiusKmmProperty_KeyAppAuthorizationDeveloper: String by project
+//val mobiusKmmProperty_KeyAppAuthorizationDeveloper = project.properties["mobiusKmmProperty_KeyAppAuthorizationDeveloper"].toString()
 
 
 /**
@@ -26,27 +26,30 @@ plugins {
     id("com.codingfeline.buildkonfig") version "0.7.0"
 }
 
-
 /**
- * Usage: Run $ ./gradlew generateBuildKonfig
+ * Using:
+ *      $ ./gradlew generateBuildKonfig
+ *
+ * Source: https://github.com/yshrsmz/BuildKonfig/issues/41
+ * Issue: https://github.com/yshrsmz/BuildKonfig/issues/44
  */
-configure<com.codingfeline.buildkonfig.gradle.BuildKonfigExtension> {
+buildkonfig {
     packageName = "app.mobius.credential_managment"
 
     // default config is required
     defaultConfigs {
-        buildConfigField(com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING, "keyAppAuthorizationDeveloper", "secretPw")
+        buildConfigField(
+            STRING, "MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY",
+//            project.properties["mobiusKmmProperty_KeyAppAuthorizationDeveloper"].toString()
+            "$mobiusKmmProperty_KeyAppAuthorizationDeveloper"
+        )
     }
 
-    targetConfigs() {
-        android{}
-    }
-       /*android {
-            buildConfigField("STRING", "name2", "value2")
-        }
-        ios {
-            buildConfigField("STRING", "name3", "value3")
-        }*/
+    targetConfigs(closureOf<NamedDomainObjectContainer<TargetConfigDsl>> {
+        create("android") {}
+        create("ios") { }
+    })
+
 }
 
 kotlin {

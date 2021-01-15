@@ -1,5 +1,6 @@
 package app.mobius.credential_managment.domain
 
+import app.mobius.credential_managment.BuildKonfig
 import com.benasher44.uuid.Uuid
 
 //TODO: Keep uuid ?
