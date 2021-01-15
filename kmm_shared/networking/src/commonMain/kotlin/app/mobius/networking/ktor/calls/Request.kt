@@ -1,12 +1,9 @@
-package app.mobius.network.ktor.calls
+package app.mobius.networking.ktor.calls
 
-import app.mobius.network.engines.KtorHttpCLient
+import app.mobius.networking.ktor.engine.KtorHttpCLient
 import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.util.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlin.jvm.JvmStatic
 
 /**
  *  When handling routes (Routing feature), or directly intercepting the pipeline (requests),

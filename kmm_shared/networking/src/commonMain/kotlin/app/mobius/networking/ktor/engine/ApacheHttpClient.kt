@@ -1,4 +1,4 @@
-package app.mobius.network.ktor.engine
+package app.mobius.networking.ktor.engine
 
 /**
  *  . Most configurable HTTP client

@@ -1,4 +1,4 @@
-package app.mobius.network.ktor.engine
+package app.mobius.networking.ktor.engine
 
 import app.mobius.util.annotations.Unimplemented
 import io.ktor.client.*

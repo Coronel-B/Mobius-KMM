@@ -1,5 +1,6 @@
-package app.mobius.network.engines
+package app.mobius.networking.ktor.engine
 
+import app.mobius.credential_managment.config.Config.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
@@ -54,10 +55,9 @@ class KtorHttpCLient {
             host = "http://localhost"
             port = 8090
 
-//            TODO: Take values from external .gradle
-            header("MOB-Authentication", "developerPw")
-            header("platform-name", "Android")
-            header("platform-ecosystem", "Mobile")
+            header("MOBIUS-KMM-authorization", MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY)
+            header("MOBIUS-KMM-platform-name", "Android")
+            header("MOBIUS-KMM-platform-ecosystem", "Mobile")
         }
 
     }

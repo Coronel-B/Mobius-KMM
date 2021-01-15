@@ -40,3 +40,7 @@ data class Platform(
     val name: String,
     val ecosystem: String
 )
+
+object Some {
+    val test = BuildKonfig.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY
+}

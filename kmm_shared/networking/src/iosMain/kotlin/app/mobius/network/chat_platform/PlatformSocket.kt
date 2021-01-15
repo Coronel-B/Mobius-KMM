@@ -1,6 +1,7 @@
 package app.mobius.network.chat_platform
 
 //iOS
+import app.mobius.networking.chat_platform.PlatformSocketListener
 import platform.Foundation.*
 import platform.darwin.NSObject
 

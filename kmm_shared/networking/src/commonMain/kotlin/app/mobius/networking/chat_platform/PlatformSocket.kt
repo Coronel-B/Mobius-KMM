@@ -1,4 +1,4 @@
-package app.mobius.network.chat_platform
+package app.mobius.networking.chat_platform
 
 /**
  * Chat for send and receive messages from a WebSocket

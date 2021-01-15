@@ -28,6 +28,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(project(":kmm_shared:util"))
+                implementation(project(":kmm_shared:credential_managment"))
 
                 implementation(D.Ktor.Common.commonCore)
                 implementation(D.Ktor.Common.commonCio)

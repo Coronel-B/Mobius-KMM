@@ -1,5 +1,6 @@
-package app.mobius.network.ktor.calls
+package app.mobius.networking.ktor.calls
 
+import app.mobius.networking.ktor.calls.Request
 import io.ktor.util.*
 import kotlinx.coroutines.runBlocking
 import org.junit.Test

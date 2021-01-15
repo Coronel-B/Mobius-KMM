@@ -1,4 +1,4 @@
-package app.mobius.network.ktor.calls
+package app.mobius.networking.ktor.calls
 
 import io.ktor.util.*
 import kotlinx.coroutines.*

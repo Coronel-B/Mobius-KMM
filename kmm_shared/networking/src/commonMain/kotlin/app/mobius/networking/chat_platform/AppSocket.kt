@@ -1,4 +1,4 @@
-package app.mobius.network.chat_platform
+package app.mobius.networking.chat_platform
 
 class AppSocket(url: String) {
     private val ws = PlatformSocket(url)
