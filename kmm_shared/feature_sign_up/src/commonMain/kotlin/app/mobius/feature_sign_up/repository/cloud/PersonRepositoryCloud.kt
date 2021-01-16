@@ -25,7 +25,6 @@ class PersonRepositoryCloud : PersonRepository {
             encodedPath = path
         }
         body = PersonSignUpDto(username = "itdev")
-
     }
 
 }

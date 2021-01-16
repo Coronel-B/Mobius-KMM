@@ -2,7 +2,8 @@
 
 ###### Immortalizes the essence and consciousness of people
 
-___
+## Code of Conduct
+Please see our [code of conduct](https://github.com/Coronel-B/Mobius-Android/blob/master/documentation/CODE_OF_CONDUCT.md)
 
 ### Android App
 

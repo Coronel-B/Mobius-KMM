@@ -22,7 +22,7 @@ kotlin {
                 api(project(":kmm_shared:networking"))
 
                 /**
-                 * TODO | Gradle: Use the dependencies of the parent module (:networking)
+                 * TODO | Gradle: Refactor for use the dependencies of the parent module (:networking)
                  * Using Clean Project does not work
                  */
                 implementation(D.Ktor.Common.commonCore)
@@ -51,7 +51,7 @@ kotlin {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13")
 
-//                TODO | Gradle: Use the dependencies of the parent module (:networking)
+//                TODO | Gradle: Refactor for use the dependencies of the parent module (:networking)
                 implementation(D.Ktor.Android.androidMock)
                 implementation(D.Coroutines.androidTest)
             }
