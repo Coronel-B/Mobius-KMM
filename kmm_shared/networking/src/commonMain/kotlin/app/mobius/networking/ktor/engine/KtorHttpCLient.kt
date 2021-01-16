@@ -1,6 +1,7 @@
 package app.mobius.networking.ktor.engine
 
-import app.mobius.credential_managment.config.Config.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_API_KEY
+import app.mobius.credential_managment.config.Config.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_FULL_NAME
+import app.mobius.credential_managment.config.Config.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_SECRET_API_KEY
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
@@ -51,12 +52,17 @@ class KtorHttpCLient {
         install(Auth) {
 //            Providers config
 
+
+
+//            TODO: Use Digest Auth
+            digest {
+                username = MOBIUS_KMM_AUTHORIZATION_DEVELOPER_SECRET_API_KEY
+                password = MOBIUS_KMM_AUTHORIZATION_DEVELOPER_FULL_NAME
+            }
+
+//            For Login feature
             digest {  }
 
-            digest {
-                username = "Braian Coronel" //TODO: Get from gradle.properties
-                password = "secretPw"
-            }
         }
 
         /**
@@ -78,14 +84,14 @@ class KtorHttpCLient {
 
             header("Content-Type", "application/vnd.api+json")
 
-            header("MOBIUS-KMM-authorization", MOBIUS_KMM_AUTHORIZATION_DEVELOPER_API_KEY)
-            header("MOBIUS-KMM-developer-name", "Braian Coronel")   //TODO: Get from gradle.properties
+//            TODO: Use Digest Auth
+            header("MOBIUS-KMM-authorization", MOBIUS_KMM_AUTHORIZATION_DEVELOPER_SECRET_API_KEY)
+            header("MOBIUS-KMM-developer-name", MOBIUS_KMM_AUTHORIZATION_DEVELOPER_FULL_NAME)
             header("MOBIUS-KMM-platform-name", "Android")
             header("MOBIUS-KMM-platform-ecosystem", "Mobile")
         }
 
     }
-
 
     /**
      * Source: https://ktor.io/docs/default-request.html#example

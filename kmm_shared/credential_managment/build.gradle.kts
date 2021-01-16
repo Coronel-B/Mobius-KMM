@@ -13,8 +13,8 @@ import com.codingfeline.buildkonfig.gradle.TargetConfigDsl
  *  . Get variable with DSL: https://stackoverflow.com/a/59871066/5279996
  *  . https://stackoverflow.com/a/46805257/5279996
  */
-val mobiusKmmProperty_KeyAppAuthorizationDeveloper: String by project
-//val mobiusKmmProperty_KeyAppAuthorizationDeveloper = project.properties["mobiusKmmProperty_KeyAppAuthorizationDeveloper"].toString()
+val appAuthorizationDeveloperFullName = project.properties["mobiusKmmProperty_appAuthorizationDeveloperFullName"].toString()
+val mobiusKmmProperty_appAuthorizationDeveloperSecretApiKey: String by project
 
 
 /**
@@ -39,9 +39,12 @@ buildkonfig {
     // default config is required
     defaultConfigs {
         buildConfigField(
-            STRING, "MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY",
-//            project.properties["mobiusKmmProperty_KeyAppAuthorizationDeveloper"].toString()
-            "$mobiusKmmProperty_KeyAppAuthorizationDeveloper"
+            STRING, "MOBIUS_KMM_AUTHORIZATION_DEVELOPER_FULL_NAME",
+            "$appAuthorizationDeveloperFullName"
+        )
+        buildConfigField(
+            STRING, "MOBIUS_KMM_AUTHORIZATION_DEVELOPER_SECRET_API_KEY",
+            "$mobiusKmmProperty_appAuthorizationDeveloperSecretApiKey"
         )
     }
 

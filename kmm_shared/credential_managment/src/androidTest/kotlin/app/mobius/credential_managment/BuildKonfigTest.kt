@@ -6,8 +6,13 @@ import org.junit.Test
 class BuildKonfigTest {
 
     @Test
-    fun keyAppAuthorizationDeveloperExistsInBuildKonfig() {
-        Assert.assertTrue(BuildKonfig.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY.isNotEmpty())
+    fun appAuthorizationDeveloperFullNameExistsInBuildKonfig() {
+        Assert.assertTrue(BuildKonfig.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_FULL_NAME.isNotEmpty())
+    }
+
+    @Test
+    fun appAuthorizationDeveloperSecretApiKeyExistsInBuildKonfig() {
+        Assert.assertTrue(BuildKonfig.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_SECRET_API_KEY.isNotEmpty())
     }
 
 }

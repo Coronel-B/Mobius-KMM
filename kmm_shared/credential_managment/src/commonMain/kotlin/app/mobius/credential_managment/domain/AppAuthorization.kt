@@ -1,6 +1,5 @@
 package app.mobius.credential_managment.domain
 
-import app.mobius.credential_managment.BuildKonfig
 import com.benasher44.uuid.Uuid
 
 //TODO: Keep uuid ?
@@ -40,7 +39,3 @@ data class Platform(
     val name: String,
     val ecosystem: String
 )
-
-object Some {
-    val test = BuildKonfig.MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY
-}
