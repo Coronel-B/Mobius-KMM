@@ -44,7 +44,6 @@ kotlin {
             dependencies {
                 implementation(D.Ktor.Android.androidOkHttp)
                 implementation(D.Ktor.Android.androidLogging)
-                implementation(D.Ktor.Android.androidSerialization)
 
                 implementation(D.Coroutines.android)
             }

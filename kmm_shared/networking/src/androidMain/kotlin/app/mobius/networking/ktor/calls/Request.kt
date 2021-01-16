@@ -1,4 +1,4 @@
-package app.mobius.network.ktor.calls
+package app.mobius.networking.ktor.calls
 
 import app.mobius.networking.ktor.engine.KtorHttpCLient
 import io.ktor.client.request.*

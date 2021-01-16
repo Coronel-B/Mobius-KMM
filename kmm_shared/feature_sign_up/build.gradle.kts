@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    kotlin("plugin.serialization") version "1.4.10"
 }
 
 kotlin {
@@ -26,12 +27,14 @@ kotlin {
                  */
                 implementation(D.Ktor.Common.commonCore)
                 implementation(D.Ktor.Common.commonSerialization)
+
+                implementation(D.Common.uuid)
+                implementation(D.Common.kotlinxDateTime)
             }
         }
 
         val androidMain by getting {
             dependencies {
-
             }
         }
 

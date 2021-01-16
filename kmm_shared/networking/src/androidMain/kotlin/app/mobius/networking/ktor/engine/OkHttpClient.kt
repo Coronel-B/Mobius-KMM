@@ -1,4 +1,4 @@
-package app.mobius.network.ktor.engine
+package app.mobius.networking.ktor.engine
 
 import io.ktor.client.*
 import io.ktor.client.engine.okhttp.*

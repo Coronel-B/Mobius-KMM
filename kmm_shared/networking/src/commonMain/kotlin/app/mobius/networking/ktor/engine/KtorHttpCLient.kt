@@ -4,6 +4,8 @@ import app.mobius.credential_managment.config.Config.MOBIUS_KMM_AUTHORIZATION_DE
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.auth.*
+import io.ktor.client.features.json.*
+import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.observer.*
 import io.ktor.client.request.*
 import io.ktor.http.*
@@ -50,10 +52,24 @@ class KtorHttpCLient {
 //            Providers config
         }
 
+        /**
+         * https://ktor.io/docs/json-feature.html#kotlinx
+         */
+        install(JsonFeature) {
+            serializer = KotlinxSerializer(kotlinx.serialization.json.Json {
+                prettyPrint = true
+                isLenient = true
+            })
+        }
+
         defaultRequest {
-            method = HttpMethod.Head
+      /*      method = HttpMethod.Head
             host = "http://localhost"
-            port = 8090
+            port = 8090*/
+
+//            contentType(ContentType.Application.Json)
+
+            header("Content-Type", "application/vnd.api+json")
 
             header("MOBIUS-KMM-authorization", MOBIUS_KMM_AUTHORIZATION_DEVELOPER_KEY)
             header("MOBIUS-KMM-platform-name", "Android")

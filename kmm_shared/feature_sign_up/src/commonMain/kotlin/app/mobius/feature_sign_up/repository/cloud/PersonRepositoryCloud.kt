@@ -24,6 +24,8 @@ class PersonRepositoryCloud : PersonRepository {
             takeFrom("http://localhost:8090/")
             encodedPath = path
         }
+        body = PersonSignUpDto(username = "itdev")
+
     }
 
 }
