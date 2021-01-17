@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    kotlin("plugin.serialization") version "1.4.10"
 }
 
 kotlin {
@@ -21,17 +22,19 @@ kotlin {
                 api(project(":kmm_shared:networking"))
 
                 /**
-                 * TODO | Gradle: Use the dependencies of the parent module (:networking)
+                 * TODO | Gradle: Refactor for use the dependencies of the parent module (:networking)
                  * Using Clean Project does not work
                  */
                 implementation(D.Ktor.Common.commonCore)
                 implementation(D.Ktor.Common.commonSerialization)
+
+                implementation(D.Common.uuid)
+                implementation(D.Common.kotlinxDateTime)
             }
         }
 
         val androidMain by getting {
             dependencies {
-
             }
         }
 
@@ -48,7 +51,7 @@ kotlin {
                 implementation(kotlin("test-junit"))
                 implementation("junit:junit:4.13")
 
-//                TODO | Gradle: Use the dependencies of the parent module (:networking)
+//                TODO | Gradle: Refactor for use the dependencies of the parent module (:networking)
                 implementation(D.Ktor.Android.androidMock)
                 implementation(D.Coroutines.androidTest)
             }

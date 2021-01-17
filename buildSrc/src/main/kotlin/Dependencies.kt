@@ -99,7 +99,6 @@ object D {
             const val androidMock = "${client}mock-jvm:${V.ktor}"
 
             const val androidLogging = "${client}logging-jvm:${V.ktor}"
-            const val androidSerialization = "${client}serialization-jvm:${V.ktor}"
         }
 
         object iOS {

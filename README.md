@@ -2,7 +2,8 @@
 
 ###### Immortalizes the essence and consciousness of people
 
-___
+## Code of Conduct
+Please see our [code of conduct](https://github.com/Coronel-B/Mobius-Android/blob/master/documentation/CODE_OF_CONDUCT.md)
 
 ### Android App
 
@@ -45,6 +46,10 @@ ___
 ##### Specification:
   * Json API
   * Open API 3.0
+  
+#### See Setup in:
+
+ * :kmm_shared:credential_managment -> Setup.md
  
  ##### API Support:
   * http://www.möbius.app/support/api

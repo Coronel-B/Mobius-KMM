@@ -9,4 +9,6 @@ data class Token(
     val token: String? = null,
     val created: LocalDateTime = currentLocalDateTime(),
     val expiry: LocalDateTime
-)
+) {
+    constructor() : this(expiry = currentLocalDateTime())
+}

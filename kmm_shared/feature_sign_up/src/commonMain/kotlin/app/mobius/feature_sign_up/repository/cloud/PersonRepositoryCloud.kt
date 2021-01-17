@@ -1,7 +1,7 @@
 package app.mobius.feature_sign_up.repository.cloud
 
 import app.mobius.feature_sign_up.domain.dto.PersonSignUpDto
-import app.mobius.network.engines.KtorHttpCLient
+import app.mobius.networking.ktor.engine.KtorHttpCLient
 import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.util.*
@@ -24,6 +24,7 @@ class PersonRepositoryCloud : PersonRepository {
             takeFrom("http://localhost:8090/")
             encodedPath = path
         }
+        body = PersonSignUpDto(username = "itdev")
     }
 
 }

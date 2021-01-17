@@ -1,8 +1,58 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
+import com.codingfeline.buildkonfig.gradle.TargetConfigDsl
 
+/**
+ * Describes the appAuthorizationKey from home properties on build time
+ * PRECONDITION: Variables exist as property in ~/.gradle/gradle.properties with <YOUR-KEY>
+ *
+ * TODO: Migrate to a task
+ * TODO: do a task for addEditKeyAppAuthorizationDeveloper
+ *
+ * Source:
+ *  . Get variable with DSL: https://stackoverflow.com/a/59871066/5279996
+ *  . https://stackoverflow.com/a/46805257/5279996
+ */
+val appAuthorizationDeveloperFullName = project.properties["mobiusKmmProperty_appAuthorizationDeveloperFullName"].toString()
+val mobiusKmmProperty_appAuthorizationDeveloperSecretApiKey: String by project
+
+
+/**
+ * BuildKonfig: https://plugins.gradle.org/plugin/com.codingfeline.buildkonfig
+ */
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("com.codingfeline.buildkonfig") version "0.7.0"
+}
+
+/**
+ * Using:
+ *      $ ./gradlew generateBuildKonfig
+ *
+ * Source: https://github.com/yshrsmz/BuildKonfig/issues/41
+ * Issue: https://github.com/yshrsmz/BuildKonfig/issues/44
+ */
+buildkonfig {
+    packageName = "app.mobius.credential_managment"
+
+    // default config is required
+    defaultConfigs {
+        buildConfigField(
+            STRING, "MOBIUS_KMM_AUTHORIZATION_DEVELOPER_FULL_NAME",
+            "$appAuthorizationDeveloperFullName"
+        )
+        buildConfigField(
+            STRING, "MOBIUS_KMM_AUTHORIZATION_DEVELOPER_SECRET_API_KEY",
+            "$mobiusKmmProperty_appAuthorizationDeveloperSecretApiKey"
+        )
+    }
+
+    targetConfigs(closureOf<NamedDomainObjectContainer<TargetConfigDsl>> {
+        create("android") {}
+        create("ios") { }
+    })
+
 }
 
 kotlin {

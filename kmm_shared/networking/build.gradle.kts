@@ -27,6 +27,9 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
+                implementation(project(":kmm_shared:util"))
+                implementation(project(":kmm_shared:credential_managment"))
+
                 implementation(D.Ktor.Common.commonCore)
                 implementation(D.Ktor.Common.commonCio)
                 implementation(D.Ktor.Common.commonJson)
@@ -41,7 +44,6 @@ kotlin {
             dependencies {
                 implementation(D.Ktor.Android.androidOkHttp)
                 implementation(D.Ktor.Android.androidLogging)
-                implementation(D.Ktor.Android.androidSerialization)
 
                 implementation(D.Coroutines.android)
             }
