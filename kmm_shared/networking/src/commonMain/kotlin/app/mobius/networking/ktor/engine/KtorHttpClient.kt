@@ -26,9 +26,6 @@ class KtorHttpClient {
     @KtorExperimentalAPI
     val client = HttpClient {
 
-//        TODO: Install Logging
-//        TODO: Install timeout
-
         /**
          * Set up an observer for responses
          * Receiving HTTP errors in response don’t cause exceptions.
@@ -89,6 +86,19 @@ class KtorHttpClient {
             header("Content-Type", "application/vnd.api+json")
             header("Platform-Name", "Android")
             header("Platform-Ecosystem", "Mobile")
+        }
+
+
+//        TODO: Install Logging
+
+        /**
+         * . request timeout — time-bound of the whole request processing,
+         * . connect timeout — time-bound of the connection establishment,
+         * . socket timeout — time-bound of the interval between any two subsequent packets (read/write timeout).
+         */
+        install(HttpTimeout) {
+//            timeout config
+            requestTimeoutMillis = 30000
         }
 
     }
