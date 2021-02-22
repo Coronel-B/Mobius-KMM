@@ -10,7 +10,6 @@ import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.features.observer.*
 import io.ktor.client.request.*
-import io.ktor.http.*
 import io.ktor.util.*
 
 /**
@@ -88,18 +87,21 @@ class KtorHttpClient {
             header("Platform-Ecosystem", "Mobile")
         }
 
+        install(HttpTimeout) {
+            /**
+             * Timeout Config
+             *
+             * . request timeout — time-bound of the whole request processing,
+             * . connect timeout — time-bound of the connection establishment,
+             * . socket timeout — time-bound of the interval between any two subsequent packets (read/write timeout).
+             */
+            requestTimeoutMillis = 30000
+            connectTimeoutMillis = 30000
+            socketTimeoutMillis = 30000
+        }
 
 //        TODO: Install Logging
 
-        /**
-         * . request timeout — time-bound of the whole request processing,
-         * . connect timeout — time-bound of the connection establishment,
-         * . socket timeout — time-bound of the interval between any two subsequent packets (read/write timeout).
-         */
-        install(HttpTimeout) {
-//            timeout config
-            requestTimeoutMillis = 30000
-        }
 
     }
 
