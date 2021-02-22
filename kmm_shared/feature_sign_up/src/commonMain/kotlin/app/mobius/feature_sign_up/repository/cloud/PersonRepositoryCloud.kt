@@ -1,7 +1,7 @@
 package app.mobius.feature_sign_up.repository.cloud
 
 import app.mobius.feature_sign_up.domain.dto.PersonSignUpDto
-import app.mobius.networking.ktor.engine.KtorHttpCLient
+import app.mobius.networking.ktor.engine.KtorHttpClient
 import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.util.*
@@ -11,7 +11,7 @@ import io.ktor.client.statement.*
 @KtorExperimentalAPI
 class PersonRepositoryCloud : PersonRepository {
 
-    private val client = KtorHttpCLient().client
+    private val client = KtorHttpClient().client
 
     override suspend fun addPerson(personSignUpDto: PersonSignUpDto) : HttpResponse {
         return client.post {

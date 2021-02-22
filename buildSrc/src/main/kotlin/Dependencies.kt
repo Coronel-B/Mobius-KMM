@@ -97,8 +97,6 @@ object D {
         object Android {
             const val androidOkHttp = "${client}okhttp:${V.ktor}"
             const val androidMock = "${client}mock-jvm:${V.ktor}"
-
-            const val androidLogging = "${client}logging-jvm:${V.ktor}"
         }
 
         object iOS {

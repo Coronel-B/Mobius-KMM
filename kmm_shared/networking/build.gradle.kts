@@ -43,7 +43,6 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(D.Ktor.Android.androidOkHttp)
-                implementation(D.Ktor.Android.androidLogging)
 
                 implementation(D.Coroutines.android)
             }
