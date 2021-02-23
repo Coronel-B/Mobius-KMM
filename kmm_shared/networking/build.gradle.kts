@@ -32,8 +32,9 @@ kotlin {
 
                 implementation(D.Ktor.Common.commonCore)
                 implementation(D.Ktor.Common.commonCio)
-                implementation(D.Ktor.Common.commonJson)
                 implementation(D.Ktor.Common.commonLogging)
+                implementation(D.Ktor.Common.logback)
+                implementation(D.Ktor.Common.commonJson)
                 implementation(D.Ktor.Common.commonSerialization)
                 implementation(D.Ktor.Common.commonAuth)
 

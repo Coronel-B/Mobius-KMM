@@ -88,8 +88,11 @@ object D {
             const val commonMock = "${client}mock:${V.ktor}"
             const val commonCio = "${client}cio:${V.ktor}"
 
-            const val commonJson = "${client}json:${V.ktor}"
+//            Logging: https://ktor.io/docs/features-logging.html#add_dependencies
             const val commonLogging = "${client}logging:${V.ktor}"
+            const val logback = "ch.qos.logback:logback-classic:${V.Common.logback}"
+
+            const val commonJson = "${client}json:${V.ktor}"
             const val commonSerialization = "${client}serialization:${V.ktor}"
             const val commonAuth = "${client}auth:${V.ktor}"
         }

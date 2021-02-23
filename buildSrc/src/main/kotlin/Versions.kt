@@ -27,6 +27,7 @@ object V {
 
     object Common {
         const val uuid = "0.2.3"
+        const val logback = "1.2.3" //https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     }
 
     object AndroidX {

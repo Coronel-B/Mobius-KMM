@@ -8,6 +8,7 @@ import io.ktor.client.features.auth.*
 import io.ktor.client.features.auth.providers.*
 import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
+import io.ktor.client.features.logging.*
 import io.ktor.client.features.observer.*
 import io.ktor.client.request.*
 import io.ktor.util.*
@@ -77,10 +78,9 @@ class KtorHttpClient {
         }
 
         defaultRequest {
-      /*      method = HttpMethod.Head
-            host = "http://localhost"
-            port = 8090*/
-
+//            host = "localhost"
+            host = "127.0.0.1"
+            port = 8090
 
             header("Content-Type", "application/vnd.api+json")
             header("Platform-Name", "Android")
@@ -100,8 +100,13 @@ class KtorHttpClient {
             socketTimeoutMillis = 30000
         }
 
-//        TODO: Install Logging
-
+        /**
+         * https://ktor.io/docs/features-logging.html#configure_feature
+         */
+        install(Logging) {
+            logger = Logger.DEFAULT
+            level = LogLevel.HEADERS
+        }
 
     }
 

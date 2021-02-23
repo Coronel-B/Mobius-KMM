@@ -22,7 +22,6 @@ class PersonRepositoryCloud : PersonRepository {
 
     private fun HttpRequestBuilder.addPersonResult(path: String) {
         url {
-            takeFrom("http://localhost:8090/")
             encodedPath = path
         }
         body = PersonSignUpDto(username = "itdev")
