@@ -7,7 +7,7 @@ object V {
     const val compileSdk = 30
 
     const val kotlin = "1.4.10"
-    const val androidGradlePlugin = "4.0.1"
+    const val androidGradlePlugin = "7.0.0-alpha07"
 
     const val buildToolsVersion = "30.0.2"
     const val cocoapodsext = "0.11"
@@ -24,6 +24,13 @@ object V {
     const val stately = "1.1.0"
     const val serialization = "1.0.0"
     const val kotlinxDateTime = "0.1.1"
+
+    object Android {
+        object CompileOptions {
+//            const val sourceCompatibility = JavaVersion.VERSION_11
+//            const val targetCompatibility = JavaVersion.VERSION_11
+        }
+    }
 
     object Common {
         const val uuid = "0.2.3"

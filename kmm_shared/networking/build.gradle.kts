@@ -5,6 +5,25 @@ plugins {
     id("com.android.library")
 }
 
+android {
+    compileSdkVersion(30)
+    defaultConfig {
+        minSdkVersion(24)
+        targetSdkVersion(30)
+    }
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+
+//    TODO: Delete workaround for issue/KT-43944
+    configurations {
+        create("androidTestApi")
+        create("androidTestDebugApi")
+        create("androidTestReleaseApi")
+        create("testApi")
+        create("testDebugApi")
+        create("testReleaseApi")
+    }
+}
+
 kotlin {
     android()
     ios {
@@ -77,15 +96,6 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    compileSdkVersion(30)
-    defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(30)
-    }
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 }
 
 val packForXcode by tasks.creating(Sync::class) {

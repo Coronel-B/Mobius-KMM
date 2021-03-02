@@ -27,7 +27,7 @@ Android Jetpack Libraries
  * LiveData 
  * Flow
  * ViewModel
- * (Coroutines)[https://kotlinlang.org/docs/reference/coroutines-overview.html]
+ * [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html)
  
  ##### Build Automation:
   * Gradle Kotlin DSL
