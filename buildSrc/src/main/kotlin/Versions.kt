@@ -9,7 +9,7 @@ object V {
     const val kotlin = "1.4.10"
     const val androidGradlePlugin = "7.0.0-alpha07"
 
-    const val buildToolsVersion = "30.0.2"
+    const val buildToolsVersion = "30.0.3"
     const val cocoapodsext = "0.11"
     const val coroutines = "1.4.1"
     const val kermit = "0.1.8"

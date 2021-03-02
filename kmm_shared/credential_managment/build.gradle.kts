@@ -57,6 +57,7 @@ buildkonfig {
 
 android {
     compileSdkVersion(30)
+    buildToolsVersion("31.0.0 rc1")
     defaultConfig {
         minSdkVersion(24)
         targetSdkVersion(30)

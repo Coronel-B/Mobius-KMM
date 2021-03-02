@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdkVersion 30
+    buildToolsVersion "31.0.0 rc1"
 
     defaultConfig {
         versionCode 1

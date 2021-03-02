@@ -6,6 +6,7 @@ apply plugin: 'kotlin-parcelize'
 //https://stackoverflow.com/a/58574943/5279996
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion '31.0.0 rc1'
     defaultConfig {
         applicationId "app.mobius"
         minSdkVersion rootProject.ext.minSdkVersion
