@@ -32,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     /**
@@ -41,15 +41,18 @@ android {
      * PRECONDITION: These configurations have to be done in all modules / sub-modules
      * of the project that are KMM and the android {} block has to be before the kotlin {} block
      * TODO: Delete workaround for issue/KT-43944
-     * Source: https://stackoverflow.com/a/66433024/5279996
+     * Source:
+     *  . https://stackoverflow.com/a/66433024/5279996
+     *  . https://youtrack.jetbrains.com/issue/KT-43944#focus=Comments-27-4736409.0-0
      */
     configurations {
-        create("androidTestApi")
+        /*create("androidTestApi")
         create("androidTestDebugApi")
-        create("androidTestReleaseApi")
-        create("testApi")
-        create("testDebugApi")
-        create("testReleaseApi")
+        create("androidTestReleaseApi")*/
+
+        /*create("testApi") {}
+        create("testDebugApi") {}
+        create("testReleaseApi") {}*/
     }
 }
 

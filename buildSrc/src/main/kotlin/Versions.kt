@@ -27,8 +27,8 @@ object V {
 
     object Android {
         object CompileOptions {
-//            const val sourceCompatibility = JavaVersion.VERSION_11
-//            const val targetCompatibility = JavaVersion.VERSION_11
+//            const val sourceCompatibility = JavaVersion.VERSION_1_8
+//            const val targetCompatibility = JavaVersion.VERSION_1_8
         }
     }
 
