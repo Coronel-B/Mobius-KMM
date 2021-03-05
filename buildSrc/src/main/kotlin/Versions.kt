@@ -6,7 +6,7 @@ object V {
     const val targetSdk = 30
     const val compileSdk = 30
 
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.4.31"
     const val androidGradlePlugin = "7.0.0-alpha07"
 
     const val buildToolsVersion = "30.0.3"
