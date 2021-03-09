@@ -42,6 +42,38 @@ object D {
         const val lifecycleViewmodelExtensions = "${lifecycle}viewmodel-ktx:${V.AndroidX.lifecycle}"
         const val lifecycleLivedata = "${lifecycle}livedata:${V.AndroidX.lifecycle}"
         const val lifecycleExtension = "${lifecycle}extensions:${V.AndroidX.lifecycle}"
+
+        object JetpackCompose {
+            const val ui = "androidx.compose.ui:ui:${V.AndroidX.jetpackCompose}"
+
+            // Tooling support (Previews, etc.)
+            const val uiTooling = "androidx.compose.ui:ui-tooling:${V.AndroidX.jetpackCompose}"
+            
+            // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+            const val foundation = "androidx.compose.foundation:foundation:${V.AndroidX.jetpackCompose}"
+            
+            // Material Design
+            const val material = "androidx.compose.material:material:${V.AndroidX.jetpackCompose}"
+            
+            // Material design icons
+            const val materialIconsCore = "androidx.compose.material:material-icons-core:${V.AndroidX.jetpackCompose}"
+            const val materialIconsExtended = "androidx.compose.material:material-icons-extended:${V.AndroidX.jetpackCompose}"
+            
+            // Integration with activities
+            const val activityCompose = "androidx.activity:activity-compose:1.3.0-alpha03"
+            
+            // Integration with ViewModels
+            const val lifecycleViewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha02"
+            
+            // Integration with observables
+            const val runtimeLivedata = "androidx.compose.runtime:runtime-livedata:${V.AndroidX.jetpackCompose}"
+            const val runtimeRxJava2 = "androidx.compose.runtime:runtime-rxjava2:${V.AndroidX.jetpackCompose}"
+
+            // UI Tests
+            object AndroidTest {
+                const val uiTestJunit4 = "androidx.compose.ui:ui-test-junit4:${V.AndroidX.jetpackCompose}"
+            }
+        }
     }
 
     object AndroidXTest {

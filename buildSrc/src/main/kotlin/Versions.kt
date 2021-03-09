@@ -26,10 +26,14 @@ object V {
     const val kotlinxDateTime = "0.1.1"
 
     object Android {
+
+
+
         object CompileOptions {
 //            const val sourceCompatibility = JavaVersion.VERSION_1_8
 //            const val targetCompatibility = JavaVersion.VERSION_1_8
         }
+
     }
 
     object Common {
@@ -43,6 +47,12 @@ object V {
         const val core = "1.3.2"
         const val lifecycle = "2.2.0"
         const val recyclerview = "1.1.0"
+
+        /**
+         * https://github.com/android/compose-samples/tags
+         */
+        const val jetpackCompose = "1.0.0-beta01"
+
         const val test = "1.3.0"
         const val testExt = "1.1.2"
     }
