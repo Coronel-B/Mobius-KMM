@@ -1,6 +1,11 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
+//    id("org.jetbrains.kotlin.android") version "1.4.31"
+}
+
+repositories {
+
 }
 
 android {
@@ -30,9 +35,11 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    composeOptions {
+//    TODO: Use this when classpath will be 'com.android.tools.build:gradle:7.0.0-alpha02' or above
+    /*composeOptions {
+        kotlinCompilerVersion = "1.4.31"
         kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
-    }
+    }*/
 }
 
 dependencies {
@@ -41,6 +48,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("com.google.android.material:material:1.3.0")
 
+    implementation(D.AndroidX.JetpackCompose.compiler)  //TODO: Delete this when classpath will be 7.0.0-alpha02' or above
     implementation(D.AndroidX.JetpackCompose.ui)
     implementation(D.AndroidX.JetpackCompose.uiTooling)
     implementation(D.AndroidX.JetpackCompose.foundation)

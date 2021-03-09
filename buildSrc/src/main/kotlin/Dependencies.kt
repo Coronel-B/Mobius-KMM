@@ -44,6 +44,19 @@ object D {
         const val lifecycleExtension = "${lifecycle}extensions:${V.AndroidX.lifecycle}"
 
         object JetpackCompose {
+
+            /**
+             * TODO: Delete this dependencie when classpath will be 'com.android.tools.build:gradle:7.0.0-alpha02' (or above)
+                     and use the following:
+
+                         composeOptions {
+                            kotlinCompilerVersion = "1.4.31"
+                            kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
+                         }
+             * Source: https://stackoverflow.com/a/64485894/5279996
+             */
+            const val compiler = "androidx.compose.compiler:compiler:${V.AndroidX.jetpackCompose}"
+
             const val ui = "androidx.compose.ui:ui:${V.AndroidX.jetpackCompose}"
 
             // Tooling support (Previews, etc.)
