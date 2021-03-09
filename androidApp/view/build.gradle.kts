@@ -31,7 +31,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-beta01"
+        kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
     }
 }
 
@@ -40,10 +40,21 @@ dependencies {
     implementation("androidx.core:core-ktx:1.3.2")
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("com.google.android.material:material:1.3.0")
-    implementation("")
+
+    implementation(D.AndroidX.JetpackCompose.ui)
+    implementation(D.AndroidX.JetpackCompose.uiTooling)
+    implementation(D.AndroidX.JetpackCompose.foundation)
+    implementation(D.AndroidX.JetpackCompose.material)
+    implementation(D.AndroidX.JetpackCompose.materialIconsCore)
+    implementation(D.AndroidX.JetpackCompose.materialIconsExtended)
+    implementation(D.AndroidX.JetpackCompose.activityCompose)
+    implementation(D.AndroidX.JetpackCompose.lifecycleViewModelCompose)
+    implementation(D.AndroidX.JetpackCompose.runtimeLivedata)
+    implementation(D.AndroidX.JetpackCompose.runtimeRxJava2)
 
 //    Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    androidTestImplementation(D.AndroidX.JetpackCompose.AndroidTest.uiTestJunit4)
 }

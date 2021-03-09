@@ -5,11 +5,12 @@ object V {
     const val minSdk = 21
     const val targetSdk = 30
     const val compileSdk = 30
+    const val buildToolsVersion = "31.0.0 rc1"
+
 
     const val kotlin = "1.4.31"
     const val androidGradlePlugin = "7.0.0-alpha07"
 
-    const val buildToolsVersion = "30.0.3"
     const val cocoapodsext = "0.11"
     const val coroutines = "1.4.1"
     const val kermit = "0.1.8"
@@ -26,8 +27,6 @@ object V {
     const val kotlinxDateTime = "0.1.1"
 
     object Android {
-
-
 
         object CompileOptions {
 //            const val sourceCompatibility = JavaVersion.VERSION_1_8
