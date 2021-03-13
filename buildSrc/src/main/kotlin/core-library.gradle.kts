@@ -6,8 +6,3 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
 }
-
-configure<JavaPluginConvention> {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
