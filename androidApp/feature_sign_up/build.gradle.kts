@@ -1,7 +1,5 @@
-//apply(from = "${rootProject.projectDir}/buildSrc/core-library-build.gradle.kts")
-
 plugins {
-    id("core-library")
+    id("core-android-library")
 }
 
 android {
