@@ -1,6 +1,4 @@
-/**
- * https://stackoverflow.com/a/65030997/5279996
- */
+// TODO: Delete
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'

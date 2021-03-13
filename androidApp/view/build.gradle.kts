@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-//    id("org.jetbrains.kotlin.android") version "1.4.31"
 }
 
 repositories {
