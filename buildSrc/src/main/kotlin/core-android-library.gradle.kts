@@ -6,3 +6,5 @@ plugins {
     id("kotlin-android")
     id("kotlin-parcelize")
 }
+
+//android {}
