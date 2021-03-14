@@ -1,1 +1,2 @@
 [Migrate groovy common code to Kotlin DSL](https://quickbirdstudios.com/blog/gradle-kotlin-buildsrc-plugin-android/)
+[Developing Custom Gradle Plugins](https://docs.gradle.org/current/userguide/custom_plugins.html)

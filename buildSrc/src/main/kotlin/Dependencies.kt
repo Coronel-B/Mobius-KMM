@@ -98,6 +98,12 @@ object D {
         const val rules = "${test}:rules:${V.AndroidX.test}"
     }
 
+    object AndroidTest {
+        private const val test = "com.android.support.test"
+
+        const val espresso = "${test}.espresso:espresso-core:${V.AndroidTest.espresso}"
+    }
+
     object KotlinTest {
         private const val kotlinTest = "org.jetbrains.kotlin:kotlin-test"
 

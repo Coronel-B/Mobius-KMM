@@ -56,6 +56,10 @@ object V {
         const val testExt = "1.1.2"
     }
 
+    object AndroidTest {
+        const val espresso = "3.0.2"
+    }
+
     object OkHttp {
         const val okhttp3 = "4.9.0"
     }
