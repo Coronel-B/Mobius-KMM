@@ -36,19 +36,33 @@ internal fun Project.configureAndroid() = this.extensions.getByType<AndroidBaseE
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    /*kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }*/
 }
 
 internal fun Project.configureDependencies() = dependencies {
-    add("testImplementation", D.junit)
+    configureDependenciesOfTesting()
+}
 
-    val androidTestImplementation = "androidTestImplementation"
+internal fun Project.configureDependenciesOfCore() = dependencies {
+    val impl = "implementation"
+
     if (project.containsAndroidPlugin()) {
+        add(impl, D.Jetbrains.kotlin)
+        add(impl, D.AndroidX.appcompat)
+        add(impl, D.AndroidX.coreKtx)
+    }
+}
+
+internal fun Project.configureDependenciesOfTesting() = dependencies {
+    val androidTestImplementation = "androidTestImplementation"
+    val testImplementation = "testImplementation"
+
+    add(testImplementation, D.junit)
+
+    if (project.containsAndroidPlugin()) {
+        add(androidTestImplementation, D.AndroidXTest.junit)
         add(androidTestImplementation, D.AndroidXTest.runner)
         add(androidTestImplementation, D.AndroidXTest.rules)
-        add(androidTestImplementation, D.AndroidTest.espresso)
+        add(androidTestImplementation, D.AndroidXTest.espresso)
     }
 }
 

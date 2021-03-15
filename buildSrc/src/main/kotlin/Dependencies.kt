@@ -92,16 +92,17 @@ object D {
     object AndroidXTest {
         private const val test = "androidx.test"
 
-        const val core = "${test}:core:${V.AndroidX.test}"
-        const val junit = "${test}.ext:junit:${V.AndroidX.testExt}"
-        const val runner = "${test}:runner:${V.AndroidX.test}"
-        const val rules = "${test}:rules:${V.AndroidX.test}"
+        const val core = "${test}:core:${V.AndroidXTest.test}"
+        const val junit = "${test}.ext:junit:${V.AndroidXTest.testExt}"
+        const val runner = "${test}:runner:${V.AndroidXTest.test}"
+        const val rules = "${test}:rules:${V.AndroidXTest.test}"
+        const val espresso = "${test}.espresso:espresso-core:${V.AndroidXTest.espresso}"
     }
 
-    object AndroidTest {
-        private const val test = "com.android.support.test"
+    object Jetbrains {
+        private const val jetbrains = "org.jetbrains"
 
-        const val espresso = "${test}.espresso:espresso-core:${V.AndroidTest.espresso}"
+        const val kotlin = ".kotlin:kotlin-stdlib-jdk7:${V.kotlin}"
     }
 
     object KotlinTest {

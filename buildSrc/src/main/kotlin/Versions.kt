@@ -51,13 +51,12 @@ object V {
          * https://github.com/android/compose-samples/tags
          */
         const val jetpackCompose = "1.0.0-beta01"
-
-        const val test = "1.3.0"
-        const val testExt = "1.1.2"
     }
 
-    object AndroidTest {
-        const val espresso = "3.0.2"
+    object AndroidXTest {
+        const val test = "1.3.0"
+        const val testExt = "1.1.2"
+        const val espresso = "3.3.0"
     }
 
     object OkHttp {
