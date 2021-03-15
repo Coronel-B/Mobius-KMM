@@ -18,7 +18,7 @@ object V {
     const val ktor = "1.5.0"
     const val ktorMockNative = "1.3.1"
     const val junit = "4.13"
-    const val material = "1.2.1"
+    const val material = "1.3.0"
     const val multiplatformSettings = "0.6.3"
     const val robolectric = "4.4"
     const val sqlDelight = "1.4.4"

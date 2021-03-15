@@ -7,7 +7,6 @@ object D {
     const val androidGradlePlugin = "com.android.tools.build:gradle:${V.androidGradlePlugin}"
     const val cocoapodsext = "co.touchlab:kotlinnativecocoapods:${V.cocoapodsext}"
     const val junit = "junit:junit:${V.junit}"
-    const val material = "com.google.android.material:material:${V.material}"
     const val karmok = "co.touchlab:karmok-library:${V.karmok}"
     const val kermit = "co.touchlab:kermit:${V.kermit}"
     const val multiplatformSettings = "com.russhwolf:multiplatform-settings:${V.multiplatformSettings}"
@@ -30,6 +29,11 @@ object D {
         const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.kotlinxDateTime}"
     }
 
+    object Google {
+        private const val google = "com.google"
+
+        const val material = "$google.android.material:material:${V.material}"
+    }
 
     object AndroidX {
         private const val lifecycle = "androidx.lifecycle:lifecycle-"
