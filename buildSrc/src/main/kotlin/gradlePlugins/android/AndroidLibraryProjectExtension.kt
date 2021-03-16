@@ -1,4 +1,4 @@
-package plugin.android
+package gradlePlugins.android
 
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.JavaVersion
@@ -71,6 +71,9 @@ internal fun Project.containsAndroidPlugin(): Boolean {
 }
 
 internal fun Project.configurePlugins() {
+    /**
+     * Impl Notes: Always apply first com.android.library
+     */
     plugins.apply("com.android.library")
     plugins.apply("kotlin-android")
     plugins.apply("kotlin-parcelize")

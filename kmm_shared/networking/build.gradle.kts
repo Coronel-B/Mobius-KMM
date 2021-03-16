@@ -15,7 +15,7 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
 //    TODO: Delete workaround for issue/KT-43944
-    configurations {}
+//    configurations {}
 }
 
 kotlin {

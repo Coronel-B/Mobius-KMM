@@ -45,7 +45,7 @@ android {
      *  . https://stackoverflow.com/a/66433024/5279996
      *  . https://youtrack.jetbrains.com/issue/KT-43944#focus=Comments-27-4736409.0-0
      */
-    configurations {
+//    configurations {
         /*create("androidTestApi")
         create("androidTestDebugApi")
         create("androidTestReleaseApi")*/
@@ -53,7 +53,7 @@ android {
         /*create("testApi") {}
         create("testDebugApi") {}
         create("testReleaseApi") {}*/
-    }
+//    }
 }
 
 kotlin {

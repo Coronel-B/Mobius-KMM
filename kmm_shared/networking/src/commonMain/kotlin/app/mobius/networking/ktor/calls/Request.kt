@@ -18,8 +18,9 @@ class Request {
 
     private val client = KtorHttpClient().client
 
+//    TODO: Clean default headers
     suspend fun getHtmlContent() = client.request<String> {
-        url("http://itdevexpert.com")
+        url("http://www.google.com")
         method = HttpMethod.Get
     }
 

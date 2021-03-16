@@ -16,6 +16,8 @@ class PersonRepositoryCloud : PersonRepository {
 
     override suspend fun addPerson(personSignUpDto: PersonSignUpDto) : HttpResponse {
         return client.post {
+            host = "127.0.0.1"
+            port = 8090
             addPersonResult(SignUpEndpoints.Companion.Path.ADD_PERSON)
         }
     }

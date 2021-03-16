@@ -1,0 +1,1 @@
+PRECONDITION: Use lowercase and does not camelCase. E.g: gradle-plugins

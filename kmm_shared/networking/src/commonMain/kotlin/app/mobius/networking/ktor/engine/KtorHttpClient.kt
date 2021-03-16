@@ -78,10 +78,6 @@ class KtorHttpClient {
         }
 
         defaultRequest {
-//            host = "localhost"
-            host = "127.0.0.1"
-            port = 8090
-
             header("Content-Type", "application/vnd.api+json")
             header("Platform-Name", "Android")
             header("Platform-Ecosystem", "Mobile")
