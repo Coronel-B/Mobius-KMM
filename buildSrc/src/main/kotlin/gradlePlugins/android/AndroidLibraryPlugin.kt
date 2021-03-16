@@ -24,8 +24,8 @@ class AndroidLibraryPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
         project.configurePlugins()
-//        project.configureAndroid()
-//        project.configureDependencies()
+        project.configureAndroid()
+        project.configureDependencies()
     }
 
 }
