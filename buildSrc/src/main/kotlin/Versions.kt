@@ -2,7 +2,7 @@
  * Abbreviation: https://www.abbreviations.com/abbreviation/Version
  */
 object V {
-    const val minSdk = 21
+    const val minSdk = 24
     const val targetSdk = 30
     const val compileSdk = 30
     const val buildToolsVersion = "31.0.0 rc1"
@@ -29,8 +29,8 @@ object V {
     object Android {
 
         object CompileOptions {
-//            const val sourceCompatibility = JavaVersion.VERSION_1_8
-//            const val targetCompatibility = JavaVersion.VERSION_1_8
+//            const val sourceCompatibility = JavaVersion.VERSION_11
+//            const val targetCompatibility = JavaVersion.VERSION_11
         }
 
     }
@@ -50,7 +50,7 @@ object V {
         /**
          * https://github.com/android/compose-samples/tags
          */
-        const val jetpackCompose = "1.0.0-beta01"
+        const val jetpackCompose = "1.0.0-alpha12"
     }
 
     object AndroidXTest {

@@ -20,7 +20,7 @@ android {
     buildToolsVersion("31.0.0 rc1")
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(19)
+        minSdkVersion(24)
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
@@ -32,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     /**

@@ -6,9 +6,10 @@ buildscript {
     repositories {
         google()
         jcenter()
-    }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.2'
+//        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath "com.android.tools.build:gradle:7.0.0-alpha09"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -41,7 +42,7 @@ task clean(type: Delete) {
  * Fuente: https://stackoverflow.com/a/54142084/5279996
  */
 ext {
-    minSdkVersion = 21
+    minSdkVersion = 24
     targetSdkVersion = 30
     compileSdkVersion = 30
 

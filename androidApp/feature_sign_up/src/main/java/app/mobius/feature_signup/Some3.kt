@@ -1,9 +1,0 @@
-class Some {
-
-
-    init {
-
-    }
-
-
-}

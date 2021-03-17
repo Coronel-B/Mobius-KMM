@@ -22,13 +22,13 @@ include(":kmm_shared")
 // ------- BEGIN ANDROID --------
 
 // Core
-include(":androidApp:shared")
-include(":androidApp:domain")
-include(":androidApp:view")
+include(":shared")
+include(":domain")
+include(":view")
 
 // Features
-include(":androidApp:feature_sign_up")
-include(":androidApp:feature_login")
+include(":feature_sign_up")
+include(":feature_login")
 
 // ------- END ANDROID --------
 
