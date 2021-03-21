@@ -34,6 +34,17 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    /**
+     * https://stackoverflow.com/q/62302913/5279996
+     */
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/*.kotlin_module'
+    }
+
 }
 
 dependencies {
