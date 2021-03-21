@@ -27,12 +27,12 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -40,11 +40,11 @@ dependencies {
 //    implementation(project(':kmm_shared'))
 
 //    Android Core
-//    api(project(":feature_login"))
-//    api(project(":feature_sign_up"))
-//    api(project(":shared"))
-//    api(project(":domain"))
-//    api(project(":view"))
+    api(project(":feature_login"))
+    api(project(":feature_sign_up"))
+    api(project(":shared"))
+    api(project(":domain"))
+    api(project(":view"))
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'

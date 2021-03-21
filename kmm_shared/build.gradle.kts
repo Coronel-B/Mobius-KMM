@@ -32,8 +32,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = V.JVM.Java.source
+        targetCompatibility = V.JVM.Java.target
     }
 
     /**

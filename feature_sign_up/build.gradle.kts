@@ -9,13 +9,13 @@ android {
         versionName = "1.0"
     }
 
-    buildFeatures {
+   /* buildFeatures {
 //        Enables Jetpack Compose for this module
         compose = true
-    }
+    }*/
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = V.JVM.Kotlin.target
     }
 
 }
@@ -28,5 +28,5 @@ dependencies {
 //    TODO: Refactor to :androidApp:domain
     implementation(project(":domain"))
     implementation(project(":shared"))
-    api(project(":view"))
+//    api(project(":view"))
 }

@@ -1,5 +1,8 @@
+import org.gradle.api.JavaVersion
+
 /**
  * Abbreviation: https://www.abbreviations.com/abbreviation/Version
+ * PRECONDITION: Only use in Kotlin DSL (e.g: build.gradle.kts), not Groovy
  */
 object V {
     const val minSdk = 24
@@ -26,13 +29,14 @@ object V {
     const val serialization = "1.0.0"
     const val kotlinxDateTime = "0.1.1"
 
-    object Android {
-
-        object CompileOptions {
-//            const val sourceCompatibility = JavaVersion.VERSION_11
-//            const val targetCompatibility = JavaVersion.VERSION_11
+    object JVM {
+        object Java {
+            val source = JavaVersion.VERSION_1_8
+            val target = JavaVersion.VERSION_1_8
         }
-
+        object Kotlin {
+            val target = JavaVersion.VERSION_1_8.toString()
+        }
     }
 
     object Common {
@@ -50,7 +54,7 @@ object V {
         /**
          * https://github.com/android/compose-samples/tags
          */
-        const val jetpackCompose = "1.0.0-beta02"
+        const val jetpackCompose = "1.0.0-alpha12"
     }
 
     object AndroidXTest {

@@ -33,8 +33,8 @@ internal fun Project.configureAndroid() = this.extensions.getByType<AndroidBaseE
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = V.JVM.Java.source
+        targetCompatibility = V.JVM.Java.target
     }
 }
 
@@ -76,6 +76,6 @@ internal fun Project.configurePlugins() {
      */
     plugins.apply("com.android.library")
     plugins.apply("kotlin-android")
-    plugins.apply("kotlin-parcelize")
+//    plugins.apply("kotlin-parcelize")
 }
 

@@ -17,21 +17,21 @@ android {
         versionName = "1.0"
     }
 
-    buildFeatures {
+   /* buildFeatures {
 //        Enables Jetpack Compose for this module
         compose = true
-    }
+    }*/
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-        useIR = true
+        jvmTarget = V.JVM.Kotlin.target
+//        useIR = true
     }
 
 //    TODO: Use this when classpath will be 'com.android.tools.build:gradle:7.0.0-alpha02' or above
-    composeOptions {
-        kotlinCompilerVersion = "1.4.31"
+    /*composeOptions {
+//        kotlinCompilerVersion = "1.4.31"
         kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
-    }
+    }*/
 }
 
 dependencies {
@@ -39,7 +39,7 @@ dependencies {
 
 //    implementation("androidx.compose.compiler:compiler:1.0.0-beta01")
 //    api(D.AndroidX.JetpackCompose.compiler)  //TODO: Delete this when classpath will be 7.0.0-alpha02' or above
-    api(D.AndroidX.JetpackCompose.ui)
+    /*api(D.AndroidX.JetpackCompose.ui)
     api(D.AndroidX.JetpackCompose.uiTooling)
     api(D.AndroidX.JetpackCompose.foundation)
     api(D.AndroidX.JetpackCompose.material)
@@ -48,7 +48,7 @@ dependencies {
     api(D.AndroidX.JetpackCompose.activityCompose)
     api(D.AndroidX.JetpackCompose.lifecycleViewModelCompose)
     api(D.AndroidX.JetpackCompose.runtimeLivedata)
-    api(D.AndroidX.JetpackCompose.runtimeRxJava2)
+    api(D.AndroidX.JetpackCompose.runtimeRxJava2)*/
 
 //    Testing
     androidTestImplementation(D.AndroidX.JetpackCompose.AndroidTest.uiTestJunit4)
