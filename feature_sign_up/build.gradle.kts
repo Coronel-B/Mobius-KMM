@@ -1,21 +1,34 @@
 plugins {
-    id("com.itdevexpert.mobius.android-library")
+//    id("com.itdevexpert.mobius.android-library")
+    id("com.android.library")
+    id("kotlin-android")
 }
 
 android {
+    compileSdkVersion(30)
+    buildToolsVersion("31.0.0 rc1")
 
     defaultConfig {
+        minSdkVersion(21)
+        targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
     }
 
-   /* buildFeatures {
-//        Enables Jetpack Compose for this module
-        compose = true
-    }*/
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = V.JVM.Java.source
+        targetCompatibility = V.JVM.Java.target
+    }
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
+//        useIR = true
     }
 
 }
