@@ -8,7 +8,7 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             if (requested.id.namespace == "com.android") {
-                useModule("com.android.tools.build:gradle:4.2.0-alpha16")
+                useModule("com.android.tools.build:gradle:4.2.0-beta06")
             }
 
         }
