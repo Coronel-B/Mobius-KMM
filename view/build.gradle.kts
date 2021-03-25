@@ -28,18 +28,18 @@ android {
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
-        useIR = true
+//        useIR = true
     }
 
-    buildFeatures {
+   /* buildFeatures {
 //        Enables Jetpack Compose for this module
         compose = true
-    }
+    }*/
 
-    composeOptions {
+    /*composeOptions {
 //        kotlinCompilerVersion = "1.4.30"
         kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
-    }
+    }*/
 }
 dependencies {
     api(D.Google.material)

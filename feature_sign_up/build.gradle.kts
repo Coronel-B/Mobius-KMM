@@ -23,7 +23,7 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-    implementation(project(":kmm_shared:feature_sign_up"))
+    implementation(project(":kmm_shared:feature_sign_up"))    //TODO: Error Jacoco
 
 //    TODO: Refactor to :androidApp:domain
     implementation(project(":domain"))

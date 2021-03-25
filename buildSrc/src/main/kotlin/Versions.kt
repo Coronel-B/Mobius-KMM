@@ -31,11 +31,11 @@ object V {
 
     object JVM {
         object Java {
-            val source = JavaVersion.VERSION_1_8
-            val target = JavaVersion.VERSION_1_8
+            val source = JavaVersion.VERSION_11
+            val target = JavaVersion.VERSION_11
         }
         object Kotlin {
-            val target = JavaVersion.VERSION_1_8.toString()
+            val target = JavaVersion.VERSION_11.toString()
         }
     }
 
