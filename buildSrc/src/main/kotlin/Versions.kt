@@ -54,8 +54,8 @@ object V {
         /**
          * https://github.com/android/compose-samples/tags
          */
-        const val jetpackCompose = "1.0.0-beta02"
-//        const val jetpackCompose = "1.0.0-alpha03"
+//        const val jetpackCompose = "1.0.0-beta02"
+        const val jetpackCompose = "1.0.0-alpha12"
     }
 
     object AndroidXTest {

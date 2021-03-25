@@ -5,7 +5,6 @@ plugins {
 }
 
 android {
-
     compileSdkVersion(30)
     buildToolsVersion("31.0.0 rc1")
 
@@ -29,22 +28,18 @@ android {
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
-//        useIR = true
+        useIR = true
     }
 
-    /*buildFeatures {
+    buildFeatures {
 //        Enables Jetpack Compose for this module
         compose = true
-    }*/
+    }
 
-    /**
-     * TODO: Delete compose.runtime and compose.compiler dependencies and enable the following options
-     * The 1.0.0-beta01 does not working
-     */
-    /*composeOptions {
-        kotlinCompilerVersion = "1.4.30"
+    composeOptions {
+//        kotlinCompilerVersion = "1.4.30"
         kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
-    }*/
+    }
 }
 dependencies {
     api(D.Google.material)
