@@ -54,7 +54,7 @@ object D {
                      and use the following:
 
                          composeOptions {
-                            kotlinCompilerVersion = "1.4.31"
+                            kotlinCompilerVersion = "1.4.30"
                             kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
                          }
              * Source: https://stackoverflow.com/a/64485894/5279996

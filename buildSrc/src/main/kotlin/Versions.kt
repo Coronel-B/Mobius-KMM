@@ -11,7 +11,7 @@ object V {
     const val buildToolsVersion = "31.0.0 rc1"
 
 
-    const val kotlin = "1.4.31"
+    const val kotlin = "1.4.30"
     const val androidGradlePlugin = "7.0.0-alpha07"
 
     const val cocoapodsext = "0.11"
@@ -31,11 +31,11 @@ object V {
 
     object JVM {
         object Java {
-            val source = JavaVersion.VERSION_1_8
-            val target = JavaVersion.VERSION_1_8
+            val source = JavaVersion.VERSION_11
+            val target = JavaVersion.VERSION_11
         }
         object Kotlin {
-            val target = JavaVersion.VERSION_1_8.toString()
+            val target = JavaVersion.VERSION_11.toString()
         }
     }
 
@@ -54,7 +54,8 @@ object V {
         /**
          * https://github.com/android/compose-samples/tags
          */
-        const val jetpackCompose = "1.0.0-alpha12"
+        const val jetpackCompose = "1.0.0-beta02"
+//        const val jetpackCompose = "1.0.0-alpha03"
     }
 
     object AndroidXTest {

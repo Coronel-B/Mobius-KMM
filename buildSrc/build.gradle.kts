@@ -16,11 +16,16 @@ repositories {
 dependencies {
     testImplementation("junit:junit:4.13.2")
 
-//    Depend on the android gradle plugin, since we want to access it in our plugin
+//
+    /**
+     * Depend on the android gradle plugin, since we want to access it in our plugin
+     *
+     * WARNING: Use 4.1.2 y not 7.0.0-alpha11 because: Configuration testApi does not exist.
+     */
     implementation("com.android.tools.build:gradle:4.1.2")
 
 //    Depend on the kotlin plugin, since we want to access it in our plugin
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30")
 
 //    Depend on the default Gradle API's since we want to build a custom plugin
     implementation(gradleApi())

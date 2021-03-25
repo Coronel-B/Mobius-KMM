@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("kotlin-parcelize")
 }
 group = "app.mobius.myapplication"
 version = "1.0-SNAPSHOT"
@@ -20,7 +19,7 @@ android {
     buildToolsVersion("31.0.0 rc1")
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdkVersion(24)
+        minSdkVersion(21)
         targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
