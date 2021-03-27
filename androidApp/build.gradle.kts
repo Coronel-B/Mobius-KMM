@@ -68,22 +68,21 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${V.kotlin}")
 
 
-
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
 
-    implementation("com.google.guava:guava:$rootProject.guavaVersion")
-    implementation("com.google.code.gson:gson:$rootProject.gsonVersion")
+    implementation("com.google.guava:guava:${V.guavaVersion}")
+    implementation("com.google.code.gson:gson:${V.gson}")
 
-    implementation("com.github.bumptech.glide:glide:$rootProject.glideVersion")
+    implementation("com.github.bumptech.glide:glide:${V.glideVersion}")
 
-    implementation("de.hdodenhof:circleimageview:$rootProject.circleImageViewVersion")
+    implementation("de.hdodenhof:circleimageview:${V.circleImageViewVersion}")
 
-    implementation("com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion")
-    implementation("com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion")
+    implementation("com.squareup.retrofit2:retrofit:${V.retrofitVersion}")
+    implementation("com.squareup.retrofit2:converter-gson:${V.retrofitVersion}")
 
-    implementation("com.jakewharton.threetenabp:threetenabp:$rootProject.threetenabp")
+    implementation("com.jakewharton.threetenabp:threetenabp:${V.threetenabp}")
 
-    implementation("pub.devrel:easypermissions:$rootProject.easypermissions")
+    implementation("pub.devrel:easypermissions:${V.easypermissions}")
 
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("com.google.android.gms:play-services-maps:17.0.0")
