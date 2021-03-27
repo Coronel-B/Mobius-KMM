@@ -12,7 +12,7 @@ object V {
 
 
     const val kotlin = "1.4.30"
-    const val androidGradlePlugin = "7.0.0-alpha07"
+    const val androidGradlePlugin = "4.2.0-beta06"
 
     const val cocoapodsext = "0.11"
     const val coroutines = "1.4.1"
@@ -31,11 +31,11 @@ object V {
 
     object JVM {
         object Java {
-            val source = JavaVersion.VERSION_11
-            val target = JavaVersion.VERSION_11
+            val source = JavaVersion.VERSION_1_8
+            val target = JavaVersion.VERSION_1_8
         }
         object Kotlin {
-            val target = JavaVersion.VERSION_11.toString()
+            val target = JavaVersion.VERSION_1_8.toString()
         }
     }
 
@@ -52,10 +52,12 @@ object V {
         const val recyclerview = "1.1.0"
 
         /**
-         * https://github.com/android/compose-samples/tags
+         * USING: https://stackoverflow.com/a/66828584/5279996
+         * Compiler version:
+         *  . https://github.com/android/compose-samples/tags
+         *  . https://maven.google.com/web/index.html#androidx.compose.compiler:compiler
          */
-//        const val jetpackCompose = "1.0.0-beta02"
-        const val jetpackCompose = "1.0.0-alpha12"
+        const val jetpackCompose = "1.0.0-beta03"
     }
 
     object AndroidXTest {

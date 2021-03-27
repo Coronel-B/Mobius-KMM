@@ -14,8 +14,7 @@ buildscript {
          *      https://developer.android.com/studio/releases/gradle-plugin
          *      https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
          */
-//        classpath "com.android.tools.build:gradle:4.2.0-beta06" // With Java 8
-        classpath "com.android.tools.build:gradle:7.0.0-alpha11" // With Java 11
+        classpath "com.android.tools.build:gradle:4.2.0-beta06" // With Java 8
 
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
