@@ -9,6 +9,7 @@ buildscript {
     }
     dependencies {
         /**
+         * WARNING: Exists a bug in AGP 7.0 for KMM
          * Versions:
          *      https://developer.android.com/studio/releases/gradle-plugin
          *      https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
