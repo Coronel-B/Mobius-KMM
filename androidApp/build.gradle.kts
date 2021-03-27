@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "app.mobius"
-        minSdkVersion(21)
+        minSdkVersion(24)
         targetSdkVersion(30)
         versionCode = 1
         versionName = "2020.3.5-1"
