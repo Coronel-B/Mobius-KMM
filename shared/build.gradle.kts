@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-//    id("com.itdevexpert.mobius.android-library")
 }
 
 android {
@@ -11,16 +10,21 @@ android {
     defaultConfig {
         minSdkVersion(21)
         targetSdkVersion(30)
-        versionCode = 1
-        versionName = "1.0"
+    }
+    compileOptions {
+        sourceCompatibility = V.JVM.Java.source
+        targetCompatibility = V.JVM.Java.target
     }
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
     }
-
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+
+    api(project(":domain"))
+    implementation("com.jakewharton.threetenabp:threetenabp:${V.threetenabp}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${V.kotlin}")
 }

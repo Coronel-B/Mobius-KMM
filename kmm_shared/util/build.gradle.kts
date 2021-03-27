@@ -1,3 +1,47 @@
+plugins {
+    kotlin("multiplatform")
+    id("com.android.library")
+}
+
+android {
+    configurations {
+        create("androidTestApi")
+        create("androidTestDebugApi")
+        create("androidTestReleaseApi")
+        create("testApi")
+        create("testDebugApi")
+        create("testReleaseApi")
+    }
+}
+
+
+kotlin {
+    android()
+    ios {
+        binaries {
+            framework {
+                baseName = "util"
+            }
+        }
+    }
+    sourceSets {
+        val commonMain by getting
+        val androidMain by getting
+        val iosMain by getting
+    }
+}
+
+android {
+    compileSdkVersion(29)
+    defaultConfig {
+        minSdkVersion(24)
+        targetSdkVersion(29)
+    }
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+}
+
+
+/*
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
@@ -6,16 +50,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("31.0.0 rc1")
-    defaultConfig {
-        minSdkVersion(21)
-        targetSdkVersion(30)
+    configurations {
+        create("androidTestApi")
+        create("androidTestDebugApi")
+        create("androidTestReleaseApi")
+        create("testApi")
+        create("testDebugApi")
+        create("testReleaseApi")
     }
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-
-//    TODO: Delete workaround for issue/KT-43944
-    configurations {}
 }
 
 kotlin {
@@ -23,7 +65,7 @@ kotlin {
     ios {
         binaries {
             framework {
-                baseName = "kmm_shared:util"
+                baseName = "util"
             }
         }
     }
@@ -47,6 +89,28 @@ kotlin {
     }
 }
 
+android {
+    compileSdkVersion(30)
+    buildToolsVersion("31.0.0 rc1")
+    defaultConfig {
+        minSdkVersion(21)
+        targetSdkVersion(30)
+    }
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
 val packForXcode by tasks.creating(Sync::class) {
     group = "build"
     val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
@@ -60,4 +124,4 @@ val packForXcode by tasks.creating(Sync::class) {
     from({ framework.outputDirectory })
     into(targetDir)
 }
-tasks.getByName("build").dependsOn(packForXcode)
+tasks.getByName("build").dependsOn(packForXcode)*/

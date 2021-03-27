@@ -6,6 +6,17 @@ plugins {
 }
 
 android {
+    configurations {
+        create("androidTestApi")
+        create("androidTestDebugApi")
+        create("androidTestReleaseApi")
+        create("testApi")
+        create("testDebugApi")
+        create("testReleaseApi")
+    }
+}
+
+android {
     compileSdkVersion(30)
     buildToolsVersion("31.0.0 rc1")
     defaultConfig {
@@ -14,8 +25,6 @@ android {
     }
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
-//    TODO: Delete workaround for issue/KT-43944
-    configurations {}
 }
 
 
