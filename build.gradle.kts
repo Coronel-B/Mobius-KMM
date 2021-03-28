@@ -7,13 +7,14 @@ buildscript {
     }
     dependencies {
         /**
-         * WARNING: Exists a bug in AGP 7.0 for KMM
+         * PRECONDITION:
+         *  . Use workaround for issue/KT-43944
+         *  . Use Java 11
          * Versions:
          *      https://developer.android.com/studio/releases/gradle-plugin
          *      https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
          */
-//        classpath "com.android.tools.build:gradle:4.2.0-beta06" // With Java 8
-        classpath("com.android.tools.build:gradle:7.0.0-alpha11") // With Java 8
+        classpath("com.android.tools.build:gradle:7.0.0-alpha11")
 
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31")
 

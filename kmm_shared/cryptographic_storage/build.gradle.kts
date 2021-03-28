@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+//    TODO: Delete workaround for issue/KT-43944
     configurations {
         create("androidTestApi")
         create("androidTestDebugApi")

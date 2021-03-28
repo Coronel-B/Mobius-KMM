@@ -19,8 +19,14 @@ dependencies {
 //
     /**
      * Depend on the android gradle plugin, since we want to access it in our plugin
+     * PRECONDITION:
+     *  . Use workaround for issue/KT-43944
+     *  . Use Java 11
+     * Source:
+     *  . Use AGP 7.0:  https://stackoverflow.com/a/66837356/5279996
      *
-     * WARNING: Use 4.1.2 y not 7.0.0-alpha11 because: Configuration testApi does not exist.
+     * WARNING:
+     *  . Do not use 4.1.2 by error: Please initialize at least one Kotlin target in 'x (:x)
      */
     implementation("com.android.tools.build:gradle:7.0.0-alpha11")
 

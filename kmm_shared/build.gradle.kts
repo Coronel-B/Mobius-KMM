@@ -24,6 +24,7 @@ version = "1.0-SNAPSHOT"
  *  . https://youtrack.jetbrains.com/issue/KT-43944#focus=Comments-27-4736409.0-0
  */
 android {
+//    TODO: Delete workaround for issue/KT-43944
     configurations {
         create("androidTestApi")
         create("androidTestDebugApi")

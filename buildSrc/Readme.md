@@ -5,5 +5,3 @@
 [](https://medium.com/friday-insurance/how-to-write-a-gradle-plugin-in-kotlin-68d7a3534e71)
 
 # Bugs 
-
-https://discuss.gradle.org/t/could-not-find-implementation-class-for-plugin-error-when-using-gradle-4-1/24279/2
