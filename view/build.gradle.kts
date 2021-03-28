@@ -28,11 +28,46 @@ android {
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
+        useIR = true
+    }
+
+    buildFeatures {
+//        Enables Jetpack Compose for this module
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerVersion = "1.4.31"
+        kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
     }
 
 }
 dependencies {
     api(D.Google.material)
+
+    implementation("androidx.activity:activity-compose:1.3.0-alpha04")
+    implementation("androidx.compose.runtime:runtime:${V.AndroidX.jetpackCompose}")
+
+
+
+    /**
+     * https://stackoverflow.com/a/64485894/5279996
+     * https://maven.google.com/web/index.html#androidx.compose.compiler:compiler
+     */
+//    implementation("androidx.compose.runtime:runtime:${V.AndroidX.jetpackCompose}")
+//    implementation("androidx.compose.compiler:compiler:${V.AndroidX.jetpackCompose}")
+//    implementation("androidx.ui:ui-tooling:${V.AndroidX.jetpackCompose}")
+
+    /*api(D.AndroidX.JetpackCompose.ui)
+    api(D.AndroidX.JetpackCompose.uiTooling)
+    api(D.AndroidX.JetpackCompose.foundation)
+    api(D.AndroidX.JetpackCompose.material)
+    api(D.AndroidX.JetpackCompose.materialIconsCore)
+    api(D.AndroidX.JetpackCompose.materialIconsExtended)
+    api(D.AndroidX.JetpackCompose.activityCompose)
+    api(D.AndroidX.JetpackCompose.lifecycleViewModelCompose)
+    api(D.AndroidX.JetpackCompose.runtimeLivedata)
+    api(D.AndroidX.JetpackCompose.runtimeRxJava2)*/
 
 //    Testing
     androidTestImplementation(D.AndroidX.JetpackCompose.AndroidTest.uiTestJunit4)
