@@ -5,15 +5,6 @@ pluginManagement {
         jcenter()
         mavenCentral()
     }
-    /*resolutionStrategy {
-        eachPlugin {
-            if (requested.id.namespace == "com.android") {
-//                Do not use buildSrc
-                useModule("com.android.tools.build:gradle:7.0.0-alpha11")
-            }
-
-        }
-    }*/
 }
 rootProject.name = "Mobius"
 
