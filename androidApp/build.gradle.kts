@@ -55,11 +55,11 @@ dependencies {
 //    implementation(project(':kmm_shared'))
 
 //    Android Core
-    api(project(":feature_login"))
-    api(project(":feature_sign_up"))
-    api(project(":shared"))
-    api(project(":domain"))
-    api(project(":view"))
+    api(project(":androidApp:feature_login"))
+    api(project(":androidApp:feature_sign_up"))
+    api(project(":androidApp:shared"))
+    api(project(":androidApp:domain"))
+    api(project(":androidApp:view"))
 
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
