@@ -107,7 +107,7 @@ object D {
     object Jetbrains {
         private const val jetbrains = "org.jetbrains"
 
-        const val kotlin = ".kotlin:kotlin-stdlib-jdk7:${V.kotlin}"
+        const val kotlin = "$jetbrains.kotlin:kotlin-stdlib-jdk7:${V.kotlin}"
     }
 
     object KotlinTest {

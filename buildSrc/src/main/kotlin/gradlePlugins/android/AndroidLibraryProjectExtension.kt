@@ -10,6 +10,15 @@ import org.gradle.kotlin.dsl.getByType
 private typealias AndroidBaseExtension = BaseExtension
 private typealias AndroidBasePlugin = BasePlugin
 
+internal fun Project.configurePlugins() {
+    /**
+     * Impl Notes: Always apply first com.android.library
+     */
+    plugins.apply("com.android.library")
+    plugins.apply("kotlin-android")
+//    plugins.apply("kotlin-parcelize")
+}
+
 /**
  * Note: You can still override properties which are set by our project plugin, by just configuring them again using the android {} block!
  * Source:
@@ -18,20 +27,26 @@ private typealias AndroidBasePlugin = BasePlugin
 internal fun Project.configureAndroid() = this.extensions.getByType<AndroidBaseExtension>().run {
     compileSdkVersion(30)
     buildToolsVersion("31.0.0 rc1")
+
     defaultConfig {
+        minSdkVersion(24)
+        targetSdkVersion(30)
+
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
         consumerProguardFiles("consumer-rules.pro")
     }
+
     buildTypes {
+        getByName("debug") {
+            isTestCoverageEnabled = true
+        }
+
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
-
-        getByName("debug") {
-            isTestCoverageEnabled = true
-        }
     }
+
     compileOptions {
         sourceCompatibility = V.JVM.Java.source
         targetCompatibility = V.JVM.Java.target
@@ -39,6 +54,7 @@ internal fun Project.configureAndroid() = this.extensions.getByType<AndroidBaseE
 }
 
 internal fun Project.configureDependencies() = dependencies {
+    configureDependenciesOfCore()
     configureDependenciesOfTesting()
 }
 
@@ -69,13 +85,3 @@ internal fun Project.configureDependenciesOfTesting() = dependencies {
 internal fun Project.containsAndroidPlugin(): Boolean {
     return project.plugins.toList().any { plugin -> plugin is AndroidBasePlugin }
 }
-
-internal fun Project.configurePlugins() {
-    /**
-     * Impl Notes: Always apply first com.android.library
-     */
-    plugins.apply("com.android.library")
-    plugins.apply("kotlin-android")
-//    plugins.apply("kotlin-parcelize")
-}
-

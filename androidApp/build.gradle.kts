@@ -61,11 +61,12 @@ dependencies {
     api(project(":androidApp:domain"))
     api(project(":androidApp:view"))
 
+    implementation(D.Jetbrains.kotlin)
+
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("com.google.android.material:material:1.2.1")
     implementation("androidx.cardview:cardview:1.0.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${V.kotlin}")
 
 
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
