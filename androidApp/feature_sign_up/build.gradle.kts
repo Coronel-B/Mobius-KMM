@@ -11,6 +11,16 @@ android {
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
+        useIR = true    //TODO: Check if is necessary
+    }
+
+    buildFeatures {
+//        Enables Jetpack Compose for this module
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
     }
 
 }

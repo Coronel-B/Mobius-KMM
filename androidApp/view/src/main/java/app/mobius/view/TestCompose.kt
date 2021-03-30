@@ -8,6 +8,6 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun DefaultPreview3() {
     Column {
-
+        "Hello world"
     }
 }
