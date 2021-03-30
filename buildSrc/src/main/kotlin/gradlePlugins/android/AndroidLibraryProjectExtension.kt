@@ -1,14 +1,18 @@
 package gradlePlugins.android
 
 import com.android.build.gradle.BaseExtension
-import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.api.plugins.BasePlugin
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
+private const val IMPL = "implementation"
+private const val ANDROID_TEST_IMPL = "androidTestImplementation"
+private const val TEST_IMPL = "testImplementation"
+
 private typealias AndroidBaseExtension = BaseExtension
 private typealias AndroidBasePlugin = BasePlugin
+
 
 internal fun Project.configurePlugins() {
     /**
@@ -59,26 +63,21 @@ internal fun Project.configureDependencies() = dependencies {
 }
 
 internal fun Project.configureDependenciesOfCore() = dependencies {
-    val impl = "implementation"
-
     if (project.containsAndroidPlugin()) {
-        add(impl, D.Jetbrains.kotlin)
-        add(impl, D.AndroidX.appcompat)
-        add(impl, D.AndroidX.coreKtx)
+        add(IMPL, D.Jetbrains.kotlin)
+        add(IMPL, D.AndroidX.appcompat)
+        add(IMPL, D.AndroidX.coreKtx)
     }
 }
 
 internal fun Project.configureDependenciesOfTesting() = dependencies {
-    val androidTestImplementation = "androidTestImplementation"
-    val testImplementation = "testImplementation"
-
-    add(testImplementation, D.junit)
+    add(TEST_IMPL, D.junit)
 
     if (project.containsAndroidPlugin()) {
-        add(androidTestImplementation, D.AndroidXTest.junit)
-        add(androidTestImplementation, D.AndroidXTest.runner)
-        add(androidTestImplementation, D.AndroidXTest.rules)
-        add(androidTestImplementation, D.AndroidXTest.espresso)
+        add(ANDROID_TEST_IMPL, D.AndroidXTest.junit)
+        add(ANDROID_TEST_IMPL, D.AndroidXTest.runner)
+        add(ANDROID_TEST_IMPL, D.AndroidXTest.rules)
+        add(ANDROID_TEST_IMPL, D.AndroidXTest.espresso)
     }
 }
 
