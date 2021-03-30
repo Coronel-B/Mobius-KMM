@@ -28,7 +28,7 @@ dependencies {
      * WARNING:
      *  . Do not use 4.1.2 by error: Please initialize at least one Kotlin target in 'x (:x)
      */
-    implementation("com.android.tools.build:gradle:7.0.0-alpha11")
+    implementation("com.android.tools.build:gradle:7.0.0-alpha12")
 
 //    Depend on the kotlin plugin, since we want to access it in our plugin
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31")

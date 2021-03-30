@@ -12,8 +12,12 @@ object V {
 
 
     const val kotlin = "1.4.31"
+
+    /**
+     * https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
+     */
     const val androidGradlePlugin = "4.2.0-beta06"
-    const val androidGradlePlugin7 = "7.0.0-alpha11"
+    const val androidGradlePlugin7 = "7.0.0-alpha12"
 
     const val cocoapodsext = "0.11"
     const val coroutines = "1.4.1"
