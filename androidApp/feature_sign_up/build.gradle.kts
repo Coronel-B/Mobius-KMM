@@ -19,6 +19,7 @@ android {
         compose = true
     }
 
+//    TODO: Migrate to some compose plugin
     composeOptions {
         kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
     }
