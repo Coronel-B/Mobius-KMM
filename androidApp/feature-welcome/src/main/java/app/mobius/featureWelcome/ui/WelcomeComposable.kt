@@ -29,7 +29,7 @@ fun PreviewWelcome() {
             .padding(16.dp)
             .background(Color.White)
     ) {
-        Logo()
+//        Logo()
         AppName()
 
         Row(
@@ -45,6 +45,14 @@ fun PreviewWelcome() {
 }
 
 @Composable
+fun SomeImg() {
+    Image(
+        painter = painterResource(R.drawable.header),
+        contentDescription = null
+    )
+}
+
+/*@Composable
 fun Logo() {
     Image(
         painter = painterResource(id = R.drawable.some_test),
@@ -52,7 +60,7 @@ fun Logo() {
         modifier = Modifier.fillMaxWidth(),
         contentScale = ContentScale.Crop
     )
-}
+}*/
 
 @Composable
 fun AppName() {

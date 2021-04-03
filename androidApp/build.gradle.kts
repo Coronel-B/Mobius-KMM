@@ -16,8 +16,6 @@ android {
         versionCode = 1
         versionName = "2020.3.5-1"
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
-
-        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         getByName("debug") {
