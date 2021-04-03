@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.mobius.featureWelcome.R
 
 @Preview(
     device = Devices.PIXEL_2_XL,
@@ -29,7 +30,7 @@ fun PreviewWelcome() {
             .padding(16.dp)
             .background(Color.White)
     ) {
-//        Logo()
+        Logo()
         AppName()
 
         Row(
@@ -45,22 +46,14 @@ fun PreviewWelcome() {
 }
 
 @Composable
-fun SomeImg() {
-    Image(
-        painter = painterResource(R.drawable.header),
-        contentDescription = null
-    )
-}
-
-/*@Composable
 fun Logo() {
     Image(
-        painter = painterResource(id = R.drawable.some_test),
+        painter = painterResource(id = R.drawable.header),
         contentDescription = null,
         modifier = Modifier.fillMaxWidth(),
         contentScale = ContentScale.Crop
     )
-}*/
+}
 
 @Composable
 fun AppName() {
