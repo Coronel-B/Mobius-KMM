@@ -20,7 +20,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
+        kotlinCompilerExtensionVersion = V.AndroidX.Compose.jetpackCompose
     }
 
 }
@@ -29,6 +29,7 @@ dependencies {
 
     api(D.AndroidX.JetpackCompose.runtime)
     api(D.AndroidX.JetpackCompose.ui)
+
     api(D.AndroidX.JetpackCompose.uiTooling)
     api(D.AndroidX.JetpackCompose.foundation)
     api(D.AndroidX.JetpackCompose.material)
@@ -37,7 +38,10 @@ dependencies {
     api(D.AndroidX.JetpackCompose.activityCompose)
     api(D.AndroidX.JetpackCompose.lifecycleViewModelCompose)
     api(D.AndroidX.JetpackCompose.runtimeLivedata)
-    api(D.AndroidX.JetpackCompose.runtimeRxJava2)
+    api(D.AndroidX.JetpackCompose.uiGraphics)
+    api(D.AndroidX.JetpackCompose.foundationLayout)
+    api(D.AndroidX.JetpackCompose.navigation)
+    api(D.AndroidX.JetpackCompose.paging)
 
 //    Testing
     androidTestImplementation(D.AndroidX.JetpackCompose.AndroidTest.uiTestJunit4)

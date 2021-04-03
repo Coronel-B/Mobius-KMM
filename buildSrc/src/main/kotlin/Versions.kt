@@ -68,13 +68,27 @@ object V {
         const val lifecycle = "2.2.0"
         const val recyclerview = "1.1.0"
 
-        /**
-         * USING: https://stackoverflow.com/a/66828584/5279996
-         * Compiler version:
-         *  . https://github.com/android/compose-samples/tags
-         *  . https://maven.google.com/web/index.html#androidx.compose.compiler:compiler
-         */
-        const val jetpackCompose = "1.0.0-beta03"
+        object Activity {
+            const val activityCompose = "1.3.0-alpha5" // https://maven.google.com/web/index.html#androidx.activity:activity-compose
+        }
+
+        object Compose {
+            /**
+             * USING: https://stackoverflow.com/a/66828584/5279996
+             * Compiler version:
+             *  . https://github.com/android/compose-samples/tags
+             *  . https://maven.google.com/web/index.html#androidx.compose.compiler:compiler
+             */
+            const val jetpackCompose = "1.0.0-beta03"
+        }
+
+        object Navigation {
+            const val navigationCompose = "1.0.0-alpha09"
+        }
+
+        object Paging {
+            const val pagingCompose = "1.0.0-alpha08"   // https://maven.google.com/web/index.html#androidx.paging:paging-compose
+        }
     }
 
     object AndroidXTest {

@@ -55,41 +55,31 @@ object D {
 
                          composeOptions {
                             kotlinCompilerVersion = "1.4.30"
-                            kotlinCompilerExtensionVersion = V.AndroidX.jetpackCompose
+                            kotlinCompilerExtensionVersion = V.AndroidX.Compose.jetpackCompose
                          }
              * Source: https://stackoverflow.com/a/64485894/5279996
              */
-            const val runtime = "androidx.compose.runtime:runtime:${V.AndroidX.jetpackCompose}"
-            const val compiler = "androidx.compose.compiler:compiler:${V.AndroidX.jetpackCompose}"
+            const val runtime = "androidx.compose.runtime:runtime:${V.AndroidX.Compose.jetpackCompose}"
+            const val compiler = "androidx.compose.compiler:compiler:${V.AndroidX.Compose.jetpackCompose}"
 
-            const val ui = "androidx.compose.ui:ui:${V.AndroidX.jetpackCompose}"
+            const val activityCompose = "androidx.activity:activity-compose:${V.AndroidX.Activity.activityCompose}" // Integration with activities
+            const val foundation = "androidx.compose.foundation:foundation:${V.AndroidX.Compose.jetpackCompose}" // (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+            const val foundationLayout = "androidx.compose.foundation:foundation-layout:${V.AndroidX.Compose.jetpackCompose}"
+            const val lifecycleViewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha02" // Integration with ViewModels
+            const val material = "androidx.compose.material:material:${V.AndroidX.Compose.jetpackCompose}" // Material Design
+            const val materialIconsCore = "androidx.compose.material:material-icons-core:${V.AndroidX.Compose.jetpackCompose}" // Material design icons
+            const val materialIconsExtended = "androidx.compose.material:material-icons-extended:${V.AndroidX.Compose.jetpackCompose}"
+            const val navigation = "androidx.navigation:navigation-compose:${V.AndroidX.Navigation.navigationCompose}"
+            const val paging = "androidx.paging:paging-compose:${V.AndroidX.Paging.pagingCompose}"
+            const val runtimeLivedata = "androidx.compose.runtime:runtime-livedata:${V.AndroidX.Compose.jetpackCompose}" // Integration with observables
+            const val ui = "androidx.compose.ui:ui:${V.AndroidX.Compose.jetpackCompose}"
+            const val uiTooling = "androidx.compose.ui:ui-tooling:${V.AndroidX.Compose.jetpackCompose}" // (Previews, etc.)
+            const val uiGraphics = "androidx.compose.ui:ui-graphics:${V.AndroidX.Compose.jetpackCompose}"
 
-            // Tooling support (Previews, etc.)
-            const val uiTooling = "androidx.compose.ui:ui-tooling:${V.AndroidX.jetpackCompose}"
-            
-            // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
-            const val foundation = "androidx.compose.foundation:foundation:${V.AndroidX.jetpackCompose}"
-            
-            // Material Design
-            const val material = "androidx.compose.material:material:${V.AndroidX.jetpackCompose}"
-            
-            // Material design icons
-            const val materialIconsCore = "androidx.compose.material:material-icons-core:${V.AndroidX.jetpackCompose}"
-            const val materialIconsExtended = "androidx.compose.material:material-icons-extended:${V.AndroidX.jetpackCompose}"
-            
-            // Integration with activities
-            const val activityCompose = "androidx.activity:activity-compose:1.3.0-alpha05"
-            
-            // Integration with ViewModels
-            const val lifecycleViewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha02"
-            
-            // Integration with observables
-            const val runtimeLivedata = "androidx.compose.runtime:runtime-livedata:${V.AndroidX.jetpackCompose}"
-            const val runtimeRxJava2 = "androidx.compose.runtime:runtime-rxjava2:${V.AndroidX.jetpackCompose}"
 
             // UI Tests
             object AndroidTest {
-                const val uiTestJunit4 = "androidx.compose.ui:ui-test-junit4:${V.AndroidX.jetpackCompose}"
+                const val uiTestJunit4 = "androidx.compose.ui:ui-test-junit4:${V.AndroidX.Compose.jetpackCompose}"
             }
         }
     }
