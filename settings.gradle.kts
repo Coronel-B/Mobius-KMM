@@ -19,6 +19,7 @@ include(":androidApp:domain")
 include(":androidApp:view")
 
 // Features
+include(":androidApp:feature-welcome")
 include(":androidApp:feature_sign_up")
 include(":androidApp:feature_login")
 

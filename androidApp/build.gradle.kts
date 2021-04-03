@@ -55,6 +55,7 @@ dependencies {
 //    implementation(project(':kmm_shared'))
 
 //    Android Core
+    api(project(":androidApp:feature-welcome"))
     api(project(":androidApp:feature_login"))
     api(project(":androidApp:feature_sign_up"))
     api(project(":androidApp:shared"))

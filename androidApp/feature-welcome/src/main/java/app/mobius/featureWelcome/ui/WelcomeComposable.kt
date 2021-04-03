@@ -1,4 +1,4 @@
-package app.mobius.feature_signup.presentation.ui
+package app.mobius.featureWelcome.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -17,7 +17,6 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.mobius.feature_signup.R
 
 @Preview(
     device = Devices.PIXEL_2_XL,
@@ -46,10 +45,10 @@ fun PreviewWelcome() {
 
 @Composable
 fun Logo() {
-    Icon(
-        painter = painterResource(id = R.drawable.ic_welcome_logo),
+    /*Icon(
+        painter = painterResource(id = R.drawable.ic_welcome),
         contentDescription = null // decorative element
-    )
+    )*/
 }
 
 @Composable
