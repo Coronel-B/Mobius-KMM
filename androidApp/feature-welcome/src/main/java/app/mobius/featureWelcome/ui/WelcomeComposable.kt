@@ -48,7 +48,7 @@ fun PreviewWelcome() {
 @Composable
 fun Logo() {
     Image(
-        painter = painterResource(id = R.drawable.header),
+        painter = painterResource(id = R.drawable.ic_welcome_logo),
         contentDescription = null,
         modifier = Modifier.fillMaxWidth(),
         contentScale = ContentScale.Crop
