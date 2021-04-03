@@ -1,4 +1,4 @@
-### issue/MOBIUS-167
+### issue/MOBIUS-167: FIXED
 
 KMM could not work with Jetpack Compose
 
