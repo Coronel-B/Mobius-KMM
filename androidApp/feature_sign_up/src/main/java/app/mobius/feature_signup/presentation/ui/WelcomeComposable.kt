@@ -1,6 +1,5 @@
-package app.mobius.feature_signup
+package app.mobius.feature_signup.presentation.ui
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -18,15 +17,11 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import android.R
-import android.graphics.Bitmap
+import app.mobius.feature_signup.R
 
-import android.graphics.BitmapFactory
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.res.imageResource
-
-
-@Preview(device = Devices.PIXEL_2_XL)
+@Preview(
+    device = Devices.PIXEL_2_XL,
+)
 @Composable
 fun PreviewWelcome() {
     Column(
@@ -51,7 +46,10 @@ fun PreviewWelcome() {
 
 @Composable
 fun Logo() {
-
+    Icon(
+        painter = painterResource(id = R.drawable.ic_welcome_logo),
+        contentDescription = null // decorative element
+    )
 }
 
 @Composable
