@@ -4,6 +4,7 @@ import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,21 +22,26 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.mobius.featureWelcome.R
 import java.util.*
+import androidx.compose.material.Typography
+
 
 @Preview(
     device = Devices.PIXEL_2_XL
 )
 @Composable
 fun PreviewWelcome() {
-    Column(
-        modifier = Modifier
-            .background(Color.White)
-            .verticalScroll(rememberScrollState())
-    ) {
-        LogoImage()
-        AppNameText()
-        DividerCanvas()
-        ContentButtons()
+    MaterialTheme() {
+        val typography = MaterialTheme.typography
+        Column(
+            modifier = Modifier
+                .background(Color.White)
+                .verticalScroll(rememberScrollState())
+        ) {
+            LogoImage()
+            AppNameText()
+            DividerCanvas()
+            ContentButtons(typography)
+        }
     }
 }
 
@@ -99,7 +105,7 @@ fun DividerCanvas() {
 }
 
 @Composable
-fun ContentButtons() {
+fun ContentButtons(typography: Typography) {
     Column(
         modifier = Modifier
             .padding(
@@ -109,13 +115,13 @@ fun ContentButtons() {
         horizontalAlignment = Alignment.CenterHorizontally
 //        , horizontalArrangement = Arrangement.SpaceEvenly // TODO: Does not work in Row
         ) {
-        CreateYourIdentityBtn()
-        EnterToYourIdentityBtn()
+        CreateYourIdentityBtn(typography)
+        EnterToYourIdentityBtn(typography)
     }
 }
 
 @Composable
-fun CreateYourIdentityBtn() {
+fun CreateYourIdentityBtn(typography: Typography) {
     Button(
         onClick = { /*TODO*/ },
         colors = ButtonDefaults.buttonColors(
@@ -128,13 +134,15 @@ fun CreateYourIdentityBtn() {
             text = "Crea tu identidad".toUpperCase(Locale.getDefault()),
             fontSize = 13.sp,
             color = Color.Black,
-            textAlign = TextAlign.Center
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            style = typography.h4
         )
     }
 }
 
 @Composable
-fun EnterToYourIdentityBtn() {
+fun EnterToYourIdentityBtn(typography: Typography) {
     Button(
         onClick = { /*TODO*/ },
         colors = ButtonDefaults.buttonColors(
@@ -147,7 +155,9 @@ fun EnterToYourIdentityBtn() {
             text = "Ingresa a tu identidad".toUpperCase(Locale.getDefault()),
             fontSize = 13.sp,
             color = Color.Black,
-            textAlign = TextAlign.Center
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            style = typography.h4
         )
     }
 }
