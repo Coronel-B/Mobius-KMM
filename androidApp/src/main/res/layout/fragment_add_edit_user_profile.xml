@@ -12,7 +12,7 @@
     app:cardElevation="8dp"
     app:cardUseCompatPadding="true"
     app:contentPadding="@dimen/keyline_1"
-    tools:context="app.mobius.app.mobius.addedituserprofile.presentation.AddEditUserProfileFragment">
+    tools:context="app.mobius.addedituserprofile.presentation.AddEditUserProfileFragment">
 
     <ScrollView
         android:layout_width="match_parent"

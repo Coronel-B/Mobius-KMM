@@ -1,16 +1,15 @@
-package app.mobius.featureWelcome
+package app.mobius.featureSignUp.presentation.ui
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.mobius.featureWelcome.ui.PreviewWelcome
-import app.mobius.featureWelcome.ui.theme.MobiusTheme
+import app.mobius.view.theme.MobiusTheme
 
-class WelcomeActivity : ComponentActivity() {
+class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

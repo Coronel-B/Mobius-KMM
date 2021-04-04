@@ -1,4 +1,4 @@
-package app.mobius.featureWelcome.ui.theme
+package app.mobius.view.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

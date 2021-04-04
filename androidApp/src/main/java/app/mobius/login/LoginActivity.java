@@ -21,12 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         TextView signUp = findViewById(R.id.sign_up);
-        signUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivityForResult(AddEditUserActivity.class, REQUEST_ADD_USER);
-            }
-        });
+        signUp.setOnClickListener(view -> startActivityForResult(AddEditUserActivity.class, REQUEST_ADD_USER));
 
     }
 

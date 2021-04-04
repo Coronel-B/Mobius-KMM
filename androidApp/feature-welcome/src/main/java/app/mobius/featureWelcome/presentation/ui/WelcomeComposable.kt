@@ -1,5 +1,6 @@
-package app.mobius.featureWelcome.ui
+package app.mobius.featureWelcome.presentation.ui
 
+import android.content.Context
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -23,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import app.mobius.featureWelcome.R
 import java.util.*
 import androidx.compose.material.Typography
+import androidx.compose.ui.platform.LocalContext
 
 
 @Preview(
@@ -30,7 +32,7 @@ import androidx.compose.material.Typography
 )
 @Composable
 fun PreviewWelcome() {
-    MaterialTheme() {
+    MaterialTheme {
         val typography = MaterialTheme.typography
         Column(
             modifier = Modifier
@@ -106,6 +108,7 @@ fun DividerCanvas() {
 
 @Composable
 fun ContentButtons(typography: Typography) {
+    val context = LocalContext.current
     Column(
         modifier = Modifier
             .padding(
@@ -115,15 +118,17 @@ fun ContentButtons(typography: Typography) {
         horizontalAlignment = Alignment.CenterHorizontally
 //        , horizontalArrangement = Arrangement.SpaceEvenly // TODO: Does not work in Row
         ) {
-        CreateYourIdentityBtn(typography)
-        EnterToYourIdentityBtn(typography)
+        CreateYourIdentityBtn(context, typography)
+        EnterToYourIdentityBtn(context, typography)
     }
 }
 
 @Composable
-fun CreateYourIdentityBtn(typography: Typography) {
+fun CreateYourIdentityBtn(context: Context, typography: Typography) {
     Button(
-        onClick = { /*TODO*/ },
+        onClick = {
+//            context.startActivity(SignUpActivity::class.java) // TODO
+        },
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Color.White,
         ),
@@ -142,7 +147,7 @@ fun CreateYourIdentityBtn(typography: Typography) {
 }
 
 @Composable
-fun EnterToYourIdentityBtn(typography: Typography) {
+fun EnterToYourIdentityBtn(context: Context, typography: Typography) {
     Button(
         onClick = { /*TODO*/ },
         colors = ButtonDefaults.buttonColors(
