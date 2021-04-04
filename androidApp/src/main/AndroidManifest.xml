@@ -15,7 +15,7 @@
             android:name="app.mobius.MainActivity"
         />
 
-        <activity android:name=".featureWelcome.WelcomeActivity">
+        <activity android:name=".featureWelcome.presentation.ui.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
