@@ -5,7 +5,7 @@ CA:
     Data layer - access, retrieve and manage application data through repository and data sources.
 
 
-Approach — CA layers inside the feature module
+## Approach — CA layers inside the feature module
 ---------------------------------------------
 
 Mobile module wires everything together.

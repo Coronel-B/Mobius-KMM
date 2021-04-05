@@ -1,22 +1,24 @@
-:androidApp has presentation layer as package (not module)
-:kmm-shared has domain and data layer as package (not module)
+ - _:androidApp has presentation layer as package (not module)_
+ - _:kmm-shared has domain and data layer as package (not module)_
 
-:androidApp (presentation)
-    :feature-login-public
-    :feature-login-impl
-    :feature-login-impl-wiring
+ - :androidApp (presentation)
+    - :feature-login-public
+    - :feature-login-impl
+    - :feature-login-impl-wiring
 
-[comment]: <> (:feature-login-fake)
-[comment]: <> (:feature-login-fake-wiring)
+[comment]: <> (For second MVP :feature-login-fake)
+[comment]: <> (:For Second MVP :feature-login-fake-wiring)
 
-:kmm-shared (domain & data)
-    :feature-sign-up-public
-    :feature-sign-up-impl
-    :feature-sign-up-impl-wiring
-    :feature-sign-up-fake
-    :feature-sign-up-fake-wiring
+ - :kmm-shared (domain & data)
+    - :feature-sign-up-public
+    - :feature-sign-up-impl
+    - :feature-sign-up-impl-wiring
+
+[comment]: <> (For second MVP :feature-login-fake)
+[comment]: <> (:For Second MVP :feature-login-fake-wiring)
 
 
+___
 
 Sources: 
  - [Android Showcase](https://github.com/igorwojda/android-showcase)
