@@ -34,3 +34,4 @@ Sources:
  - [Android Showcase](https://github.com/igorwojda/android-showcase)
  - [Android at Scale | Video](https://www.droidcon.com/media-detail?video=380843878)
  - [Android at Scale | Slideshow](https://speakerdeck.com/vrallev/android-at-scale-at-square)
+
