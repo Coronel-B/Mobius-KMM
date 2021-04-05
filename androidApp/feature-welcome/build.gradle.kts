@@ -30,6 +30,8 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    implementation(project(":androidApp:feature-sign-up:public"))
+
     implementation(project(":androidApp:domain"))
     implementation(project(":androidApp:shared"))
     implementation(project(":androidApp:view"))

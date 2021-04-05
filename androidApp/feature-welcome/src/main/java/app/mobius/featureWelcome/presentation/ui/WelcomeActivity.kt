@@ -7,7 +7,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.mobius.featureWelcome.presentation.ui.PreviewWelcome
 import app.mobius.view.theme.MobiusTheme
 
 class WelcomeActivity : ComponentActivity() {

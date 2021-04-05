@@ -30,6 +30,7 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    implementation(project(":androidApp:feature-sign-up:public"))
     implementation(project(":kmm_shared:feature_sign_up"))
 
     implementation(project(":androidApp:domain"))
