@@ -11,11 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity
-            android:name="app.mobius.MainActivity"
-        />
 
-        <activity android:name=".featureWelcome.presentation.ui.WelcomeActivity">
+        <activity android:name=".android.app.presentation.AndroidAppNavHostActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

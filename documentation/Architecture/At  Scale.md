@@ -2,7 +2,7 @@
  - _:kmm-shared has domain and data layer as package (not module)_
 
  - :androidApp (presentation)
-    - :feature-login-public
+    - :feature-login-open
     - :feature-login-impl
     - :feature-login-impl-wiring
 
@@ -24,10 +24,12 @@ graph LR;
 ___
 
  - :kmm-shared (domain & data)
-    - :feature-sign-up-public
+    - :feature-sign-up-open
     - :feature-sign-up-impl
     - :feature-sign-up-impl-wiring
 
+Observations:
+- Use open because in package names cannot contain java keywords like 'public'
 ___
 
 Sources: 
