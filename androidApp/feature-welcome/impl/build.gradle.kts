@@ -29,6 +29,8 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    implementation(project(":androidApp:feature-welcome:open"))
+
     implementation(project(":androidApp:feature-sign-up:public"))
 //    implementation(project(":androidApp:feature_login:public"))
 

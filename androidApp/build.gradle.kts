@@ -33,6 +33,16 @@ android {
 
     kotlinOptions {
         jvmTarget = V.JVM.Kotlin.target
+        useIR = true
+    }
+
+    buildFeatures {
+//        Enables Jetpack Compose for this module
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = V.AndroidX.Compose.jetpackCompose
     }
 
     /**
@@ -52,11 +62,16 @@ dependencies {
 
 //    implementation(project(':kmm_shared'))
 
-//    Android Core
-    api(project(":androidApp:feature-welcome:open"))
+//    ----- BEGIN ANDROID CORE -----
+//    Welcome Feature
+    implementation(project(":androidApp:feature-welcome:open"))
+    implementation(project(":androidApp:feature-welcome:impl-wiring"))
+
     api(project(":androidApp:shared"))
     api(project(":androidApp:domain"))
     api(project(":androidApp:view"))
+//    ----- END ANDROID CORE -----
+
 
     implementation(D.Jetbrains.kotlin)
 

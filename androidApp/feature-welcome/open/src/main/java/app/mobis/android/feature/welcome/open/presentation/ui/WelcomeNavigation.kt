@@ -3,5 +3,9 @@ package app.mobis.android.feature.welcome.open.presentation.ui
 import androidx.compose.runtime.Composable
 
 interface WelcomeNavigation {
-    fun getWelcomeComposable() : Composable
+
+    fun getWelcomeComposable() : String {
+        return "Test multimodular arch"
+    }
+
 }

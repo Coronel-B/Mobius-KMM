@@ -6,15 +6,9 @@
     - :feature-login-impl
     - :feature-login-impl-wiring
 
-:feature-login:public <- :feature-login:impl <- :feature-login:impl-wiring
-
-```mermaid
-graph LR;
-    A[Write Code] --> B{Does it work?}
-    B -- Yes --> C[Great!]
-    B -- No --> D[Google]
-    D --> A
-```
+:feature-login:open <- :feature-login:impl -> :feature-login:impl-wiring
+:feature-login:impl-wiring -> :feature-login:impl, :feature-login:open
+:app -> :feature-login:open, :feature-login:impl-wiring 
 
 # TODO
 [comment]: <> (For second MVP :feature-login:fake)
@@ -36,4 +30,4 @@ Sources:
  - [Android Showcase](https://github.com/igorwojda/android-showcase)
  - [Android at Scale | Video](https://www.droidcon.com/media-detail?video=380843878)
  - [Android at Scale | Slideshow](https://speakerdeck.com/vrallev/android-at-scale-at-square)
-
+ - [Why do we need to separate DI wiring from impl?](https://stackoverflow.com/q/64661640/5279996)
