@@ -69,7 +69,7 @@ object V {
         const val recyclerview = "1.1.0"
 
         object Activity {
-            const val activityCompose = "1.3.0-alpha5" // https://maven.google.com/web/index.html#androidx.activity:activity-compose
+            const val activityCompose = "1.3.0-alpha8" // https://maven.google.com/web/index.html#androidx.activity:activity-compose
         }
 
         object Compose {
@@ -79,11 +79,11 @@ object V {
              *  . https://github.com/android/compose-samples/tags
              *  . https://maven.google.com/web/index.html#androidx.compose.compiler:compiler
              */
-            const val jetpackCompose = "1.0.0-beta03"
+            const val jetpackCompose = "1.0.0-beta07"
         }
 
         object Navigation {
-            const val navigationCompose = "1.0.0-alpha09"
+            const val navigationCompose = "2.4.0-alpha01"   // https://mvnrepository.com/artifact/androidx.navigation/navigation-compose
         }
 
         object Paging {

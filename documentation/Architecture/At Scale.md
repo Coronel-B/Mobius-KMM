@@ -2,25 +2,24 @@
  - _:kmm-shared has domain and data layer as package (not module)_
 
  - :androidApp (presentation)
-    - :feature-login-open
-    - :feature-login-impl
-    - :feature-login-impl-wiring
+    - :feature-welcome
+      - :open
+      - :impl
+      - :impl-wiringg
 
-:feature-login:open <- :feature-login:impl -> :feature-login:impl-wiring
-:feature-login:impl-wiring -> :feature-login:impl, :feature-login:open
-:app -> :feature-login:open, :feature-login:impl-wiring 
+:feature-welcome:open <- :feature-welcome:impl -> :feature-welcome:impl-wiring
+:feature-welcome:impl-wiring -> :feature-welcome:impl, :feature-welcome:open
+:app -> :feature-welcome:open, :feature-welcome:impl-wiring 
 
-# TODO
-[comment]: <> (For second MVP :feature-login:fake)
-[comment]: <> (:For Second MVP :feature-login:fake-wiring)
-[comment]: <> (:For Second MVP ::feature-login:demo)
-
+[comment]: <> (For second MVP :feature-welcome:fake)
+[comment]: <> (:For Second MVP :feature-welcome:fake-wiring)
+[comment]: <> (:For Second MVP ::feature-welcome:demo)
 ___
 
  - :kmm-shared (domain & data)
-    - :feature-sign-up-open
-    - :feature-sign-up-impl
-    - :feature-sign-up-impl-wiring
+    - :feature-welcome-open
+    - :feature-welcome-impl
+    - :feature-welcome-impl-wiring
 
 Observations:
 - Use open because in package names cannot contain java keywords like 'public'

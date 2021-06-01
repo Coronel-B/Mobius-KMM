@@ -18,15 +18,19 @@ class AndroidAppNavHostActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
+
+        val welcomeNavigation: WelcomeNavigation = WelcomeModulesProvider.bindWelcomeNavigation()
+
+
+        /*setContent {
             MobiusTheme {
                 Surface(color = MaterialTheme.colors.background) {
 
                     val welcomeNavigation: WelcomeNavigation = WelcomeModulesProvider.bindWelcomeNavigation()
-                    TestCompose(welcomeNavigation.getWelcomeComposable())
+//                    TestCompose(welcomeNavigation.getWelcomeComposable())
                 }
             }
-        }
+        }*/
     }
 }
 

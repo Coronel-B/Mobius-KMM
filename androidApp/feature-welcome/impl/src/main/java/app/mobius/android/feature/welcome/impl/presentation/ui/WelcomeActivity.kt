@@ -13,17 +13,22 @@ class WelcomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MobiusTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    PreviewWelcome()
-                }
-            }
+            ContentWelcome()
         }
     }
 }
 
 @Preview(showBackground = true)
+@Composable
+fun ContentWelcome() {
+    MobiusTheme {
+        // A surface container using the 'background' color from the theme
+        Surface(color = MaterialTheme.colors.background) {
+            PreviewWelcome()
+        }
+    }
+}
+
 @Composable
 fun DefaultPreview() {
     MobiusTheme {
