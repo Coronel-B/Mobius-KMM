@@ -5,6 +5,12 @@
 
     <string name="not_yet_registered">I\'m not registered yet</string>
 
+    <!-- Screens -->
+    <string name="welcome_screen">Welcome</string>
+    <string name="sign_up_screen">Sign Up</string>
+    <string name="login_screen">Login</string>
+    <string name="home_screen">Home</string>
+
     <!--Errores de sign up-->
     <string name="error_network">The network is\'nt available</string>
 
@@ -102,18 +108,18 @@
     <string name="title_acknowledge_dni_dialog">DNI acknowledgement </string>
     <string name="message_acknowledge_dni_dialog">
         It is a requirement to guarantee the uniqueness of the people.
-        Then you will have to verify the account.</string>
+        Then you will have to verify the account.</string>
 
     <!--Diálogo reconocer id dni-->
     <string name="title_acknowledge_dni_id_dialog">Number of identification</string>
     <string name="message_acknowledge_dni_id_dialog">
         It is the permission that you grant us so that
-        Möbius can consult the database
-        National registry of people and
-        Determine if your existence is real.
+        Möbius can consult the database
+        National registry of people and
+        Determine if your existence is real.
     </string>
 
-    <string name="title_activity_test_maps">Map</string>
+    <string name="title_activity_test_maps" translatable="false">Map</string>
     <string-array name="nationalities">
         <item>Afganistán</item>
         <item>Albania</item>

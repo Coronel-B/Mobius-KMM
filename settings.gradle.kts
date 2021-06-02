@@ -19,8 +19,13 @@ include(":androidApp:domain")
 include(":androidApp:view")
 
 // Features
-include(":androidApp:feature-welcome")
-include(":androidApp:feature_sign_up")
+include(":androidApp:feature-welcome:open")
+include(":androidApp:feature-welcome:impl")
+
+include(":androidApp:feature-sign-up:public")
+include(":androidApp:feature-sign-up:impl")
+include(":androidApp:feature-sign-up:impl-wiring")
+
 include(":androidApp:feature_login")
 
 // ------- END ANDROID --------
@@ -34,3 +39,4 @@ include(":kmm_shared:credential_managment")
 include(":kmm_shared:util")
 include(":kmm_shared:feature_sign_up")
 include(":kmm_shared:domain")
+include(":androidApp:feature-welcome:impl-wiring")
