@@ -34,9 +34,17 @@ class AndroidAppNavHostActivity : ComponentActivity() {
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun TestCompose(someText: String = "MÖBIUS") {
+fun MockWelcome(someText: String = "WELCOME") {
+    Text(
+        text = someText,
+        color = Color.Black,
+        fontSize = 48.sp,
+    )
+}
+
+@Composable
+fun MockSignUp(someText: String = "SIGN-UP") {
     Text(
         text = someText,
         color = Color.Black,

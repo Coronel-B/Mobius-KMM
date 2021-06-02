@@ -1,5 +1,12 @@
 package app.mobius.android.app
 
-class MobiusApplication {
+import android.app.Application
+
+class MobiusApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+    }
 
 }

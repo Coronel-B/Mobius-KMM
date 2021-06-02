@@ -9,6 +9,7 @@
     <string name="welcome_screen">Welcome</string>
     <string name="sign_up_screen">Sign Up</string>
     <string name="login_screen">Login</string>
+    <string name="home_screen">Home</string>
 
     <!--Errores de sign up-->
     <string name="error_network">The network is\'nt available</string>
