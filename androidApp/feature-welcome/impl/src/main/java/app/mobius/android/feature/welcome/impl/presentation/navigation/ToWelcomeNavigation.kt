@@ -1,13 +1,14 @@
 package app.mobius.android.feature.welcome.impl.presentation.navigation
 
-import androidx.activity.ComponentActivity
+import androidx.compose.runtime.Composable
 import app.mobis.android.feature.welcome.open.presentation.ui.WelcomeNavigation
-import app.mobius.android.feature.welcome.impl.presentation.ui.WelcomeActivity
+import app.mobius.android.feature.welcome.impl.presentation.ui.ContentWelcome
 
 class ToWelcomeNavigation : WelcomeNavigation {
 
-    override fun getWelcomeComposable(): ComponentActivity {
-        return WelcomeActivity()
+    @Composable
+    override fun GetWelcomeComposable() {
+        ContentWelcome()
     }
 
 }

@@ -1,9 +1,10 @@
 package app.mobis.android.feature.welcome.open.presentation.ui
 
-import androidx.activity.ComponentActivity
+import androidx.compose.runtime.Composable
 
 interface WelcomeNavigation {
 
-    fun getWelcomeComposable() : ComponentActivity
+    @Composable
+    fun GetWelcomeComposable()
 
 }
