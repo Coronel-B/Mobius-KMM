@@ -11,7 +11,7 @@ object V {
     const val buildToolsVersion = "31.0.0 rc1"
 
 
-    const val kotlin = "1.4.31"
+    const val kotlin = "1.4.32"
 
     /**
      * https://mvnrepository.com/artifact/com.android.tools.build/gradle?repo=google
