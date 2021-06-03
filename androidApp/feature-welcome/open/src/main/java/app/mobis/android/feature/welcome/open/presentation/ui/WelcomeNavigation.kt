@@ -5,6 +5,6 @@ import androidx.compose.runtime.Composable
 interface WelcomeNavigation {
 
     @Composable
-    fun GetWelcomeComposable()
+    fun GetWelcomeComposable(onClickSignUp: () -> Unit, onClickLogin: () -> Unit)
 
 }

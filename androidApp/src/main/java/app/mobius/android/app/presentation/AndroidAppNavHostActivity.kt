@@ -14,11 +14,11 @@ class AndroidAppNavHostActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-//            MobiusTheme {
-//                Surface(color = MaterialTheme.colors.background) {
+            MobiusTheme {
+                Surface(color = MaterialTheme.colors.background) {
                     ComposeNavigation()
-//                }
-//            }
+                }
+            }
         }
 
     }

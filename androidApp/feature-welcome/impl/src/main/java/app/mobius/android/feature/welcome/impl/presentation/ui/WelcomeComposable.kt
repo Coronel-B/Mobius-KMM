@@ -24,14 +24,14 @@ import androidx.compose.ui.unit.sp
 import java.util.*
 import androidx.compose.material.Typography
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import app.mobius.android.feature.welcome.impl.R
-
 
 @Preview(
     device = Devices.PIXEL_2_XL
 )
 @Composable
-fun PreviewWelcome() {
+fun PreviewWelcome(onClickSignUp: () -> Unit, onClickLogin: () -> Unit) {
     MaterialTheme {
         val typography = MaterialTheme.typography
         Column(

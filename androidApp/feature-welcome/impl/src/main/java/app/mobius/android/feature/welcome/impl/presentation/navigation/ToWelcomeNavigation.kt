@@ -7,8 +7,8 @@ import app.mobius.android.feature.welcome.impl.presentation.ui.ContentWelcome
 class ToWelcomeNavigation : WelcomeNavigation {
 
     @Composable
-    override fun GetWelcomeComposable() {
-        ContentWelcome()
+    override fun GetWelcomeComposable(onClickSignUp: () -> Unit, onClickLogin: () -> Unit) {
+        ContentWelcome(onClickSignUp, onClickLogin)
     }
 
 }

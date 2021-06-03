@@ -8,11 +8,11 @@ import app.mobius.view.theme.MobiusTheme
 
 @Preview(showBackground = true)
 @Composable
-fun ContentWelcome() {
+fun ContentWelcome(onClickSignUp: () -> Unit, onClickLogin: () -> Unit) {
     MobiusTheme {
 //          A surface container using the 'background' color from the theme
         Surface(color = MaterialTheme.colors.background) {
-            PreviewWelcome()
+            PreviewWelcome(onClickSignUp, onClickLogin)
         }
     }
 }
