@@ -1,7 +1,8 @@
-package app.mobius.android.app.presentation.navigation
+package app.mobius.android.app.presentation.navigation.screen
 
 import androidx.annotation.StringRes
 import app.mobius.R
+import app.mobius.android.app.presentation.navigation.AppDestinations
 
 sealed class AppScreen(val route: String, @StringRes val resourceId: Int) {
     object Welcome : AppScreen(AppDestinations.WELCOME_SCREEN, R.string.welcome_screen)

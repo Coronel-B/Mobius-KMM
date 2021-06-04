@@ -9,7 +9,7 @@ import androidx.compose.ui.tooling.preview.PreviewParameter
  * 
  * Use preview with params in composable: https://medium.com/snapp-mobile/sample-data-in-compose-previews-bec32b62370f
  * Impl notes: Multiple @PreviewParameter are not allowed
- * Source:
+ * Source: https://stackoverflow.com/a/67831364/5279996
  */
 @Preview(
     name = "Welcome Screen Preview Mock",

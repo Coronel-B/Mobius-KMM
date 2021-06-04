@@ -39,7 +39,7 @@ fun WelcomeScreenContent(
             LogoImage()
             AppNameText()
             DividerCanvas()
-            ContentButtons(typography)
+            ContentButtons(typography = typography, onClickSignUp = onClickSignUp, onClickLogin = onClickLogin)
         }
     }
 }
@@ -104,8 +104,12 @@ fun DividerCanvas() {
 }
 
 @Composable
-fun ContentButtons(typography: Typography) {
-    val context = LocalContext.current
+fun ContentButtons(
+    typography: Typography,
+    onClickSignUp: () -> Unit,
+    onClickLogin: () -> Unit
+) {
+//    val context = LocalContext.current
     Column(
         modifier = Modifier
             .padding(
@@ -115,17 +119,15 @@ fun ContentButtons(typography: Typography) {
         horizontalAlignment = Alignment.CenterHorizontally
 //        , horizontalArrangement = Arrangement.SpaceEvenly // TODO: Does not work in Row
         ) {
-        CreateYourIdentityBtn(context, typography)
-        EnterToYourIdentityBtn(context, typography)
+        CreateYourIdentityBtn(typography, onClickSignUp)
+        EnterToYourIdentityBtn(typography, onClickLogin)
     }
 }
 
 @Composable
-fun CreateYourIdentityBtn(context: Context, typography: Typography) {
+fun CreateYourIdentityBtn(typography: Typography, onClickSignUp: () -> Unit) {
     Button(
-        onClick = {
-//            context.startActivity(SignUpActivity::class.java) // TODO
-        },
+        onClick = { onClickSignUp.invoke() },
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Color.White,
         ),
@@ -144,9 +146,9 @@ fun CreateYourIdentityBtn(context: Context, typography: Typography) {
 }
 
 @Composable
-fun EnterToYourIdentityBtn(context: Context, typography: Typography) {
+fun EnterToYourIdentityBtn(typography: Typography, onClickLogin: () -> Unit) {
     Button(
-        onClick = { /*TODO*/ },
+        onClick = { onClickLogin.invoke() },
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Color.White,
         ),
