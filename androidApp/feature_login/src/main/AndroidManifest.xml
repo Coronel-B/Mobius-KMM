@@ -1,4 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="app.mobius.feature_login">
+    package="app.mobius.android.feature_login">
 
 </manifest>

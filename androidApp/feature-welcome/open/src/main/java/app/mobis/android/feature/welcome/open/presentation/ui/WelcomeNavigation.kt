@@ -1,4 +1,4 @@
-package app.mobis.android.feature.welcome.open.presentation.ui
+package app.mobius.android.feature.welcome.open.presentation.ui
 
 import androidx.compose.runtime.Composable
 

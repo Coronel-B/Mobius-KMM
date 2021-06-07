@@ -3,10 +3,9 @@ plugins {
 }
 
 android {
-
     defaultConfig {
         versionCode = 1
-        versionName = "0.0"
+        versionName = "1.0"
     }
 
     kotlinOptions {
@@ -28,8 +27,6 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-
-    implementation(project(":androidApp:feature-welcome:open"))
 
     implementation(project(":androidApp:domain"))
     implementation(project(":androidApp:shared"))

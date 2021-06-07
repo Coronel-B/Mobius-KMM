@@ -67,6 +67,10 @@ dependencies {
     implementation(project(":androidApp:feature-welcome:open"))
     implementation(project(":androidApp:feature-welcome:impl-wiring"))
 
+//    SignUp Feature
+    implementation(project(":androidApp:feature-sign-up:open"))
+    implementation(project(":androidApp:feature-sign-up:impl-wiring"))
+
     api(project(":androidApp:shared"))
     api(project(":androidApp:domain"))
     api(project(":androidApp:view"))

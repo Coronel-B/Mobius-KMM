@@ -22,7 +22,7 @@ include(":androidApp:view")
 include(":androidApp:feature-welcome:open")
 include(":androidApp:feature-welcome:impl")
 
-include(":androidApp:feature-sign-up:public")
+include(":androidApp:feature-sign-up:open")
 include(":androidApp:feature-sign-up:impl")
 include(":androidApp:feature-sign-up:impl-wiring")
 

@@ -1,4 +1,4 @@
-package app.mobius.android.feature.welcome.open
+package app.mobius.feature
 
 import org.junit.Test
 

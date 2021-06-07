@@ -19,7 +19,7 @@ fun ComposeNavigation() {
         startDestination = WELCOME_SCREEN
     ) {
         composable(route = WELCOME_SCREEN) { WelcomeScreen(navHostController) }
-        composable(route = SIGN_UP_SCREEN) { SignUpScreen(navHostController) }
+        composable(route = SIGN_UP_SCREEN) { SignUpScreen() }
         composable(route = LOGIN_SCREEN) { LoginScreen() }
     }
 

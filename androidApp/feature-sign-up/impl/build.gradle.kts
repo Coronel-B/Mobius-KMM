@@ -1,6 +1,5 @@
 plugins {
     id("com.itdevexpert.mobius.android-library")
-    id("kotlin-android")
 }
 
 android {
@@ -29,13 +28,11 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(project(":androidApp:feature-sign-up:open"))
 
-    implementation(project(":androidApp:feature-sign-up:public"))
     implementation(project(":kmm_shared:feature_sign_up"))
 
     implementation(project(":androidApp:domain"))
     implementation(project(":androidApp:shared"))
     implementation(project(":androidApp:view"))
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.android.material:material:1.3.0")
 }
