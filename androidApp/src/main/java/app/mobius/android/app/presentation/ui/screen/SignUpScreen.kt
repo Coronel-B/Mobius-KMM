@@ -1,4 +1,4 @@
-package app.mobius.android.app.presentation.navigation.screen
+package app.mobius.android.app.presentation.ui.screen
 
 import androidx.compose.runtime.Composable
 import app.mobius.feature.signup.open.presentation.ui.SignUpNavigation

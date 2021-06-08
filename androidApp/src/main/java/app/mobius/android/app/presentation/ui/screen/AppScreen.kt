@@ -1,4 +1,4 @@
-package app.mobius.android.app.presentation.navigation.screen
+package app.mobius.android.app.presentation.ui.screen
 
 import androidx.annotation.StringRes
 import app.mobius.R

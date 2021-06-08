@@ -155,8 +155,8 @@ fun EnterToYourIdentityBtn(typography: Typography, onClickLogin: () -> Unit) {
     ) {
         Text(
             text = "Ingresa a tu identidad".toUpperCase(Locale.getDefault()),
-            fontSize = 13.sp,
             color = Color.Black,
+            fontSize = 13.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
             style = typography.h4

@@ -6,12 +6,12 @@ import androidx.navigation.compose.composable
 import app.mobius.android.app.presentation.navigation.AppDestinations.LOGIN_SCREEN
 import app.mobius.android.app.presentation.navigation.AppDestinations.SIGN_UP_SCREEN
 import app.mobius.android.app.presentation.navigation.AppDestinations.WELCOME_SCREEN
-import app.mobius.android.app.presentation.navigation.screen.LoginScreen
-import app.mobius.android.app.presentation.navigation.screen.SignUpScreen
-import app.mobius.android.app.presentation.navigation.screen.WelcomeScreen
+import app.mobius.android.app.presentation.ui.screen.LoginScreen
+import app.mobius.android.app.presentation.ui.screen.SignUpScreen
+import app.mobius.android.app.presentation.ui.screen.WelcomeScreen
 
 @Composable
-fun ComposeNavigation() {
+fun AppNavHost() {
     val navHostController = appNavHostController()
 
     NavHost(
@@ -22,5 +22,4 @@ fun ComposeNavigation() {
         composable(route = SIGN_UP_SCREEN) { SignUpScreen() }
         composable(route = LOGIN_SCREEN) { LoginScreen() }
     }
-
 }
