@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="feature_welcome">Bienvenido</string>
+    <string name="create_your_identity">Crea tu identidad</string>
+    <string name="enter_to_your_identity">Ingresa a tu identidad</string>
 </resources>

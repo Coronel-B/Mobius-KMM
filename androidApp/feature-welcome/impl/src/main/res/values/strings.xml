@@ -1,3 +1,5 @@
 <resources>
     <string name="feature_welcome">Welcome</string>
+    <string name="create_your_identity">Create your identity</string>
+    <string name="enter_to_your_identity">Enter to your identity</string>
 </resources>

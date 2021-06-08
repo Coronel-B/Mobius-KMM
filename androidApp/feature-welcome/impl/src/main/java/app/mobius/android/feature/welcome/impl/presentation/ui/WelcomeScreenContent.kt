@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.util.*
 import androidx.compose.material.Typography
+import androidx.compose.ui.res.stringResource
 import app.mobius.android.feature.welcome.impl.R
 
 @Composable
@@ -67,7 +68,7 @@ fun AppNameText() {
         horizontalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "MÖBIUS",
+            text = stringResource(id = R.string.app_name).toUpperCase(Locale.getDefault()),
             color = Color.Black,
             fontFamily = FontFamily.SansSerif,
             fontSize = 48.sp,
@@ -133,7 +134,7 @@ fun CreateYourIdentityBtn(typography: Typography, onClickSignUp: () -> Unit) {
             .padding(8.dp)
     ) {
         Text(
-            text = "Crea tu identidad".toUpperCase(Locale.getDefault()),
+            text = stringResource(id = R.string.create_your_identity).toUpperCase(Locale.getDefault()),
             fontSize = 13.sp,
             color = Color.Black,
             fontWeight = FontWeight.Bold,
@@ -154,7 +155,7 @@ fun EnterToYourIdentityBtn(typography: Typography, onClickLogin: () -> Unit) {
             .padding(8.dp)
     ) {
         Text(
-            text = "Ingresa a tu identidad".toUpperCase(Locale.getDefault()),
+            text = stringResource(id = R.string.enter_to_your_identity).toUpperCase(Locale.getDefault()),
             color = Color.Black,
             fontSize = 13.sp,
             fontWeight = FontWeight.Bold,

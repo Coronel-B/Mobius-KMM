@@ -1,0 +1,7 @@
+STRINGS
+
+___
+Context: In sub-modules of impl, wiring and open. In general module of a feature this works.
+Error: "x" is translated here but not found in default locale
+Solution: Translations Editor (double shift), check and uncheck the item of resource
+___

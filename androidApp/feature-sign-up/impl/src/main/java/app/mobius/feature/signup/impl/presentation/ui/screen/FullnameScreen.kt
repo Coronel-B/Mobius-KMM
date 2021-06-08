@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -14,6 +15,8 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.mobius.feature.signup.impl.R
+import java.util.*
 
 @Preview(
     name = "FullnameScreen Preview",
@@ -25,7 +28,7 @@ fun FullnameScreen(onClickNextScreen: () -> Unit = {}) {
         topBar = {
             TopAppBar(
                 title = {
-                    Text("Sign Up - Fullname")
+                    Text("${stringResource(R.string.feature_sign_up)} - ${stringResource(R.string.fullname_screen)}")
                 },
                 backgroundColor = Color.White,
             )
@@ -33,12 +36,14 @@ fun FullnameScreen(onClickNextScreen: () -> Unit = {}) {
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             Text(
-                text = "Crearemos tu identidad dentro de Möbius en unos simples pasos",
+                text = stringResource(id = R.string.fullname_screen_description),
                 color = Color.Black,
                 fontSize = 20.sp,
                 fontFamily = FontFamily.SansSerif,
                 fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.align(Alignment.Center).padding(all = 16.dp),
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .padding(all = 16.dp),
                 textAlign = TextAlign.Center,
             )
 
@@ -61,11 +66,10 @@ fun ButtonNext(onClickNextScreen: () -> Unit) {
         modifier = Modifier.padding(all = 20.dp)
     ) {
         Text(
-            text = "Next",
+            text = stringResource(id = R.string.actions_next).toUpperCase(Locale.getDefault()),
             color = Color.Black,
             fontFamily = FontFamily.Default,
             fontSize = 18.sp,
-//            fontWeight = FontWeight.Thin,
             style = typography.h3
         )
     }
