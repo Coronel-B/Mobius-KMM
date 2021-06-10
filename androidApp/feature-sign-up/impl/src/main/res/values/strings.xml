@@ -2,4 +2,6 @@
     <string name="feature_sign_up">Sign Up</string>
     <string name="fullname_screen">Fullname</string>
     <string name="fullname_screen_description">We will create your identity within Möbius in a few simple steps</string>
+    <string name="outlined_text_field_name">Name</string>
+    <string name="outlined_text_field_surname">Surname</string>
 </resources>

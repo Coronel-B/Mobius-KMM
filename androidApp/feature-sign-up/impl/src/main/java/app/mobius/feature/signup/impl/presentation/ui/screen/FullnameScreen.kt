@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.mobius.compose.material.CustomOutlinedTextField
 import app.mobius.feature.signup.impl.R
 import java.util.*
 
@@ -37,13 +38,12 @@ fun FullnameScreen(onClickNextScreen: () -> Unit = {}) {
         Box(modifier = Modifier.fillMaxSize()) {
 
             Box( modifier = Modifier.align(Alignment.Center)) {
-                Column {
+                Column() {
                     Description()
                     Form()
                 }
             }
             Box( modifier = Modifier.align(Alignment.BottomEnd)) { ButtonNext(onClickNextScreen) }
-
         }
     }
 }
@@ -70,23 +70,21 @@ fun Description() {
 fun Form() {
     Column(
         modifier = Modifier
-            .wrapContentSize()
             .padding(all = 16.dp),
     ) {
-        var name by remember { mutableStateOf("") }
-        var surname by remember { mutableStateOf("") }
-
-        OutlinedTextField(
-            value = name,
-            onValueChange = { name = it },
-            label = { Text("Name") }
-        )
-        OutlinedTextField(
-            value = surname,
-            onValueChange = { surname = it },
-            label = { Text("Surname") }
-        )
+        Name()
+        Surname()
     }
+}
+
+@Composable
+fun Name() {
+    CustomOutlinedTextField(label = stringResource(id = R.string.outlined_text_field_name))
+}
+
+@Composable
+fun Surname() {
+    CustomOutlinedTextField(label = stringResource(id = R.string.outlined_text_field_surname))
 }
 
 //TODO: For Extensions

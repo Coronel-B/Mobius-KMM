@@ -3,5 +3,6 @@
     <string name="feature_sign_up">Registro de identidad</string>
     <string name="fullname_screen">Nombre completo</string>
     <string name="fullname_screen_description">Crearemos tu identidad dentro de Möbius en unos simples pasos</string>
-
+    <string name="outlined_text_field_name">Nombre</string>
+    <string name="outlined_text_field_surname">Apellido</string>
 </resources>
