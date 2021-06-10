@@ -6,5 +6,5 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun GenderScreen() {
-    Text(text = "birthdate", fontSize = 48.sp)
+    Text(text = "TODO: Gender", fontSize = 36.sp)
 }

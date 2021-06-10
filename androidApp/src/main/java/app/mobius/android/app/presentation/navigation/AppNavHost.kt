@@ -18,7 +18,7 @@ fun AppNavHost() {
         navController = navHostController,
         startDestination = WELCOME_SCREEN
     ) {
-        composable(route = WELCOME_SCREEN) { WelcomeScreen(navHostController) }
+        composable(route = WELCOME_SCREEN) { WelcomeScreen(navHostController = navHostController) }
         composable(route = SIGN_UP_SCREEN) { SignUpScreen() }
         composable(route = LOGIN_SCREEN) { LoginScreen() }
     }

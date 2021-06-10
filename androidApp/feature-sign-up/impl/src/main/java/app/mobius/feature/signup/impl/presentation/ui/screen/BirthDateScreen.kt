@@ -6,5 +6,5 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun BirthDateScreen() {
-    Text(text = "birthdate", fontSize = 48.sp)
+    Text(text = "TODO: birthdate", fontSize = 36.sp)
 }

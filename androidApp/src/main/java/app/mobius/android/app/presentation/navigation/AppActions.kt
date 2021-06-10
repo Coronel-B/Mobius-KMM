@@ -26,14 +26,9 @@ class AndroidAppActions(private val androidAppNavHostController: NavHostControll
 }
 
 
-
 @Composable
-fun actions(): AndroidAppActions {
-    val navHostController = appNavHostController()
-
-    val actions = remember(navHostController) {
-        AndroidAppActions(navHostController)
+fun actions(androidAppNavHostController: NavHostController): AndroidAppActions {
+    return remember(androidAppNavHostController) {
+        AndroidAppActions(androidAppNavHostController)
     }
-
-    return actions
 }

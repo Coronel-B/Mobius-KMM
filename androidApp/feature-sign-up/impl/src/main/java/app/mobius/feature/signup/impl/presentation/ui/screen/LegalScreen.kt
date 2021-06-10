@@ -6,5 +6,5 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun LegalScreen() {
-    Text(text = "birthdate", fontSize = 48.sp)
+    Text(text = "TODO: legal", fontSize = 36.sp)
 }

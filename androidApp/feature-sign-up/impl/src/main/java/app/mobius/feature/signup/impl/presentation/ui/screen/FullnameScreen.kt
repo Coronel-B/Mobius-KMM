@@ -11,20 +11,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Devices
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.mobius.compose.material.CustomOutlinedTextField
 import app.mobius.feature.signup.impl.R
 import java.util.*
 
-@Preview(
-    name = "FullnameScreen Preview",
-    device = Devices.PIXEL_2_XL
-)
 @Composable
-fun FullnameScreen(onClickNextScreen: () -> Unit = {}) {
+fun FullnameScreen(onClickNextScreen: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(

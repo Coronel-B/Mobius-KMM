@@ -6,5 +6,5 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun PhoneScreen() {
-    Text(text = "birthdate", fontSize = 48.sp)
+    Text(text = "TODO: Phone", fontSize = 36.sp)
 }
