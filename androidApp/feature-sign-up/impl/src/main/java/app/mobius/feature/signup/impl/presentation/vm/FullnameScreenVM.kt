@@ -12,19 +12,24 @@ class FullnameScreenVM : ViewModel() {
 
     private val _name = MutableLiveData("")
     private val _surname = MutableLiveData("")
-    private val _isValidForm = MediatorLiveData(false)
+    private val _isValidForm = MediatorLiveData<Boolean>().apply {
+        value = false
+    }
 
     val name: LiveData<String> = _name
     val surname: LiveData<String> = _surname
     val isValidForm: LiveData<Boolean> = _isValidForm
 
     fun onNameChange(newName: String) {
-        if (newName.isNotEmpty()) _isValidForm
-        _name.value = newName
+        if (newName.isNotEmpty()) {
+            _name.value = newName
+        }
     }
 
     fun onSurnameChange(newSurname: String) {
-        _surname.value = newSurname
+        if (newSurname.isNotEmpty()) {
+            _surname.value = newSurname
+        }
     }
 
 }
