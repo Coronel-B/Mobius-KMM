@@ -11,25 +11,33 @@ import androidx.lifecycle.ViewModel
 class FullnameScreenVM : ViewModel() {
 
     private val _name = MutableLiveData("")
+    private val _isNameError = MutableLiveData(false)
     private val _surname = MutableLiveData("")
+    private val _isSurnameError = MutableLiveData(false)
     private val _isValidForm = MediatorLiveData<Boolean>().apply {
         value = false
     }
 
     val name: LiveData<String> = _name
+    val isNameError: LiveData<Boolean> = _isNameError
     val surname: LiveData<String> = _surname
+    val isSurnameError: LiveData<Boolean> = _isSurnameError
     val isValidForm: LiveData<Boolean> = _isValidForm
 
     fun onNameChange(newName: String) {
-        if (newName.isNotEmpty()) {
-            _name.value = newName
-        }
+        _name.value = newName
+        _isNameError.value = newName.isEmpty() || !withoutNumbers(newName)
     }
 
     fun onSurnameChange(newSurname: String) {
-        if (newSurname.isNotEmpty()) {
-            _surname.value = newSurname
-        }
+        _surname.value = newSurname
+        _isSurnameError.value = newSurname.isEmpty() || !withoutNumbers(newSurname)
     }
+
+    /**
+     * Check that any number not exists in text
+     * Source: https://stackoverflow.com/a/4440309/5279996
+     */
+    private fun withoutNumbers(text: String) = text.contains(regex = Regex("^[^0-9]+$"))
 
 }

@@ -14,9 +14,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.compose.material.CustomOutlinedTextField
 import app.mobius.feature.signup.impl.R
@@ -72,22 +69,30 @@ fun Description() {
 fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
 
     val name by viewModel.name.observeAsState("")
+    val isNameError by viewModel.isNameError.observeAsState(false)
+    val surname by viewModel.surname.observeAsState("")
+    val isSurnameError by viewModel.isSurnameError.observeAsState(false)
 
     Column(
         modifier = Modifier
             .padding(all = 16.dp),
     ) {
-        NameContent(name) { viewModel.onNameChange(it) }
-        Surname()
+        NameContent(name, isNameError) { viewModel.onNameChange(it) }
+        SurnameContent(surname, isSurnameError) { viewModel.onSurnameChange(it) }
     }
 }
 
 @Composable
-fun NameContent(name: String, onNameChange: (String) -> Unit) {
+fun NameContent(
+    name: String,
+    isError: Boolean = false,
+    onNameChange: (String) -> Unit
+) {
     OutlinedTextField(
         value = name,
         onValueChange = onNameChange,
         label = { Text("Name") },
+        isError = isError,
         modifier = Modifier
             .fillMaxWidth(),
         singleLine = true,
@@ -101,8 +106,29 @@ fun NameContent(name: String, onNameChange: (String) -> Unit) {
 }
 
 @Composable
-fun Surname() {
-    CustomOutlinedTextField(label = stringResource(id = R.string.outlined_text_field_surname))
+fun SurnameContent(
+    name: String,
+    isError: Boolean = false,
+    onSurnameChange: (String) -> Unit
+) {
+//    CustomOutlinedTextField(label = stringResource(id = R.string.outlined_text_field_surname))
+
+    OutlinedTextField(
+        value = name,
+        onValueChange = onSurnameChange,
+        label = { Text("Surname") },
+        isError = isError,
+        modifier = Modifier
+            .fillMaxWidth(),
+        singleLine = true,
+        colors = TextFieldDefaults.outlinedTextFieldColors(
+            focusedBorderColor = OrangeLight,
+            unfocusedBorderColor = Color.LightGray,
+            focusedLabelColor = Color.Black,
+            unfocusedLabelColor = Color.Black,
+        )
+    )
+
 }
 
 //TODO: For Extensions
