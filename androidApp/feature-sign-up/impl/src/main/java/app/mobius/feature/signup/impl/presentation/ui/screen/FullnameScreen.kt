@@ -127,7 +127,6 @@ fun ButtonNext(onClickNextScreen: () -> Unit) {
     }
 }
 
-//TODO: Use watchers for textfields
 fun validateForm(name: String, surname: String) : Boolean {
     return false
 }
