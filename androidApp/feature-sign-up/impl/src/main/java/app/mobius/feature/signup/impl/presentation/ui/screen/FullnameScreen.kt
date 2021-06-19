@@ -5,6 +5,7 @@ import androidx.compose.material.*
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -68,8 +69,12 @@ fun Description() {
 @Composable
 fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
 
-    val name by viewModel.name.observeAsState("")
-    val isNameError by viewModel.isNameError.observeAsState(false)
+//    val name by viewModel.name.observeAsState("")
+    val name2 by rememberSaveable {
+        mutableSetOf("")
+    }
+
+//    val isNameError by viewModel.isNameError.observeAsState(false)
     val surname by viewModel.surname.observeAsState("")
     val isSurnameError by viewModel.isSurnameError.observeAsState(false)
 
@@ -77,7 +82,8 @@ fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
         modifier = Modifier
             .padding(all = 16.dp),
     ) {
-        NameContent(name, isNameError) { viewModel.onNameChange(it) }
+//        NameContent(name, isNameError) { viewModel.onNameChange(it) }
+        NameContent(name) { viewModel.onNameChange(it) }
         SurnameContent(surname, isSurnameError) { viewModel.onSurnameChange(it) }
     }
 }

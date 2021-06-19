@@ -1,28 +1,25 @@
 package app.mobius.feature.signup.impl.presentation.vm
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 
 /**
  * https://developer.android.com/jetpack/compose/state?hl=es-419
  */
 class FullnameScreenVM : ViewModel() {
 
-    private val _name = MutableLiveData("")
-    private val _isNameError = MutableLiveData(false)
-    private val _surname = MutableLiveData("")
-    private val _isSurnameError = MutableLiveData(false)
-    private val _isValidForm = MediatorLiveData<Boolean>().apply {
-        value = false
-    }
+    private val _name = MutableStateFlow("")
+    private val _isNameError = MutableStateFlow(false)
+    private val _surname = MutableStateFlow("")
+    private val _isSurnameError = MutableStateFlow(false)
+    private val _isValidForm = MutableStateFlow(false)
 
-    val name: LiveData<String> = _name
-    val isNameError: LiveData<Boolean> = _isNameError
-    val surname: LiveData<String> = _surname
-    val isSurnameError: LiveData<Boolean> = _isSurnameError
-    val isValidForm: LiveData<Boolean> = _isValidForm
+    val name: StateFlow<String> = _name
+    val isNameError: StateFlow<Boolean> = _isNameError
+    val surname: StateFlow<String> = _surname
+    val isSurnameError: StateFlow<Boolean> = _isSurnameError
+    val isValidForm: StateFlow<Boolean> = _isValidForm
 
     fun onNameChange(newName: String) {
         _name.value = newName
