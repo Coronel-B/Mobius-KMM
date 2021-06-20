@@ -1,27 +1,33 @@
 package app.mobius.feature.signup.impl.presentation.ui.screen
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.*
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import app.mobius.compose.material.CustomOutlinedTextField
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.FullnameScreenVM
 import app.mobius.view.theme.OrangeLight
 import java.util.*
 
+@ExperimentalComposeUiApi
 @Composable
 fun FullnameScreen(onClickNextScreen: () -> Unit) {
     Scaffold(
@@ -65,33 +71,44 @@ fun Description() {
 
 /**
  * Imports: https://stackoverflow.com/a/67882258/5279996
+ *
+ *
+ * https://proandroiddev.com/better-handling-states-between-viewmodel-and-composable-7ca14af379cb
  */
+@ExperimentalComposeUiApi
 @Composable
 fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
 
-//    val name by viewModel.name.observeAsState("")
-    val name2 by rememberSaveable {
-        mutableSetOf("")
-    }
 
-//    val isNameError by viewModel.isNameError.observeAsState(false)
-    val surname by viewModel.surname.observeAsState("")
-    val isSurnameError by viewModel.isSurnameError.observeAsState(false)
+    val name by remember { viewModel.name }.collectAsState()
+    val isNameError by viewModel.isNameError.collectAsState()
+    val surname by viewModel.surname.collectAsState()
+    val isSurnameError by viewModel.isSurnameError.collectAsState()
+
+    val (focusRequesterFromNameToSurname) = FocusRequester.createRefs()
+
 
     Column(
         modifier = Modifier
             .padding(all = 16.dp),
     ) {
 //        NameContent(name, isNameError) { viewModel.onNameChange(it) }
-        NameContent(name) { viewModel.onNameChange(it) }
-        SurnameContent(surname, isSurnameError) { viewModel.onSurnameChange(it) }
+        NameContent(name = name, focusRequesterToSurname = focusRequesterFromNameToSurname) {
+            viewModel.onNameChange(it)
+        }
+        SurnameContent(surname = surname, isError = isSurnameError, focusRequesterFromName = focusRequesterFromNameToSurname) {
+            viewModel.onSurnameChange(it)
+        }
     }
 }
 
+//TODO: delete only one letter with keyboard delete
+@ExperimentalComposeUiApi
 @Composable
 fun NameContent(
     name: String,
     isError: Boolean = false,
+    focusRequesterToSurname: FocusRequester,
     onNameChange: (String) -> Unit
 ) {
     OutlinedTextField(
@@ -107,31 +124,54 @@ fun NameContent(
             unfocusedBorderColor = Color.LightGray,
             focusedLabelColor = Color.Black,
             unfocusedLabelColor = Color.Black,
+        ),
+        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
+        keyboardActions = KeyboardActions(
+            onNext = {
+                focusRequesterToSurname.requestFocus()
+//                focusRequesterToSurname.captureFocus()
+            }
         )
+
     )
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun SurnameContent(
-    name: String,
+    surname: String,
     isError: Boolean = false,
+    focusRequesterFromName: FocusRequester,
     onSurnameChange: (String) -> Unit
 ) {
 //    CustomOutlinedTextField(label = stringResource(id = R.string.outlined_text_field_surname))
+    val keyboardController = LocalSoftwareKeyboardController.current
 
     OutlinedTextField(
-        value = name,
+        value = surname,
         onValueChange = onSurnameChange,
         label = { Text("Surname") },
         isError = isError,
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .focusRequester(focusRequester = focusRequesterFromName),
         singleLine = true,
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = OrangeLight,
             unfocusedBorderColor = Color.LightGray,
             focusedLabelColor = Color.Black,
             unfocusedLabelColor = Color.Black,
+        ),
+        keyboardOptions = KeyboardOptions(
+            imeAction = ImeAction.Done,
+            keyboardType = KeyboardType.Text
+        ),
+        keyboardActions = KeyboardActions(
+            onDone = { keyboardController?.hide()},
+            onPrevious = {
+                keyboardController?.show()
+                focusRequesterFromName.captureFocus()
+            }
         )
     )
 
