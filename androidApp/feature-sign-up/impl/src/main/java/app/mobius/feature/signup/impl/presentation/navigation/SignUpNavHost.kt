@@ -1,10 +1,12 @@
 package app.mobius.feature.signup.impl.presentation.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import app.mobius.feature.signup.impl.presentation.ui.screen.*
 
+@ExperimentalComposeUiApi
 @Composable
 fun SignUpNavHost() {
     val signUpNavHostController = signUpNavHostController()

@@ -92,11 +92,18 @@ fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
         modifier = Modifier
             .padding(all = 16.dp),
     ) {
-//        NameContent(name, isNameError) { viewModel.onNameChange(it) }
-        NameContent(name = name, focusRequesterToSurname = focusRequesterFromNameToSurname) {
+        NameContent(
+            name = name,
+            isError = isNameError,
+            focusRequesterToSurname = focusRequesterFromNameToSurname
+        ) {
             viewModel.onNameChange(it)
         }
-        SurnameContent(surname = surname, isError = isSurnameError, focusRequesterFromName = focusRequesterFromNameToSurname) {
+        SurnameContent(
+            surname = surname,
+            isError = isSurnameError,
+            focusRequesterFromName = focusRequesterFromNameToSurname
+        ) {
             viewModel.onSurnameChange(it)
         }
     }
