@@ -13,6 +13,7 @@ class FullnameScreenVM : ViewModel() {
     private val _isNameError = MutableStateFlow(false)
     private val _surname = MutableStateFlow("")
     private val _isSurnameError = MutableStateFlow(false)
+//    private val _isValidForm = MutableStateFlow(false)
     private val _isValidForm = MutableStateFlow(false)
 
     val name: StateFlow<String> = _name

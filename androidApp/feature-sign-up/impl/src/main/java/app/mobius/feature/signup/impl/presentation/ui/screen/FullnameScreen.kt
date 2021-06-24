@@ -102,7 +102,6 @@ fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
     }
 }
 
-//TODO: delete only one letter with keyboard delete
 @ExperimentalComposeUiApi
 @Composable
 fun NameContent(
