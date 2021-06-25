@@ -75,9 +75,6 @@ fun Description() {
 
 /**
  * Imports: https://stackoverflow.com/a/67882258/5279996
- *
- *
- * https://proandroiddev.com/better-handling-states-between-viewmodel-and-composable-7ca14af379cb
  */
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi

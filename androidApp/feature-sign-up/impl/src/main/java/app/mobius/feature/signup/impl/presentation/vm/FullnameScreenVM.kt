@@ -1,6 +1,7 @@
 package app.mobius.feature.signup.impl.presentation.vm
 
 import android.util.Log
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -18,13 +19,29 @@ class FullnameScreenVM : ViewModel() {
     private val _surname = MutableStateFlow("")
     private val _isSurnameError = MutableStateFlow(false)
 
-    private val _isValidForm = combineState(
+    private val _isStateInitial = combineState(
+        flow1 = _name,
+        flow2 = _surname,
+        scope = viewModelScope
+    ) { name, surname ->
+        name == "" || surname == ""
+    }
+
+    private val _existsFieldError = combineState(
         flow1 = _isNameError,
         flow2 = _isSurnameError,
         scope = viewModelScope
     ) { nameError, surnameError ->
         Log.d(this::class.java.simpleName, "$nameError $surnameError")
-        !(nameError || surnameError)
+        nameError || surnameError
+    }
+
+    private val _isValidForm = combineState(
+        flow1 = _isStateInitial,
+        flow2 = _existsFieldError,
+        scope = viewModelScope
+    ) { isStateInitial, existsFieldError ->
+        !isStateInitial && !existsFieldError
     }
 
     val name: StateFlow<String> = _name
