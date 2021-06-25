@@ -25,11 +25,15 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.FullnameScreenVM
 import app.mobius.view.theme.OrangeLight
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*
 
+@ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
 @Composable
 fun FullnameScreen(onClickNextScreen: () -> Unit) {
+    val viewModel: FullnameScreenVM = viewModel()
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -45,10 +49,10 @@ fun FullnameScreen(onClickNextScreen: () -> Unit) {
             Box( modifier = Modifier.align(Alignment.Center)) {
                 Column() {
                     Description()
-                    FormScreen()
+                    FormScreen(viewModel = viewModel)
                 }
             }
-            Box( modifier = Modifier.align(Alignment.BottomEnd)) { ButtonNext(onClickNextScreen) }
+            Box( modifier = Modifier.align(Alignment.BottomEnd)) { ButtonNext(viewModel, onClickNextScreen) }
         }
     }
 }
@@ -75,9 +79,10 @@ fun Description() {
  *
  * https://proandroiddev.com/better-handling-states-between-viewmodel-and-composable-7ca14af379cb
  */
+@ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
 @Composable
-fun FormScreen(viewModel: FullnameScreenVM = viewModel()) {
+fun FormScreen(viewModel: FullnameScreenVM) {
 
 
     val name by remember { viewModel.name }.collectAsState()
@@ -135,7 +140,6 @@ fun NameContent(
         keyboardActions = KeyboardActions(
             onNext = {
                 focusRequesterToSurname.requestFocus()
-//                focusRequesterToSurname.captureFocus()
             }
         )
 
@@ -173,10 +177,8 @@ fun SurnameContent(
             keyboardType = KeyboardType.Text
         ),
         keyboardActions = KeyboardActions(
-            onDone = { keyboardController?.hide()},
-            onPrevious = {
-                keyboardController?.show()
-                focusRequesterFromName.captureFocus()
+            onDone = {
+                keyboardController?.hide()
             }
         )
     )
@@ -184,8 +186,11 @@ fun SurnameContent(
 }
 
 //TODO: For Extensions
+@ExperimentalCoroutinesApi
 @Composable
-fun ButtonNext(onClickNextScreen: () -> Unit) {
+fun ButtonNext(viewModel: FullnameScreenVM, onClickNextScreen: () -> Unit) {
+    val isValidForm by viewModel.isValidForm.collectAsState()
+
     Button(
         onClick = {
             onClickNextScreen.invoke()
@@ -193,7 +198,9 @@ fun ButtonNext(onClickNextScreen: () -> Unit) {
         colors = ButtonDefaults.buttonColors(
             backgroundColor = Color.White,
         ),
-        modifier = Modifier.padding(all = 20.dp)
+        modifier = Modifier
+            .padding(all = 20.dp),
+        enabled = isValidForm
     ) {
         Text(
             text = stringResource(id = R.string.actions_next).toUpperCase(Locale.getDefault()),
@@ -203,8 +210,4 @@ fun ButtonNext(onClickNextScreen: () -> Unit) {
             style = typography.h3
         )
     }
-}
-
-fun validateForm(name: String, surname: String) : Boolean {
-    return false
 }

@@ -35,5 +35,7 @@ dependencies {
     implementation(project(":androidApp:domain"))
     implementation(project(":androidApp:shared"))
     implementation(project(":androidApp:view"))
+    implementation(project(":androidApp:viewmodel"))
+
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
 }
