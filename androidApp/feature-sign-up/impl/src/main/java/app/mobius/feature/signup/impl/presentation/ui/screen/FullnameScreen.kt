@@ -58,7 +58,7 @@ fun FullnameScreen(onClickNextScreen: () -> Unit) {
 }
 
 @Composable
-fun Description() {
+private fun Description() {
     Text(
         text = stringResource(id = R.string.fullname_screen_description),
         color = Color.Black,
@@ -79,7 +79,7 @@ fun Description() {
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
 @Composable
-fun FormScreen(viewModel: FullnameScreenVM) {
+private fun FormScreen(viewModel: FullnameScreenVM) {
 
 
     val name by remember { viewModel.name }.collectAsState()
@@ -113,7 +113,7 @@ fun FormScreen(viewModel: FullnameScreenVM) {
 
 @ExperimentalComposeUiApi
 @Composable
-fun NameContent(
+private fun NameContent(
     name: String,
     isError: Boolean = false,
     focusRequesterToSurname: FocusRequester,
@@ -145,7 +145,7 @@ fun NameContent(
 
 @ExperimentalComposeUiApi
 @Composable
-fun SurnameContent(
+private fun SurnameContent(
     surname: String,
     isError: Boolean = false,
     focusRequesterFromName: FocusRequester,
@@ -185,7 +185,7 @@ fun SurnameContent(
 //TODO: For Extensions
 @ExperimentalCoroutinesApi
 @Composable
-fun ButtonNext(viewModel: FullnameScreenVM, onClickNextScreen: () -> Unit) {
+private fun ButtonNext(viewModel: FullnameScreenVM, onClickNextScreen: () -> Unit) {
     val isValidForm by viewModel.isValidForm.collectAsState()
 
     Button(

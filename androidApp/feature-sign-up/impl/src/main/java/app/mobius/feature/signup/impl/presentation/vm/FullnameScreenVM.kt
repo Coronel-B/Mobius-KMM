@@ -1,16 +1,12 @@
 package app.mobius.feature.signup.impl.presentation.vm
 
 import android.util.Log
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import org.itdevexpert.viewmodel.flow.combineState
 
-/**
- * https://developer.android.com/jetpack/compose/state?hl=es-419
- */
 @ExperimentalCoroutinesApi
 class FullnameScreenVM : ViewModel() {
 

@@ -4,4 +4,11 @@
     <string name="fullname_screen_description">We will create your identity within Möbius in a few simple steps</string>
     <string name="outlined_text_field_name">Name</string>
     <string name="outlined_text_field_surname">Surname</string>
+
+    <string name="birth_moment_screen">Birth Moment</string>
+    <string name = "birth_moment_screen_phrase">Think about the great things you have done throughout your life </string>
+    <string name = "birth_moment_screen_ask">When did you start to exist? </string>
+    <string name = "birth_moment_screen_time_description">You can add the time of your birth.
+         This data will be used to show you how long your life has existed</string>
+
 </resources>

@@ -5,7 +5,9 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import app.mobius.feature.signup.impl.presentation.ui.screen.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
 @Composable
 fun SignUpNavHost() {
@@ -19,7 +21,9 @@ fun SignUpNavHost() {
         composable(route = SignUpDestinations.FULLNAME_SCREEN) {
             FullnameScreen(signUpActions.birthdateScreen)
         }
-        composable(route = SignUpDestinations.BIRHDATE_SCREEN) { BirthDateScreen() }
+        composable(route = SignUpDestinations.BIRHDATE_SCREEN) {
+            BirthMomentScreen(signUpActions.genderScreen)
+        }
         composable(route = SignUpDestinations.GENDER_SCREEN) { GenderScreen() }
         composable(route = SignUpDestinations.PHONE_SCREEN) { PhoneScreen() }
         composable(route = SignUpDestinations.PASSWORD_SCREEN) { PasswordScreen() }

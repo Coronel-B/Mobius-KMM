@@ -4,16 +4,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import app.mobius.feature.signup.impl.presentation.ui.screen.FullnameScreen
+import app.mobius.feature.signup.impl.presentation.ui.screen.BirthMomentScreen
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
 @Preview(
-    name = "FullnameScreen Preview",
+    name = "BirthMomentScreen Preview",
     device = Devices.PIXEL_2_XL
 )
 @Composable
-private fun FullnameScreenPreviewMock(onClickNextScreen: () -> Unit = {}) {
-    FullnameScreen(onClickNextScreen = onClickNextScreen)
+private fun BirthMomentPreviewMock(onClickNextScreen: () -> Unit = {}) {
+    BirthMomentScreen(onClickNextScreen = onClickNextScreen)
 }
