@@ -40,12 +40,16 @@ object D {
 
         const val appcompat = "androidx.appcompat:appcompat:${V.AndroidX.appcompat}"
         const val coreKtx = "androidx.core:core-ktx:${V.AndroidX.core}"
-        const val constraintlayout = "androidx.constraintlayout:constraintlayout:${V.AndroidX.constraintlayout}"
         const val recyclerView = "androidx.recyclerview:recyclerview:${V.AndroidX.recyclerview}"
         const val lifecycleViewmodel = "${lifecycle}viewmodel:${V.AndroidX.lifecycle}"
         const val lifecycleViewmodelExtensions = "${lifecycle}viewmodel-ktx:${V.AndroidX.lifecycle}"
         const val lifecycleLivedata = "${lifecycle}livedata:${V.AndroidX.lifecycle}"
         const val lifecycleExtension = "${lifecycle}extensions:${V.AndroidX.lifecycle}"
+
+        object Constraintlayout {
+            const val constraintlayout = "androidx.constraintlayout:constraintlayout:${V.AndroidX.Constraintlayout.constraintlayout}"
+            const val constraintlayoutCompose = "androidx.constraintlayout:constraintlayout-compose:${V.AndroidX.Constraintlayout.constraintlayoutCompose}"
+        }
 
         object JetpackCompose {
 
@@ -75,7 +79,6 @@ object D {
             const val ui = "androidx.compose.ui:ui:${V.AndroidX.Compose.jetpackCompose}"
             const val uiTooling = "androidx.compose.ui:ui-tooling:${V.AndroidX.Compose.jetpackCompose}" // (Previews, etc.)
             const val uiGraphics = "androidx.compose.ui:ui-graphics:${V.AndroidX.Compose.jetpackCompose}"
-
 
             // UI Tests
             object AndroidTest {
@@ -158,7 +161,9 @@ object D {
 
     object ThirdParties {
         object JetpackCompose {
-            const val composeMaterialDialogs = "io.github.vanpra.compose-material-dialogs:core:${V.ThirdParties.JetpackCompose.composeMaterialDialogs}"
+            const val composeMaterialDialogsCore = "io.github.vanpra.compose-material-dialogs:core:${V.ThirdParties.JetpackCompose.composeMaterialDialogsCore}"
+            const val composeMaterialDialogsDatetime = "io.github.vanpra.compose-material-dialogs:datetime:${V.ThirdParties.JetpackCompose.composeMaterialDialogsCore}"
+            const val composeMaterialDialogsColor = "io.github.vanpra.compose-material-dialogs:color:${V.ThirdParties.JetpackCompose.composeMaterialDialogsCore}"
         }
     }
 

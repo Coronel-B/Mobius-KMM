@@ -1,5 +1,6 @@
 package app.mobius.feature.signup.impl.presentation.ui.screen
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
@@ -18,6 +19,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.BirthMomentVM
@@ -27,7 +29,6 @@ import com.vanpra.composematerialdialogs.buttons
 import com.vanpra.composematerialdialogs.datetime.datepicker.datepicker
 import com.vanpra.composematerialdialogs.datetime.timepicker.timepicker
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import java.util.*
 
 @ExperimentalUnitApi
 @ExperimentalCoroutinesApi
@@ -54,7 +55,14 @@ fun BirthMomentScreen(
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
 
-            Box( modifier = Modifier.align(Alignment.TopCenter)) {
+
+
+            Box(modifier = Modifier
+//                .matchParentSize()
+                .fillMaxSize()
+                .align(alignment = Alignment.Center)
+                .background(Color.Yellow)
+            ) {
                 Column {
                     Phrase()
                     Ask()
@@ -63,7 +71,8 @@ fun BirthMomentScreen(
                     TimeDescription()
                 }
             }
-            Box( modifier = Modifier.align(Alignment.BottomEnd)) {
+
+            Box(modifier = Modifier.align(Alignment.BottomEnd)) {
                 ButtonNext(viewModel, onClickNextScreen)
             }
         }
@@ -178,13 +187,13 @@ private fun TimeDescription() {
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Normal,
         modifier = Modifier
-            .wrapContentSize()
-            .padding(all = 16.dp),
+            .wrapContentSize(align = Alignment.BottomCenter)
+            .padding(all = 16.dp)
+            .background(Color.Red)
+        ,
         textAlign = TextAlign.Center,
     )
 }
-
-
 
 //TODO: For Extensions
 @ExperimentalCoroutinesApi

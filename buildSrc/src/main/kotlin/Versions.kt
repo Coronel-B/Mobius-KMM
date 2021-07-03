@@ -63,10 +63,14 @@ object V {
 
     object AndroidX {
         const val appcompat = "1.2.0"
-        const val constraintlayout = "2.0.4"
         const val core = "1.3.2"
         const val lifecycle = "2.2.0"
         const val recyclerview = "1.1.0"
+
+        object Constraintlayout {
+            const val constraintlayout = "2.0.4"
+            const val constraintlayoutCompose = "1.0.0-alpha08"
+        }
 
         object Activity {
             const val activityCompose = "1.3.0-alpha8" // https://maven.google.com/web/index.html#androidx.activity:activity-compose
@@ -103,7 +107,9 @@ object V {
 
     object ThirdParties {
         object JetpackCompose {
-            const val composeMaterialDialogs = "0.4.3"
+            const val composeMaterialDialogsCore = "0.4.3"
+            const val composeMaterialDialogsDatetime = "0.4.3"
+            const val composeMaterialDialogsColor = "0.4.3"
         }
     }
 
