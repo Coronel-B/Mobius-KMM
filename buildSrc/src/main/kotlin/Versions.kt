@@ -32,7 +32,6 @@ object V {
     const val sqlDelight = "1.4.4"
     const val stately = "1.1.0"
     const val serialization = "1.0.0"
-    const val kotlinxDateTime = "0.1.1"
 
     const val circleImageViewVersion = "3.0.0"
     const val constraintLayoutVersion = "1.1.3"
@@ -59,6 +58,7 @@ object V {
     object Common {
         const val uuid = "0.2.3"
         const val logback = "1.2.3" //https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+        const val kotlinxDateTime = "0.1.1"
     }
 
     object AndroidX {
@@ -99,6 +99,12 @@ object V {
 
     object OkHttp {
         const val okhttp3 = "4.9.0"
+    }
+
+    object ThirdParties {
+        object JetpackCompose {
+            const val composeMaterialDialogs = "0.4.3"
+        }
     }
 
 }

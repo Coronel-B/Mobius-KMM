@@ -45,7 +45,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(D.Common.uuid)
-                implementation(D.Common.kotlinxDateTime)
+                api(D.Common.kotlinxDateTime)
             }
         }
 

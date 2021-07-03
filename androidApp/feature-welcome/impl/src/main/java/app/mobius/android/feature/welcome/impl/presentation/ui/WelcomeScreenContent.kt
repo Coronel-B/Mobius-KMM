@@ -22,6 +22,7 @@ import java.util.*
 import androidx.compose.material.Typography
 import androidx.compose.ui.res.stringResource
 import app.mobius.android.feature.welcome.impl.R
+import app.mobius.view.stringResToUpper
 
 @Composable
 fun WelcomeScreenContent(
@@ -68,7 +69,7 @@ fun AppNameText() {
         horizontalArrangement = Arrangement.Center
     ) {
         Text(
-            text = stringResource(id = R.string.app_name).toUpperCase(Locale.getDefault()),
+            text = stringResToUpper(id = R.string.app_name),
             color = Color.Black,
             fontFamily = FontFamily.SansSerif,
             fontSize = 48.sp,
@@ -134,7 +135,7 @@ fun CreateYourIdentityBtn(typography: Typography, onClickSignUp: () -> Unit) {
             .padding(8.dp)
     ) {
         Text(
-            text = stringResource(id = R.string.create_your_identity).toUpperCase(Locale.getDefault()),
+            text = stringResToUpper(id = R.string.create_your_identity),
             fontSize = 13.sp,
             color = Color.Black,
             fontWeight = FontWeight.Bold,
@@ -155,7 +156,7 @@ fun EnterToYourIdentityBtn(typography: Typography, onClickLogin: () -> Unit) {
             .padding(8.dp)
     ) {
         Text(
-            text = stringResource(id = R.string.enter_to_your_identity).toUpperCase(Locale.getDefault()),
+            text = stringResToUpper(id = R.string.enter_to_your_identity),
             color = Color.Black,
             fontSize = 13.sp,
             fontWeight = FontWeight.Bold,

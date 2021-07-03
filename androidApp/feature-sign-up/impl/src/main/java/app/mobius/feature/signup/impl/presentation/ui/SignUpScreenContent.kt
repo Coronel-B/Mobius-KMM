@@ -4,8 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.ExperimentalUnitApi
 import app.mobius.feature.signup.impl.presentation.navigation.SignUpNavHost
 
+@ExperimentalUnitApi
 @ExperimentalComposeUiApi
 @Preview(
     name = "Sign Up Screen Content Preview",

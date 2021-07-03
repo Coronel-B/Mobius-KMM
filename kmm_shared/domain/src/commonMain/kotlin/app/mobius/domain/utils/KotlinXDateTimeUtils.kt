@@ -11,11 +11,15 @@ fun Instant.toLocalDate(timeZone: TimeZone): LocalDate = toLocalDateTime(timeZon
 
 fun currentLocalDate(): LocalDate {
     val currentMoment = Clock.System.now()
-
     return currentMoment.toLocalDate(TimeZone.of(ZONE_ID_BUENOS_AIRES))
 }
 
 fun currentLocalDateTime(): LocalDateTime {
     val currentMoment = Clock.System.now()
     return currentMoment.toLocalDateTime(TimeZone.of(ZONE_ID_BUENOS_AIRES))
+}
+
+fun currentLocalTime(): String {
+    val currentLocalDateTime = currentLocalDateTime()
+    return "${currentLocalDateTime.hour}:${currentLocalDateTime.minute}"
 }

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="actions_next">Next</string>
+    <string name="actions_ok">OK</string>
+    <string name="actions_cancel">Cancel</string>
 </resources>

@@ -43,6 +43,11 @@ dependencies {
     api(D.AndroidX.JetpackCompose.navigation)
     api(D.AndroidX.JetpackCompose.paging)
 
+//    api(D.ThirdParties.JetpackCompose.composeMaterialDialogs)
+    api("io.github.vanpra.compose-material-dialogs:core:0.4.3")
+    api("io.github.vanpra.compose-material-dialogs:datetime:0.4.3")
+    api("io.github.vanpra.compose-material-dialogs:color:0.4.3")
+
 //    Testing
     androidTestImplementation(D.AndroidX.JetpackCompose.AndroidTest.uiTestJunit4)
 }

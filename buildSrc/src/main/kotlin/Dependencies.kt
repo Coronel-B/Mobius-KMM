@@ -26,7 +26,7 @@ object D {
         /**
          * https://github.com/Kotlin/kotlinx-datetime
          */
-        const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.kotlinxDateTime}"
+        const val kotlinxDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:${V.Common.kotlinxDateTime}"
     }
 
     object Google {
@@ -154,6 +154,12 @@ object D {
             const val iOSMock = "${client}mock-native:${V.ktorMockNative}"
         }
 
+    }
+
+    object ThirdParties {
+        object JetpackCompose {
+            const val composeMaterialDialogs = "io.github.vanpra.compose-material-dialogs:core:${V.ThirdParties.JetpackCompose.composeMaterialDialogs}"
+        }
     }
 
 }

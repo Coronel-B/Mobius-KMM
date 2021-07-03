@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.FullnameScreenVM
+import app.mobius.view.stringResToUpper
 import app.mobius.view.theme.OrangeLight
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*
@@ -138,8 +139,7 @@ private fun NameContent(
             onNext = {
                 focusRequesterToSurname.requestFocus()
             }
-        )
-
+        ),
     )
 }
 
@@ -200,7 +200,7 @@ private fun ButtonNext(viewModel: FullnameScreenVM, onClickNextScreen: () -> Uni
         enabled = isValidForm
     ) {
         Text(
-            text = stringResource(id = R.string.actions_next).toUpperCase(Locale.getDefault()),
+            text = stringResToUpper(id = R.string.actions_next),
             color = Color.Black,
             fontFamily = FontFamily.Default,
             fontSize = 18.sp,
