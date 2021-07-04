@@ -184,7 +184,6 @@ private fun TimePicker(
         timepicker {
             viewModel.onTimeChange(it)
         }
-//        colorpick
 
         buttons {
             positiveButton(stringResource(id = R.string.actions_ok))

@@ -7,7 +7,6 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import app.mobius.view.theme.OrangeLight
 
 @Composable
 fun CustomOutlinedTextField(
@@ -24,7 +23,7 @@ fun CustomOutlinedTextField(
             .fillMaxWidth(),
         singleLine = true,
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = OrangeLight,
+            focusedBorderColor = Color.Green,
             unfocusedBorderColor = Color.LightGray,
             focusedLabelColor = Color.Black,
             unfocusedLabelColor = Color.Black,

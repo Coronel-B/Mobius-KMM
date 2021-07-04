@@ -25,7 +25,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.FullnameScreenVM
 import app.mobius.view.stringResToUpper
-import app.mobius.view.theme.OrangeLight
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import java.util.*
 
@@ -129,7 +128,7 @@ private fun NameContent(
             .fillMaxWidth(),
         singleLine = true,
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = OrangeLight,
+            focusedBorderColor = Color.Green,
             unfocusedBorderColor = Color.LightGray,
             focusedLabelColor = Color.Black,
             unfocusedLabelColor = Color.Black,
@@ -164,7 +163,7 @@ private fun SurnameContent(
             .focusRequester(focusRequester = focusRequesterFromName),
         singleLine = true,
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = OrangeLight,
+            focusedBorderColor = Color.Green,
             unfocusedBorderColor = Color.LightGray,
             focusedLabelColor = Color.Black,
             unfocusedLabelColor = Color.Black,
