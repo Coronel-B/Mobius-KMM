@@ -69,7 +69,7 @@ object V {
 
         object Constraintlayout {
             const val constraintlayout = "2.0.4"
-            const val constraintlayoutCompose = "1.0.0-alpha08"
+            const val constraintlayoutCompose = "1.0.0-alpha08"  // https://mvnrepository.com/artifact/androidx.constraintlayout/constraintlayout-compose?repo=google
         }
 
         object Activity {
