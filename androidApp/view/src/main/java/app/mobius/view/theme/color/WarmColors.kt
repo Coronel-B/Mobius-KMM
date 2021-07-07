@@ -12,7 +12,3 @@ object WarmColors {
     val SecondaryLight = Color(0xFFff833a)
     val SecondaryDark = Color(0xFFac1900)
 }
-
-val ColorForResearch = Color(0xFF19FF00)
-val ColorForResearch2 = Color(0xFFFFF200)
-val ColorForResearch3 = Color(0xFF002EFF)

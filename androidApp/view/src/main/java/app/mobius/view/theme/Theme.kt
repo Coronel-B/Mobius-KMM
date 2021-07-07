@@ -11,36 +11,41 @@ import androidx.compose.ui.graphics.Color.Companion.Black
 import androidx.compose.ui.graphics.Color.Companion.White
 import app.mobius.view.theme.color.*
 
+/**
+ * Note: secondaryVariant is typically the same as secondary in dark theme since contrast levels are higher, and hence there is less need for a separate secondary color.
+ */
 @SuppressLint("ConflictingOnColor")
 private val DarkColorPalette = darkColors(
-    primary = WarmColors.Secondary,
-    primaryVariant = ColorForResearch,
-    secondary = ColdColors.Primary,
-    secondaryVariant = ColorForResearch,
-    background = White,
-    surface = White,
-    error = Color.Red,
-    onPrimary = ColdColors.Primary,
-    onSecondary = WarmColors.SecondaryDark,
-    onBackground = Black,
-    onSurface = ColdColors.PrimaryDark,
-    onError = ColorForResearch
+    primary = ColdColors.Primary,
+    primaryVariant = ColdColors.PrimaryDark,
+    secondary = WarmColors.Secondary,
+    background = Background,
+    surface = Surface,
+    error = Error,
+    onPrimary = OnPrimary,
+    onSecondary = OnSecondary,
+    onBackground = OnBackground,
+    onSurface = OnSurface,
+    onError = OnError
 )
 
+/**
+ * OBS: variant should be more dark
+ */
 @SuppressLint("ConflictingOnColor")
 private val LightColorPalette = lightColors(
-    primary = WarmColors.Secondary,
-    primaryVariant = ColorForResearch,
-    secondary = ColdColors.Primary,
-    secondaryVariant = ColorForResearch,
-    background = White,
-    surface = White,
-    error = Color.Red,
-    onPrimary = ColdColors.Primary,
-    onSecondary = WarmColors.SecondaryLight,
-    onBackground = Black,
-    onSurface = ColdColors.PrimaryLight,
-    onError = ColorForResearch
+    primary = ColdColors.PrimaryLight,
+    primaryVariant = ColdColors.Primary,
+    secondary = WarmColors.SecondaryLight,
+    secondaryVariant = WarmColors.Secondary,
+    background = Background,
+    surface = Surface,
+    error = Error,
+    onPrimary = OnPrimary,
+    onSecondary = OnSecondary,
+    onBackground = OnBackground,
+    onSurface = OnSurface,
+    onError = OnError
 )
 
 @Composable
