@@ -31,7 +31,7 @@ import java.util.*
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
 @Composable
-fun FullnameScreen(onClickNextScreen: () -> Unit) {
+fun FullnameScreen(onClickNextScreen: () -> Unit) {   //TODO: Delete default
     val viewModel: FullnameScreenVM = viewModel()
 
     Scaffold(

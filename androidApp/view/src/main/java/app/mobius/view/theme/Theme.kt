@@ -6,9 +6,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Black
-import androidx.compose.ui.graphics.Color.Companion.White
 import app.mobius.view.theme.color.*
 
 /**
@@ -16,9 +13,9 @@ import app.mobius.view.theme.color.*
  */
 @SuppressLint("ConflictingOnColor")
 private val DarkColorPalette = darkColors(
-    primary = ColdColors.Primary,
-    primaryVariant = ColdColors.PrimaryDark,
-    secondary = WarmColors.Secondary,
+    primary = ColdColors.PrimaryDark,
+    primaryVariant = ColdColors.Primary,
+    secondary = WarmColors.SecondaryDark,
     background = Background,
     surface = Surface,
     error = Error,
@@ -57,7 +54,8 @@ fun MobiusTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable
     }
 
     MaterialTheme(
-        colors = colors,
+//        colors = colors,
+        colors = DarkColorPalette,
         typography = Typography,
         shapes = Shapes,
         content = content

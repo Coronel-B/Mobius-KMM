@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import org.itdevexpert.viewmodel.flow.combineState
+import org.itdevexpert.viewmodel.flow.combineStateFlow
 
 @ExperimentalCoroutinesApi
 class FullnameScreenVM : ViewModel() {
@@ -32,23 +33,47 @@ class FullnameScreenVM : ViewModel() {
         nameError || surnameError
     }
 
-    private val _isValidForm = combineState(
-        flow1 = _isStateInitial,
-        flow2 = _existsFieldError,
+    private val _isValidForm2 = combineStateFlow(
+        flows = arrayOf(_isStateInitial, _existsFieldError),
         scope = viewModelScope
-    ) { isStateInitial, existsFieldError ->
-        !isStateInitial && !existsFieldError
+    ) { combinedFlows: Array<Any> ->
+        combinedFlows.map {
+
+        }
+//        !isStateInitial && !existsFieldError
+
+    }
+
+    data class A(val a: String)
+    data class B(val b: Int)
+
+    private val test1 = MutableStateFlow(A("a"))
+    private val test2 = MutableStateFlow(B(2))
+
+    @Suppress("CHANGING_ARGUMENTS_EXECUTION_ORDER_FOR_NAMED_VARARGS")
+    private val _isValidForm = combineStateFlow(
+        flows = arrayOf(test1, test2),
+        scope = viewModelScope
+    ) { combinedFlows: Array<Any> ->
+        combinedFlows.map {
+            val doSomething = when (it) {
+                is A -> true
+                is B -> false
+                else -> false
+            }
+        }
     }
 
     val name: StateFlow<String> = _name
     val isNameError: StateFlow<Boolean> = _isNameError
     val surname: StateFlow<String> = _surname
     val isSurnameError: StateFlow<Boolean> = _isSurnameError
-    val isValidForm: StateFlow<Boolean> = _isValidForm
+    val isValidForm: StateFlow<Boolean> = _isValidForm2
 
     fun onNameChange(newName: String) {
         _name.value = newName
         _isNameError.value = newName.isEmpty() || !withoutNumbers(newName)
+        test1.value = A(newName)
     }
 
     fun onSurnameChange(newSurname: String) {

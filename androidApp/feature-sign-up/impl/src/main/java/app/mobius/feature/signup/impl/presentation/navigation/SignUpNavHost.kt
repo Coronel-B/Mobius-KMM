@@ -19,7 +19,7 @@ fun SignUpNavHost() {
 
     NavHost(
         navController = signUpNavHostController,
-        startDestination = SignUpDestinations.BIRHDATE_SCREEN   //TODO: Change tu Fullname
+        startDestination = SignUpDestinations.FULLNAME_SCREEN   //TODO: Change tu Fullname
     ) {
         composable(route = SignUpDestinations.FULLNAME_SCREEN) {
             FullnameScreen(signUpActions.birthdateScreen)

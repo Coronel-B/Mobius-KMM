@@ -1,6 +1,5 @@
 package app.mobius.feature.signup.impl.presentation.ui.screen
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
@@ -28,6 +27,7 @@ import app.mobius.feature.signup.impl.presentation.vm.BirthMomentVM
 import app.mobius.view.stringResToUpper
 import com.vanpra.composematerialdialogs.MaterialDialog
 import com.vanpra.composematerialdialogs.buttons
+import com.vanpra.composematerialdialogs.color.colorChooser
 import com.vanpra.composematerialdialogs.datetime.datepicker.datepicker
 import com.vanpra.composematerialdialogs.datetime.timepicker.timepicker
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -41,7 +41,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 )
 @Composable
 fun BirthMomentScreen(
-    onClickNextScreen: () -> Unit = {}
+    onClickNextScreen: () -> Unit = {}  //TODO: Delete default
 ) {
     val viewModel: BirthMomentVM = viewModel()
 
@@ -135,7 +135,12 @@ private fun DatePicker(
 ) {
     val dialog = remember { MaterialDialog() }
 
+    val isValidData by remember { viewModel.isValidData }.collectAsState()
     val date by remember { viewModel.date }.collectAsState()
+
+    if (!isValidData) {
+        Text(text = "Error de fecha")
+    }
 
     dialog.build {
         datepicker {
@@ -228,7 +233,7 @@ private fun TimeDescription(
                 .wrapContentSize(align = Alignment.BottomCenter)
                 .padding(all = 16.dp)
                 .constrainAs(timeDescriptionRef) {
-                     top.linkTo(datePickerRef.bottom)
+                    top.linkTo(datePickerRef.bottom)
                     bottom.linkTo(buttonNextRef.top)
                 }
             ,
@@ -247,8 +252,7 @@ fun ButtonNext(
     onClickNextScreen: () -> Unit
 ) {
     scope.apply {
-        //    val isValidForm by viewModel.isValidForm.collectAsState()
-        val isValidForm = false     //TODO: Change
+        val isValidData by viewModel.isValidData.collectAsState()
 
         Button(
             onClick = {
@@ -260,11 +264,11 @@ fun ButtonNext(
             modifier = Modifier
                 .padding(all = 20.dp)
                 .constrainAs(buttonNextRef) {
-                        absoluteRight.linkTo(parent.absoluteRight)
-                        bottom.linkTo(parent.bottom)
+                    absoluteRight.linkTo(parent.absoluteRight)
+                    bottom.linkTo(parent.bottom)
                 }
             ,
-            enabled = isValidForm
+            enabled = isValidData
         ) {
             Text(
                 text = stringResToUpper(id = R.string.actions_next),
