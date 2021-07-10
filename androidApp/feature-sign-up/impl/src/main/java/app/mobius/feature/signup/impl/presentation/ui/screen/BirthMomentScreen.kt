@@ -1,5 +1,10 @@
 package app.mobius.feature.signup.impl.presentation.ui.screen
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
@@ -25,13 +30,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.BirthMomentVM
 import app.mobius.view.stringResToUpper
+import app.mobius.view.theme.color.Error
 import com.vanpra.composematerialdialogs.MaterialDialog
 import com.vanpra.composematerialdialogs.buttons
-import com.vanpra.composematerialdialogs.color.colorChooser
 import com.vanpra.composematerialdialogs.datetime.datepicker.datepicker
 import com.vanpra.composematerialdialogs.datetime.timepicker.timepicker
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalAnimationApi
 @ExperimentalUnitApi
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
@@ -58,11 +64,14 @@ fun BirthMomentScreen(
         Box(modifier = Modifier.fillMaxSize()) {
 
             ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-                val (phraseRef, askRef, datePickerRef, timePickerRef, timeDescriptionRef, buttonNextRef) = createRefs()
+                val (phraseRef, askRef, datePickerRef, dateErrorRef,
+                    timePickerRef, timeDescriptionRef, buttonNextRef
+                ) = createRefs()
 
                 Phrase(scope = this, phraseRef = phraseRef)
                 Ask(scope = this, askRef = askRef, phraseRef = phraseRef)
                 DatePicker(scope = this, datePickerRef = datePickerRef, askRef = askRef, viewModel = viewModel)
+                DateError(scope = this, dateErrorRef = dateErrorRef, datePickerRef = datePickerRef, viewModel = viewModel)
                 TimeDescription(scope = this, timeDescriptionRef = timeDescriptionRef, datePickerRef = datePickerRef, buttonNextRef = buttonNextRef)
                 TimePicker(scope = this, timePickerRef = timePickerRef, timeDescriptionRef = timeDescriptionRef, viewModel = viewModel)
                 ButtonNext(scope = this, buttonNextRef = buttonNextRef, viewModel = viewModel, onClickNextScreen = onClickNextScreen)
@@ -135,12 +144,7 @@ private fun DatePicker(
 ) {
     val dialog = remember { MaterialDialog() }
 
-    val isValidData by remember { viewModel.isValidData }.collectAsState()
     val date by remember { viewModel.date }.collectAsState()
-
-    if (!isValidData) {
-        Text(text = "Error de fecha")
-    }
 
     dialog.build {
         datepicker {
@@ -169,6 +173,52 @@ private fun DatePicker(
                 }
             ,
         )
+    }
+}
+
+/**
+ * visibility on views: https://stackoverflow.com/a/66771589/5279996
+ */
+@ExperimentalAnimationApi
+@ExperimentalCoroutinesApi
+@Composable
+private fun DateError(
+    scope: ConstraintLayoutScope,
+    dateErrorRef: ConstrainedLayoutReference,
+    datePickerRef: ConstrainedLayoutReference,
+    viewModel: BirthMomentVM
+) {
+    val isDateError by viewModel.isDateError.collectAsState()
+
+    scope.apply {
+//        TODO: AnimatedVisibility as generic
+        AnimatedVisibility(
+            visible = isDateError,
+            enter = fadeIn(
+                // Overwrites the initial value of alpha to 0.4f for fade in, 0 by default
+                initialAlpha = 0.4f
+            ),
+            exit = fadeOut(
+                // Overwrites the default animation with tween
+                animationSpec = tween(durationMillis = 250)
+            ),
+            modifier = Modifier
+                .wrapContentSize(align = Alignment.BottomCenter)
+                .padding(all = 16.dp)
+                .constrainAs(dateErrorRef) {
+                    top.linkTo(datePickerRef.bottom)
+                    centerHorizontallyTo(parent)
+                }
+        ) {
+            // Content that needs to appear/disappear goes here:
+            Text(
+                text = stringResource(id = R.string.birth_moment_screen_date_error),
+                color = Error,
+                fontSize = 15.sp,
+                fontFamily = FontFamily.SansSerif,
+                fontWeight = FontWeight.Normal,
+            )
+        }
     }
 }
 

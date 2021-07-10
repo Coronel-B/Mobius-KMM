@@ -9,6 +9,7 @@
     <string name="birth_moment_screen">Momento de nacimiento</string>
     <string name="birth_moment_screen_phrase">Piensa en las grandes cosas que has hecho a lo largo de tu vida</string>
     <string name="birth_moment_screen_ask">¿Cuándo comenzaste a existir?</string>
+    <string name ="birth_moment_screen_date_error">Debes ser mayor a 13 años</string>
     <string name="birth_moment_screen_time_description">Si deseas, puedes agregar el horario de tu nacimiento.
         Este dato será utilizado para mostrarte cuánto tiempo de vida llevas existiendo</string>
 

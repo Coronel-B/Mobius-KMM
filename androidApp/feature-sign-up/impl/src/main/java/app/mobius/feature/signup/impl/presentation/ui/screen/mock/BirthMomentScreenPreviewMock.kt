@@ -1,5 +1,6 @@
 package app.mobius.feature.signup.impl.presentation.ui.screen.mock
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.tooling.preview.Devices
@@ -8,6 +9,7 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import app.mobius.feature.signup.impl.presentation.ui.screen.BirthMomentScreen
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalAnimationApi
 @ExperimentalUnitApi
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi

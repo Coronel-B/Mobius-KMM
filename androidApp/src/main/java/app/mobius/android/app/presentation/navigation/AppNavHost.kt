@@ -1,7 +1,9 @@
 package app.mobius.android.app.presentation.navigation
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import app.mobius.android.app.presentation.navigation.AppDestinations.LOGIN_SCREEN
@@ -11,6 +13,8 @@ import app.mobius.android.app.presentation.ui.screen.LoginScreen
 import app.mobius.android.app.presentation.ui.screen.SignUpScreen
 import app.mobius.android.app.presentation.ui.screen.WelcomeScreen
 
+@ExperimentalAnimationApi
+@ExperimentalUnitApi
 @ExperimentalComposeUiApi
 @Composable
 fun AppNavHost() {

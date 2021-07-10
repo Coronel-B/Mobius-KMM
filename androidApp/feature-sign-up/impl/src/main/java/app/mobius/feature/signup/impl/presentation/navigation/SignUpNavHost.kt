@@ -1,6 +1,6 @@
 package app.mobius.feature.signup.impl.presentation.navigation
 
-import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.unit.ExperimentalUnitApi
@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import app.mobius.feature.signup.impl.presentation.ui.screen.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalAnimationApi
 @ExperimentalUnitApi
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
