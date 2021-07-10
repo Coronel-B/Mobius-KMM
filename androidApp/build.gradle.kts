@@ -18,7 +18,7 @@ android {
         variant.outputs
             .map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
             .forEach { output ->
-                val outputFileName = "Möbius AI - ${variant.baseName} - ${variant.versionName} ${variant.versionCode}"
+                val outputFileName = "Möbius AI-${variant.baseName}-${variant.versionName}-${variant.versionCode}.apk"
                 println("OutputFileName: $outputFileName")
                 output.outputFileName = outputFileName
             }
@@ -29,7 +29,7 @@ android {
         minSdkVersion(24)
         targetSdkVersion(30)
         versionCode = 1
-        versionName = "0.0.1-2021.07.10-1"
+        versionName = "0.0.1-2021.07.10"
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
     }
     buildTypes {
