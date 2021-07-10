@@ -79,6 +79,7 @@ fun BirthMomentScreen(
     }
 }
 
+//TODO: Add as extension
 @Composable
 private fun Phrase(
     scope: ConstraintLayoutScope,
@@ -99,10 +100,12 @@ private fun Phrase(
                     centerHorizontallyTo(parent)
                 }
             ,
+            textAlign = TextAlign.Center,
         )
     }
 }
 
+//TODO: Add as extension
 @Composable
 private fun Ask(
     scope: ConstraintLayoutScope,
