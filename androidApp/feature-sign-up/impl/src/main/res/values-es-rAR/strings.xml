@@ -14,5 +14,7 @@
         Este dato será utilizado para mostrarte cuánto tiempo de vida llevas existiendo</string>
 
     <string name="gender_screen">Género</string>
+    <string name="gender_screen_phrase">La vida después de la muerte es posible</string>
+    <string name="gender_screen_ask">¿Con qué género te identificás?</string>
 
 </resources>

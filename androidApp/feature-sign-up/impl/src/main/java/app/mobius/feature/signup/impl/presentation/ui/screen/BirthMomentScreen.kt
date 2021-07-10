@@ -96,9 +96,9 @@ private fun Phrase(
                 .padding(all = 16.dp)
                 .constrainAs(phraseRef) {
                     top.linkTo(parent.top)
+                    centerHorizontallyTo(parent)
                 }
             ,
-            textAlign = TextAlign.Center,
         )
     }
 }
