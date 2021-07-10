@@ -1,13 +1,12 @@
 package app.mobius.feature.signup.impl.presentation.vm
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
-import org.itdevexpert.viewmodel.flow.combineState
 import org.itdevexpert.viewmodel.flow.combineStateFlow
 
+@Suppress("CHANGING_ARGUMENTS_EXECUTION_ORDER_FOR_NAMED_VARARGS")
 @ExperimentalCoroutinesApi
 class FullnameScreenVM : ViewModel() {
 
@@ -16,51 +15,30 @@ class FullnameScreenVM : ViewModel() {
     private val _surname = MutableStateFlow("")
     private val _isSurnameError = MutableStateFlow(false)
 
-    private val _isStateInitial = combineState(
-        flow1 = _name,
-        flow2 = _surname,
+    private val _isStateInitial = combineStateFlow(
+        flows = arrayOf(_name, _surname),
         scope = viewModelScope
-    ) { name, surname ->
-        name == "" || surname == ""
+    ) {
+        it.any { field ->
+            field == ""
+        }
     }
 
-    private val _existsFieldError = combineState(
-        flow1 = _isNameError,
-        flow2 = _isSurnameError,
+    private val _existsFieldError = combineStateFlow(
+        flows = arrayOf(_isNameError, _isSurnameError),
         scope = viewModelScope
-    ) { nameError, surnameError ->
-        Log.d(this::class.java.simpleName, "$nameError $surnameError")
-        nameError || surnameError
+    ) { combinedFlows ->
+        combinedFlows.any {
+            it
+        }
     }
 
-    private val _isValidForm2 = combineStateFlow(
+    private val _isValidForm = combineStateFlow(
         flows = arrayOf(_isStateInitial, _existsFieldError),
         scope = viewModelScope
     ) { combinedFlows: Array<Any> ->
-        combinedFlows.map {
-
-        }
-//        !isStateInitial && !existsFieldError
-
-    }
-
-    data class A(val a: String)
-    data class B(val b: Int)
-
-    private val test1 = MutableStateFlow(A("a"))
-    private val test2 = MutableStateFlow(B(2))
-
-    @Suppress("CHANGING_ARGUMENTS_EXECUTION_ORDER_FOR_NAMED_VARARGS")
-    private val _isValidForm = combineStateFlow(
-        flows = arrayOf(test1, test2),
-        scope = viewModelScope
-    ) { combinedFlows: Array<Any> ->
-        combinedFlows.map {
-            val doSomething = when (it) {
-                is A -> true
-                is B -> false
-                else -> false
-            }
+        combinedFlows.all {
+            !(it as Boolean)
         }
     }
 
@@ -68,12 +46,11 @@ class FullnameScreenVM : ViewModel() {
     val isNameError: StateFlow<Boolean> = _isNameError
     val surname: StateFlow<String> = _surname
     val isSurnameError: StateFlow<Boolean> = _isSurnameError
-    val isValidForm: StateFlow<Boolean> = _isValidForm2
+    val isValidForm: StateFlow<Boolean> = _isValidForm
 
     fun onNameChange(newName: String) {
         _name.value = newName
         _isNameError.value = newName.isEmpty() || !withoutNumbers(newName)
-        test1.value = A(newName)
     }
 
     fun onSurnameChange(newSurname: String) {
