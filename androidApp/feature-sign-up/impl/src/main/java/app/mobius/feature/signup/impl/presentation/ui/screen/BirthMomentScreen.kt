@@ -8,7 +8,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
-import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -27,9 +26,9 @@ import androidx.constraintlayout.compose.ConstrainedLayoutReference
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintLayoutScope
 import androidx.lifecycle.viewmodel.compose.viewModel
+import app.mobius.compose.material.ButtonNext
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.BirthMomentVM
-import app.mobius.view.stringResToUpper
 import app.mobius.view.theme.color.Error
 import com.vanpra.composematerialdialogs.MaterialDialog
 import com.vanpra.composematerialdialogs.buttons
@@ -74,7 +73,7 @@ fun BirthMomentScreen(
                 DateError(scope = this, dateErrorRef = dateErrorRef, datePickerRef = datePickerRef, viewModel = viewModel)
                 TimeDescription(scope = this, timeDescriptionRef = timeDescriptionRef, datePickerRef = datePickerRef, buttonNextRef = buttonNextRef)
                 TimePicker(scope = this, timePickerRef = timePickerRef, timeDescriptionRef = timeDescriptionRef, viewModel = viewModel)
-                ButtonNext(scope = this, buttonNextRef = buttonNextRef, viewModel = viewModel, onClickNextScreen = onClickNextScreen)
+                Next(scope = this, buttonNextRef = buttonNextRef, viewModel = viewModel, onClickNextScreen = onClickNextScreen)
             }
         }
     }
@@ -292,10 +291,9 @@ private fun TimeDescription(
     }
 }
 
-//TODO: For Extensions
 @ExperimentalCoroutinesApi
 @Composable
-fun ButtonNext(
+fun Next(
     scope: ConstraintLayoutScope,
     buttonNextRef: ConstrainedLayoutReference,
     viewModel: BirthMomentVM,
@@ -303,14 +301,10 @@ fun ButtonNext(
 ) {
     scope.apply {
         val isValidData by viewModel.isValidData.collectAsState()
-
-        Button(
+        ButtonNext(
             onClick = {
                 onClickNextScreen.invoke()
             },
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = Color.White,
-            ),
             modifier = Modifier
                 .padding(all = 20.dp)
                 .constrainAs(buttonNextRef) {
@@ -319,14 +313,6 @@ fun ButtonNext(
                 }
             ,
             enabled = isValidData
-        ) {
-            Text(
-                text = stringResToUpper(id = R.string.actions_next),
-                color = Color.Black,
-                fontFamily = FontFamily.Default,
-                fontSize = 18.sp,
-                style = typography.h3
-            )
-        }
+        )
     }
 }

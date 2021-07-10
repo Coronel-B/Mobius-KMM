@@ -12,7 +12,7 @@ import app.mobius.view.theme.color.*
  * Note: secondaryVariant is typically the same as secondary in dark theme since contrast levels are higher, and hence there is less need for a separate secondary color.
  */
 @SuppressLint("ConflictingOnColor")
-private val DarkColorPalette = darkColors(
+val DarkColorPalette = darkColors(
     primary = ColdColors.PrimaryDark,
     primaryVariant = ColdColors.Primary,
     secondary = WarmColors.SecondaryDark,
@@ -30,7 +30,7 @@ private val DarkColorPalette = darkColors(
  * OBS: variant should be more dark
  */
 @SuppressLint("ConflictingOnColor")
-private val LightColorPalette = lightColors(
+val LightColorPalette = lightColors(
     primary = ColdColors.PrimaryLight,
     primaryVariant = ColdColors.Primary,
     secondary = WarmColors.SecondaryLight,
@@ -54,8 +54,7 @@ fun MobiusTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable
     }
 
     MaterialTheme(
-//        colors = colors,
-        colors = DarkColorPalette,
+        colors = colors,
         typography = Typography,
         shapes = Shapes,
         content = content

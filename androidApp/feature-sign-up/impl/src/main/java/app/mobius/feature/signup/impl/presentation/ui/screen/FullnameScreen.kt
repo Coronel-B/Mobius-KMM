@@ -22,11 +22,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import app.mobius.compose.material.ButtonNext
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.FullnameScreenVM
 import app.mobius.view.stringResToUpper
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import java.util.*
 
 @ExperimentalCoroutinesApi
 @ExperimentalComposeUiApi
@@ -52,7 +52,7 @@ fun FullnameScreen(onClickNextScreen: () -> Unit) {   //TODO: Delete default
                     FormScreen(viewModel = viewModel)
                 }
             }
-            Box( modifier = Modifier.align(Alignment.BottomEnd)) { ButtonNext(viewModel, onClickNextScreen) }
+            Box( modifier = Modifier.align(Alignment.BottomEnd)) { Next(viewModel, onClickNextScreen) }
         }
     }
 }
@@ -181,29 +181,18 @@ private fun SurnameContent(
 
 }
 
-//TODO: For Extensions
 @ExperimentalCoroutinesApi
 @Composable
-private fun ButtonNext(viewModel: FullnameScreenVM, onClickNextScreen: () -> Unit) {
+private fun Next(viewModel: FullnameScreenVM, onClickNextScreen: () -> Unit) {
     val isValidForm by viewModel.isValidForm.collectAsState()
 
-    Button(
+    ButtonNext(
         onClick = {
             onClickNextScreen.invoke()
-              },
-        colors = ButtonDefaults.buttonColors(
-            backgroundColor = Color.White,
-        ),
+        },
         modifier = Modifier
-            .padding(all = 20.dp),
+            .padding(all = 20.dp)
+        ,
         enabled = isValidForm
-    ) {
-        Text(
-            text = stringResToUpper(id = R.string.actions_next),
-            color = Color.Black,
-            fontFamily = FontFamily.Default,
-            fontSize = 18.sp,
-            style = typography.h3
-        )
-    }
+    )
 }
