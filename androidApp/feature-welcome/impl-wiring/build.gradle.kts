@@ -11,7 +11,7 @@ android {
         minSdk = 24
         targetSdk = 30
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")

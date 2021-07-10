@@ -9,12 +9,27 @@ android {
     compileSdkVersion(30)
     buildToolsVersion("31.0.0 rc1")
 
+    /**
+     * Notes Impl: Use DomainObjectCollection#all
+     * Source: https://stackoverflow.com/a/58035977/5279996
+     */
+    applicationVariants.all {
+        val variant = this
+        variant.outputs
+            .map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
+            .forEach { output ->
+                val outputFileName = "Möbius AI - ${variant.baseName} - ${variant.versionName} ${variant.versionCode}"
+                println("OutputFileName: $outputFileName")
+                output.outputFileName = outputFileName
+            }
+    }
+
     defaultConfig {
         applicationId = "app.mobius"
         minSdkVersion(24)
         targetSdkVersion(30)
         versionCode = 1
-        versionName = "2020.3.5-1"
+        versionName = "0.0.1-2021.07.10-1"
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
     }
     buildTypes {
