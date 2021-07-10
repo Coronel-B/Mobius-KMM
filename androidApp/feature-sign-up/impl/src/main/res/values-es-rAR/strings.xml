@@ -13,4 +13,6 @@
     <string name="birth_moment_screen_time_description">Si deseas, puedes agregar el horario de tu nacimiento.
         Este dato será utilizado para mostrarte cuánto tiempo de vida llevas existiendo</string>
 
+    <string name="gender_screen">Género</string>
+
 </resources>

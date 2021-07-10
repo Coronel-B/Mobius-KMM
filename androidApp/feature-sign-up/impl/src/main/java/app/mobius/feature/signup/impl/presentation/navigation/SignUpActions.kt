@@ -7,7 +7,7 @@ import androidx.navigation.NavHostController
 class SignUpActions(private val signUpNavHostController: NavHostController) {
 
     val birthdateScreen: () -> Unit = {
-        signUpNavHostController.navigate(SignUpDestinations.BIRHDATE_SCREEN)
+        signUpNavHostController.navigate(SignUpDestinations.BIRTH_MOMENT_SCREEN)
     }
     val genderScreen: () -> Unit = {
         signUpNavHostController.navigate(SignUpDestinations.GENDER_SCREEN)
@@ -18,7 +18,6 @@ class SignUpActions(private val signUpNavHostController: NavHostController) {
     val passwordScreen: () -> Unit = {
         signUpNavHostController.navigate(SignUpDestinations.PASSWORD_SCREEN)
     }
-
     val upPress: () -> Unit = {
         signUpNavHostController.navigateUp()
     }

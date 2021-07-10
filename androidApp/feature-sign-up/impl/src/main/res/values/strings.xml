@@ -12,4 +12,6 @@
     <string name ="birth_moment_screen_time_description">You can add the time of your birth.
          This data will be used to show you how long your life has existed</string>
 
+    <string name="gender_screen">Gender</string>
+
 </resources>

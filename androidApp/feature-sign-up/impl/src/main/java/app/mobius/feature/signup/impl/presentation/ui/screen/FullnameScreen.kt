@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
-import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -25,7 +24,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import app.mobius.compose.material.ButtonNext
 import app.mobius.feature.signup.impl.R
 import app.mobius.feature.signup.impl.presentation.vm.FullnameScreenVM
-import app.mobius.view.stringResToUpper
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
 @ExperimentalCoroutinesApi
@@ -47,7 +45,7 @@ fun FullnameScreen(onClickNextScreen: () -> Unit) {   //TODO: Delete default
         Box(modifier = Modifier.fillMaxSize()) {
 
             Box( modifier = Modifier.align(Alignment.Center)) {
-                Column() {
+                Column {
                     Description()
                     FormScreen(viewModel = viewModel)
                 }
@@ -183,7 +181,10 @@ private fun SurnameContent(
 
 @ExperimentalCoroutinesApi
 @Composable
-private fun Next(viewModel: FullnameScreenVM, onClickNextScreen: () -> Unit) {
+private fun Next(
+    viewModel: FullnameScreenVM,
+    onClickNextScreen: () -> Unit
+) {
     val isValidForm by viewModel.isValidForm.collectAsState()
 
     ButtonNext(
